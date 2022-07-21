@@ -1,0 +1,10 @@
+function exerciceProgress(state, action) {
+  switch (action.type) {
+    case 'DECRESS_PROGRESS':
+      return state;
+    default:
+      return state;
+  }
+}
+
+export default exerciceProgress;
