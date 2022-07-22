@@ -1,6 +1,6 @@
 import {
   actionTypes, SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS,
-} from './authReducerTypes';
+} from './userDataTypes';
 
 const STATE_INITIAL_VALUE = {
   email: '',
@@ -18,7 +18,7 @@ const ACTION_INITIAL_STATE: actionTypes = {
   error: '',
 };
 
-function authReducer(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE) {
+function userData(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE) {
   switch (actions.type) {
     case SIGNIN_INIT:
       return {
@@ -37,4 +37,4 @@ function authReducer(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE
   }
 }
 
-export default authReducer;
+export default userData;
