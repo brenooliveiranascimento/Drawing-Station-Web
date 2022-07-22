@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,8 @@ export const InputAuth = styled.input`
   height: 30px;
   padding: 10px;
   border-radius: 40px;
-  margin: 10px
+  margin: 10px;
+  border: 1px solid #000;
 `;
 
 export const BtnSignIn = styled.button`
@@ -28,4 +29,17 @@ export const BtnSignIn = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  margin: 5px;
+  border: 1px solid #000;
+`;
+
+export const BtnRegister = styled.button`
+  width: 200px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 5px;
+  border: 1px solid #000;
 `;
