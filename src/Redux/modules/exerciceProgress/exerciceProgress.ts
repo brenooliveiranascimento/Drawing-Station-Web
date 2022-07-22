@@ -1,3 +1,5 @@
+import { FETCH_PROGRESS } from './exerciceProgressTypes';
+
 const STATE_INITIAL_VALUE = {
   basic: {
     degrade: false,
@@ -20,12 +22,13 @@ const ACTION_INITIAL_STATE = {
   type: '',
   dificulty: '',
   exercice: '',
+  payLoad: {},
 };
 
 function exerciceProgress(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE) {
   switch (action.type) {
-    case 'DECRESS_PROGRESS':
-      return state;
+    case FETCH_PROGRESS:
+      return { ...state, state: action.payLoad };
     default:
       return state;
   }

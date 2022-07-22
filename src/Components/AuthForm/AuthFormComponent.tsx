@@ -23,9 +23,7 @@ class AuthForm extends React.Component {
 
   updateUserState = (name: any, value: any) => this.setState({ [name]: value });
 
-  changeMode = () => this.setState(({ isRegister }: any): any => ({
-    isRegister: !isRegister,
-  }));
+  changeMode = () => this.setState(({ isRegister }: any) => ({ isRegister: !isRegister }));
 
   register = () => {
     const {
@@ -37,7 +35,7 @@ class AuthForm extends React.Component {
       alert('logado');
       return;
     }
-    alert('erro register');
+    alert('error register');
   };
 
   signIn = () => {
