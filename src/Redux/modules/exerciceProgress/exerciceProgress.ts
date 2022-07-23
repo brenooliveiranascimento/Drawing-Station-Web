@@ -29,7 +29,6 @@ const ACTION_INITIAL_STATE: any = {
 };
 
 function exerciceProgress(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE) {
-  console.log(action.payLoad);
   switch (action.type) {
     case FETCH_PROGRESS:
       return {
