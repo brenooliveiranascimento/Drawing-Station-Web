@@ -9,7 +9,7 @@ import {
   emailVerification,
   passwordVerification,
 } from '../../Services/emailAndPasswordVerificaion/emailAndPasswordVerificaion';
-import { createUserCount } from '../../Redux/actions/authActions/authActions';
+import { createUserCount, signIn } from '../../Redux/actions/authActions/authActions';
 
 class AuthForm extends React.Component {
   constructor(props:any) {
@@ -32,6 +32,7 @@ class AuthForm extends React.Component {
     const {
       email, password, name, confirmPassword,
     }: any = this.state;
+
     const { registerUser }: any = this.props;
     if (!name.length && confirmPassword !== password) return;
     if (emailVerification(email) && passwordVerification(password)) {
@@ -43,8 +44,9 @@ class AuthForm extends React.Component {
 
   signIn = () => {
     const { email, password }: any = this.state;
+    const { signInUser }: any = this.props;
     if (emailVerification(email) && passwordVerification(password)) {
-      alert('logar');
+      signInUser(this.state);
       return;
     }
     alert('erro signIn');
@@ -111,6 +113,7 @@ class AuthForm extends React.Component {
 
 const mapDispatchToProps = (dispatch:any) => ({
   registerUser: (userData: any) => dispatch(createUserCount(userData)),
+  signInUser: (userData: any) => dispatch(signIn(userData)),
 });
 
 export default connect(null, mapDispatchToProps)(AuthForm);

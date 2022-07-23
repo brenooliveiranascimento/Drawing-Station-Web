@@ -1,14 +1,13 @@
 /* eslint-disable func-names */
 /* eslint-disable no-console */
-/* eslint-disable arrow-body-style */
 import { Dispatch } from 'react';
-import { registerUser } from '../../../Services/authControlFirebase/authControlFirebase';
+import { registerUser, signInUser } from '../../../Services/authControlFirebase/authControlFirebase';
 import { FETCH_PROGRESS } from '../../modules/exerciceProgress/exerciceProgressTypes';
 import { SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS } from '../../modules/userData/userDataTypes';
 
-export const setExerciceProgress = (progressData: any): any => ({
+export const setExerciceProgress = ({ progress }: any): any => ({
   type: FETCH_PROGRESS,
-  payoad: progressData,
+  payLoad: progress,
 });
 
 export const setUserDataSuccess = ({ name, email, uid }: any): any => ({
@@ -29,18 +28,14 @@ export const setUserDataFail: any = () => ({
 });
 
 export const createUserCount = ({ name, email, password }: any): any => {
-  console.log(name, email, password);
   return async function (dispatch: Dispatch<any>) {
     dispatch(setUserDataInit());
     try {
       const createUserInDataBase = await registerUser(email, password, name);
       const userData = await {
-        name,
-        password,
-        email,
-        uid: createUserInDataBase.uid,
+        name, password, email, uid: createUserInDataBase.uid,
       };
-      await dispatch(setExerciceProgress(createUserInDataBase.progress));
+      await dispatch(setExerciceProgress(createUserInDataBase));
       await dispatch(setUserDataSuccess(userData));
     } catch (error: any) {
       console.log(error.message);
@@ -49,6 +44,17 @@ export const createUserCount = ({ name, email, password }: any): any => {
   };
 };
 
-export const signInUser = ({ email, password }: any) => {
-  console.log(email, password);
+export const signIn = ({ email, password }: any): any => {
+  return async function (dispatch: Dispatch<any>) {
+    dispatch(setUserDataInit());
+    try {
+      const fetchUserData: any = await signInUser(email, password);
+      console.log(fetchUserData.progress);
+      dispatch(setUserDataSuccess(fetchUserData));
+      dispatch(setExerciceProgress(fetchUserData));
+    } catch (error: any) {
+      console.log(error.message);
+      dispatch(setUserDataFail());
+    }
+  };
 };
