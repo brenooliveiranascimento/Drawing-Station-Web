@@ -6,7 +6,7 @@ export const thereIsANewVersion = async () => {
   const currentVersion: Array<number> = accessLocalStore(DRAWING_STATION_LOCAL_VERSION);
 
   const productionVersion = await getProductionVersion();
-  return productionVersion.length !== currentVersion.length;
+  return productionVersion?.length !== currentVersion?.length;
 };
 
 export const updateVersion = async () => {

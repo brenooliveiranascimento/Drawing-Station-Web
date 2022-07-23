@@ -5,6 +5,7 @@ import {
 const STATE_INITIAL_VALUE = {
   email: '',
   uid: '',
+  name: '',
   loading: false,
   error: '',
 };
@@ -14,6 +15,7 @@ const ACTION_INITIAL_STATE: actionTypes = {
   payLoad: {
     email: '',
     uid: '',
+    name: '',
   },
   error: '',
 };
@@ -26,7 +28,11 @@ function userData(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE) {
       };
     case SIGNIN_SUCCESS:
       return {
-        ...state, email: actions.payLoad.email, uid: actions.payLoad.uid, loading: false,
+        ...state,
+        email: actions.payLoad.email,
+        uid: actions.payLoad.uid,
+        loading: false,
+        name: actions.payLoad.name,
       };
     case SIGNIN_FAIL:
       return {

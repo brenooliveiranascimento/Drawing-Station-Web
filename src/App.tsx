@@ -24,7 +24,7 @@ function App() {
   const checkIsLoged = async () => {
     if (isLoged()) {
       const fetchUserInf: any = await accessLocalStore(DRAWING_STATION_USER);
-      dispatch(signedUser(fetchUserInf.uid));
+      dispatch(signedUser(fetchUserInf?.uid));
     }
   };
 

@@ -7,6 +7,7 @@ export interface actionTypes {
   payLoad: {
     email: string,
     uid: string,
+    name: string,
   },
   error: string,
 }
