@@ -4,7 +4,7 @@ import { accessLocalStore, setDataInLocalStore } from './localStoreControl';
 
 export const thereIsANewVersion = async () => {
   const currentVersion: Array<number> = accessLocalStore(DRAWING_STATION_LOCAL_VERSION);
-  console.log(await currentVersion);
+
   const productionVersion = await getProductionVersion();
   return productionVersion.length !== currentVersion.length;
 };
