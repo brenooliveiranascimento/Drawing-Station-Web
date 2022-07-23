@@ -17,12 +17,21 @@ const createAccountAndData = async (userInf: any, dispatch: any) => {
   await dispatch(setUserDataSuccess(userData));
 };
 
+const signInWithEmailAndPassword = async (email: string, password: string, dispatch: any) => {
+  const fetchUserData: any = await signInUser(email, password);
+  dispatch(setUserDataSuccess(fetchUserData));
+  dispatch(setExerciceProgress(fetchUserData));
+};
+
+const signInFail = (errorMessage: string, dispatch: any) => {
+  errorMessageConsole(errorMessage);
+  dispatch(setUserDataFail());
+};
+
 export const createUserCount = ({ name, email, password }: any): any => {
   return async function (dispatch: Dispatch<any>) {
     try {
-      await createAccountAndData({
-        name, email, password,
-      }, dispatch);
+      await createAccountAndData({ name, email, password }, dispatch);
     } catch (error: any) {
       errorMessageConsole(error.message);
       dispatch(setUserDataFail());
@@ -33,13 +42,8 @@ export const createUserCount = ({ name, email, password }: any): any => {
 export const signIn = ({ email, password }: any): any => {
   return async function (dispatch: Dispatch<any>) {
     dispatch(setUserDataInit());
-    try {
-      const fetchUserData: any = await signInUser(email, password);
-      dispatch(setUserDataSuccess(fetchUserData));
-      dispatch(setExerciceProgress(fetchUserData));
-    } catch (error: any) {
-      errorMessageConsole(error.message);
-      dispatch(setUserDataFail());
+    try { signInWithEmailAndPassword(email, password, dispatch); } catch (error: any) {
+      signInFail(error.message, dispatch);
     }
   };
 };

@@ -1,9 +1,10 @@
+import { exerciceBaseData } from '../../../MOCKS/__ExerciceData';
 import {
   FETCH_EXERCICE_FAIL, FETCH_EXERCICE_INIT, FETCH_EXERCICE_SUCCESS, SET_NOW_EXERCICE,
 } from './exerciceDataTypes';
 
 const STATE_INITIAL_VALUE = {
-  exercices: {},
+  exercices: exerciceBaseData,
   nowExerciceData: {},
   loading: false,
   error: '',
