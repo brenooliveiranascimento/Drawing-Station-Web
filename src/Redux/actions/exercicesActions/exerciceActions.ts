@@ -5,7 +5,6 @@ import { updateExerciceStore, updateExerciceStoreFail, updateExerciceStoreInit }
 
 export const updateExerciceState = async (dispatch: Dispatch<any>) => {
   const fetchExerciceData = await getProductionData();
-  console.log(fetchExerciceData);
   dispatch(updateExerciceStore(fetchExerciceData));
 };
 
