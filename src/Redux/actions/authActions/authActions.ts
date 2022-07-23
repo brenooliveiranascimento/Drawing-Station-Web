@@ -1,44 +1,30 @@
-/* eslint-disable func-names */
-/* eslint-disable no-console */
 import { Dispatch } from 'react';
+import { errorMessageConsole } from '../../../globalFuncions/errorMessage';
 import { registerUser, signInUser } from '../../../Services/authControlFirebase/authControlFirebase';
-import { FETCH_PROGRESS } from '../../modules/exerciceProgress/exerciceProgressTypes';
-import { SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS } from '../../modules/userData/userDataTypes';
+import {
+  setExerciceProgress, setUserDataFail, setUserDataInit, setUserDataSuccess,
+} from './genericAuthActions';
 
-export const setExerciceProgress = ({ progress }: any): any => ({
-  type: FETCH_PROGRESS,
-  payLoad: progress,
-});
+const createAccountAndData = async (userInf: any, dispatch: any) => {
+  const { email, password, name } = userInf;
 
-export const setUserDataSuccess = ({ name, email, uid }: any): any => ({
-  type: SIGNIN_SUCCESS,
-  payLoad: {
-    name,
-    email,
-    uid,
-  },
-});
-
-export const setUserDataInit: any = () => ({
-  type: SIGNIN_INIT,
-});
-
-export const setUserDataFail: any = () => ({
-  type: SIGNIN_FAIL,
-});
+  dispatch(setUserDataInit());
+  const fetchUserData = await registerUser(email, password, name);
+  const userData = await {
+    name, password, email, uid: fetchUserData.uid,
+  };
+  await dispatch(setExerciceProgress(fetchUserData));
+  await dispatch(setUserDataSuccess(userData));
+};
 
 export const createUserCount = ({ name, email, password }: any): any => {
   return async function (dispatch: Dispatch<any>) {
-    dispatch(setUserDataInit());
     try {
-      const createUserInDataBase = await registerUser(email, password, name);
-      const userData = await {
-        name, password, email, uid: createUserInDataBase.uid,
-      };
-      await dispatch(setExerciceProgress(createUserInDataBase));
-      await dispatch(setUserDataSuccess(userData));
+      await createAccountAndData({
+        name, email, password,
+      }, dispatch);
     } catch (error: any) {
-      console.log(error.message);
+      errorMessageConsole(error.message);
       dispatch(setUserDataFail());
     }
   };
@@ -49,11 +35,10 @@ export const signIn = ({ email, password }: any): any => {
     dispatch(setUserDataInit());
     try {
       const fetchUserData: any = await signInUser(email, password);
-      console.log(fetchUserData.progress);
       dispatch(setUserDataSuccess(fetchUserData));
       dispatch(setExerciceProgress(fetchUserData));
     } catch (error: any) {
-      console.log(error.message);
+      errorMessageConsole(error.message);
       dispatch(setUserDataFail());
     }
   };
