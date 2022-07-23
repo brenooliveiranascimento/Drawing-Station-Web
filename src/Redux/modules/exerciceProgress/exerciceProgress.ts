@@ -6,14 +6,17 @@ const STATE_INITIAL_VALUE = {
     ball: false,
     petal: false,
     rose: false,
+    concldes: 0,
   },
   intermediary: {
     shortHair: false,
     blueRose: false,
+    concldes: 0,
   },
   advanced: {
     TerryCrews: false,
     HulkBuster: false,
+    concldes: 0,
   },
   all: 0,
 };

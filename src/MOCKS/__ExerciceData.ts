@@ -131,9 +131,8 @@ export const exerciceData = {
   ],
 };
 
-export const userDataBase = (email: any, password: any, uid: any, name: any): any => ({
+export const userDataBase = (email: any, uid: any, name: any): any => ({
   email,
-  password,
   uid,
   name,
   progress: {

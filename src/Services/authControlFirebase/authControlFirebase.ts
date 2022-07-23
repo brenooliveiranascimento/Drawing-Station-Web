@@ -25,8 +25,8 @@ export const registerUser = async (email: string, password: string, name: string
   try {
     const createUser = await firebase.auth().createUserWithEmailAndPassword(email, password);
     const userUid = createUser.user?.uid;
-    await createUserInDataBase(userDataBase(email, password, userUid, name));
-    return userDataBase(email, password, userUid, name);
+    await createUserInDataBase(userDataBase(email, userUid, name));
+    return userDataBase(email, userUid, name);
   } catch (error: any) {
     console.log(error.message);
   }

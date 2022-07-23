@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable no-console */
 /* eslint-disable arrow-body-style */
 import { Dispatch } from 'react';
 import { registerUser } from '../../../Services/authControlFirebase/authControlFirebase';
@@ -18,15 +20,16 @@ export const setUserDataSuccess = ({ name, email, uid }: any): any => ({
   },
 });
 
-export const setUserDataInit: any = ({
+export const setUserDataInit: any = () => ({
   type: SIGNIN_INIT,
 });
 
-export const setUserDataFail: any = ({
+export const setUserDataFail: any = () => ({
   type: SIGNIN_FAIL,
 });
 
-export const createUserCount = ({ name, password, email }: any): any => {
+export const createUserCount = ({ name, email, password }: any): any => {
+  console.log(name, email, password);
   return async function (dispatch: Dispatch<any>) {
     dispatch(setUserDataInit());
     try {

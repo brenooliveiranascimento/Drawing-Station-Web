@@ -1,4 +1,6 @@
+/* eslint-disable no-alert */
 import React from 'react';
+import { connect } from 'react-redux';
 import {
   BtnRegister,
   BtnSignIn, FormContainer, FormLabel, InputAuth,
@@ -7,6 +9,7 @@ import {
   emailVerification,
   passwordVerification,
 } from '../../Services/emailAndPasswordVerificaion/emailAndPasswordVerificaion';
+import { createUserCount } from '../../Redux/actions/authActions/authActions';
 
 class AuthForm extends React.Component {
   constructor(props:any) {
@@ -29,19 +32,17 @@ class AuthForm extends React.Component {
     const {
       email, password, name, confirmPassword,
     }: any = this.state;
-
+    const { registerUser }: any = this.props;
     if (!name.length && confirmPassword !== password) return;
     if (emailVerification(email) && passwordVerification(password)) {
-      alert('logado');
+      registerUser(this.state);
       return;
     }
     alert('error register');
   };
 
   signIn = () => {
-    const {
-      email, password,
-    }: any = this.state;
+    const { email, password }: any = this.state;
     if (emailVerification(email) && passwordVerification(password)) {
       alert('logar');
       return;
@@ -108,4 +109,8 @@ class AuthForm extends React.Component {
   }
 }
 
-export default AuthForm;
+const mapDispatchToProps = (dispatch:any) => ({
+  registerUser: (userData: any) => dispatch(createUserCount(userData)),
+});
+
+export default connect(null, mapDispatchToProps)(AuthForm);
