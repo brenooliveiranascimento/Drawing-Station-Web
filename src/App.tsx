@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateVersion, thereIsANewVersion } from './globalFuncions/versionControl';
-import Auth from './Pages/Auth/Auth';
-import Home from './Pages/Home/Home';
 import { updateExerciceData } from './Redux/actions/exercicesActions/exerciceActions';
 import { accessLocalStore } from './globalFuncions/localStoreControl';
 import { DRAWING_STATION_USER } from './__GlobalTypes/globalTypes';
 import { signedUser } from './Redux/actions/authActions/authActions';
+import Routes from './Routes/Routes';
 
 function App() {
   const dispatch = useDispatch();
@@ -35,8 +34,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Auth} />
-        <Route path="/Home" exact component={Home} />
+        <Routes />
       </Switch>
     </BrowserRouter>
   );

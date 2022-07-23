@@ -7,6 +7,7 @@ const STATE_INITIAL_VALUE = {
   uid: '',
   name: '',
   loading: false,
+  loged: false,
   error: '',
 };
 
@@ -33,6 +34,7 @@ function userData(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE) {
         uid: actions.payLoad.uid,
         loading: false,
         name: actions.payLoad.name,
+        loged: true,
       };
     case SIGNIN_FAIL:
       return {
