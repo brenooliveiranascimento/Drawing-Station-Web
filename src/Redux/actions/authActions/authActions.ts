@@ -1,6 +1,6 @@
 import { Dispatch } from 'react';
 import { errorMessageConsole } from '../../../globalFuncions/errorMessage';
-import { registerUser, signInUser } from '../../../Services/authControlFirebase/authControlFirebase';
+import { getUserInDataBase, registerUser, signInUser } from '../../../Services/authControlFirebase/authControlFirebase';
 import {
   setExerciceProgress, setUserDataFail, setUserDataInit, setUserDataSuccess,
 } from './genericAuthActions';
@@ -40,6 +40,19 @@ export const signIn = ({ email, password }: any): any => {
     } catch (error: any) {
       errorMessageConsole(error.message);
       dispatch(setUserDataFail());
+    }
+  };
+};
+
+export const signedUser = (uid: string): any => {
+  return async function (dispatch: Dispatch<any>) {
+    try {
+      const userData: any = await getUserInDataBase(uid);
+      dispatch(setUserDataSuccess(await userData.data()));
+      console.log(await userData.data().progress);
+      dispatch(setExerciceProgress(await userData.data()));
+    } catch (error: any) {
+      errorMessageConsole(error.message);
     }
   };
 };

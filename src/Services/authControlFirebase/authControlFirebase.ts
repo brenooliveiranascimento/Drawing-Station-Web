@@ -17,7 +17,7 @@ export const getUserInDataBase = async (userId: string) => {
   try {
     return await firebase.firestore().collection('users').doc(userId).get();
   } catch (error: any) {
-    errorMessageAlert(error.message);
+    errorMessageAlert('erro');
   }
 };
 
