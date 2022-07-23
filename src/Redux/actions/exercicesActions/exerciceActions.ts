@@ -5,6 +5,7 @@ import { updateExerciceStore, updateExerciceStoreFail, updateExerciceStoreInit }
 
 export const updateExerciceState = async (dispatch: Dispatch<any>) => {
   const fetchExerciceData = await getProductionData();
+  console.log(fetchExerciceData);
   dispatch(updateExerciceStore(fetchExerciceData));
 };
 
@@ -13,7 +14,7 @@ export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
   errorMessageConsole(errorMessage);
 };
 
-export const updateExerciceData = () => {
+export const updateExerciceData = (): any => {
   return async (dispatch: Dispatch<any>) => {
     dispatch(updateExerciceStoreInit());
     try { updateExerciceState(dispatch); } catch (error: any) {
