@@ -49,7 +49,6 @@ export const signedUser = (uid: string): any => {
     try {
       const userData: any = await getUserInDataBase(uid);
       dispatch(setUserDataSuccess(await userData.data()));
-      console.log(await userData.data().progress);
       dispatch(setExerciceProgress(await userData.data()));
     } catch (error: any) {
       errorMessageConsole(error.message);
