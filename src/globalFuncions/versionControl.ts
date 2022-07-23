@@ -10,7 +10,6 @@ export const thereIsANewVersion = async () => {
 };
 
 export const updateVersion = async () => {
-  alert('New updates!');
   setDataInLocalStore(DRAWING_STATION_LOCAL_VERSION, await getProductionVersion());
   setDataInLocalStore(DRAWING_STATION_LOCAL_DATA, await getProductionData());
 };
