@@ -130,3 +130,26 @@ export const exerciceData = {
     },
   ],
 };
+
+export const userDataBase = (email: any, uid: any, name: any): any => ({
+  email,
+  uid,
+  name,
+  progress: {
+    basics: {
+      degrade: false,
+      ball: false,
+      petal: false,
+      rose: false,
+    },
+    intermediary: {
+      shortHair: false,
+      blueRose: false,
+    },
+    advanced: {
+      TerryCrews: false,
+      HulkBuster: false,
+    },
+    all: 0,
+  },
+});

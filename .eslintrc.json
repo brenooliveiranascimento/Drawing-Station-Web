@@ -32,6 +32,9 @@
             "jsx": "never",
             "mjs": "never"
           }],
-        "default-param-last" : "off"
+        "default-param-last" : "off",
+        "react/prop-types": "off",
+        "import/prefer-default-export": "off",
+        "arrow-body-style":"off"
       }
 }

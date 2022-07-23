@@ -1,13 +1,45 @@
-// import firebase from '../firebase_connection';
+/* eslint-disable no-console */
+/* eslint-disable consistent-return */
+import { setUserInLocalStore } from '../../localStore/persistUser';
+import { userDataBase } from '../../MOCKS/__ExerciceData';
+import firebase from '../firebase_connection';
 
-export const signInUser = async () => {
-  // try {
-  //   const createUser
-  // } catch (error: any) {
-  //   console.log(message.message);
-  // }
+export const createUserInDataBase = async (userData: any) => {
+  try {
+    await firebase.firestore().collection('users').doc(userData.uid).set(userData);
+  } catch (error: any) {
+    console.log(error.message);
+  }
 };
 
-export const registerUser = () => {
+export const getUserInDataBase = async (userId: string) => {
+  try {
+    return await firebase.firestore().collection('users').doc(userId).get();
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};
 
+export const signInUser = async (email: string, password: string) => {
+  try {
+    const signIn = await firebase.auth().signInWithEmailAndPassword(email, password);
+    const userId: any = await signIn.user?.uid;
+    const userData = await getUserInDataBase(userId);
+    setUserInLocalStore(userData?.data());
+    return userData?.data();
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};
+
+export const registerUser = async (email: string, password: string, name: string) => {
+  try {
+    const createUser = await firebase.auth().createUserWithEmailAndPassword(email, password);
+    const userUid = createUser.user?.uid;
+    await createUserInDataBase(userDataBase(email, userUid, name));
+    setUserInLocalStore(userDataBase(email, userUid, name));
+    return userDataBase(email, userUid, name);
+  } catch (error: any) {
+    console.log(error.message);
+  }
 };
