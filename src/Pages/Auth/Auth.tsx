@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthCard from '../../Components/AuthCard/AuthCard';
+import AuthCard from '../../Components/AuthComponents/AuthCard/AuthCard';
 import './styles.css';
 
 function Auth() {

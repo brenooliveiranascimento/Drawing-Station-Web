@@ -1,15 +1,12 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import { connect } from 'react-redux';
+import { createUserCount, signIn } from '../../../Redux/actions/authActions/authActions';
+import { emailVerification, passwordVerification } from '../../../Services/emailAndPasswordVerificaion/emailAndPasswordVerificaion';
 import {
   BtnRegister,
   BtnSignIn, FormContainer, FormLabel, InputAuth,
 } from './AuthForm';
-import {
-  emailVerification,
-  passwordVerification,
-} from '../../Services/emailAndPasswordVerificaion/emailAndPasswordVerificaion';
-import { createUserCount, signIn } from '../../Redux/actions/authActions/authActions';
 
 class AuthForm extends React.Component {
   constructor(props:any) {
