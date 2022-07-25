@@ -1,0 +1,8 @@
+.backgroundImage {
+  display: flex;
+  align-items: center;
+  background: url("../../Assets//waveFundo.svg") fixed center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
