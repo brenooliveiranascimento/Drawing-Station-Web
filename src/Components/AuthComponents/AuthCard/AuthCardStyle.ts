@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CardContainer = styled.section`
   display: flex;
   width: 900px;
-  height: 500px;
+  height: 600px;
   flex-direction: row;
   align-items: center;
   justify-content: center;

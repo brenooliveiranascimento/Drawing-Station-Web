@@ -1,0 +1,10 @@
+.auth_image_container {
+  display: flex;
+}
+
+.auth_drawing_image {
+  width: 400px;
+  height: 600px;
+  height: auto - 90px;
+  filter: brightness(40%);
+}
