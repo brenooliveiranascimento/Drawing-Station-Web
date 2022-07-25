@@ -3,7 +3,7 @@
 
 ## Sejam bem vindos a minha plataforma de ensino! :)
 
-<h3>**Ainda em desenvolvimento.**</h3>
+<h3>**Ainda em desenvolvimento**</h3>
 
 Este projeto se trata da minha plataforma de ensino de desenhos realistas, estou aplicando
 oque venho aprendendo no curso da Trybe nos ultimos mese!
