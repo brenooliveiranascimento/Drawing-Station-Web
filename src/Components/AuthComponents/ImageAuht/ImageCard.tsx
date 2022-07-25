@@ -13,6 +13,8 @@ function ImageCard() {
           alt="awdjowpa"
         />
         <h1>Levado voce ao próximo nivel</h1>
+        <span>Desenhos realistas com Lápis de cor</span>
+
       </section>
 
     </section>

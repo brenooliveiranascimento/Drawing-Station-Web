@@ -1,9 +1,5 @@
-.auth_image_container {
-  display: flex;
-}
-
 .auth_drawing_image {
-  width: 776px;
+  width: 775px;
   height: 600px;
   height: auto - 90px;
   background: url("../../../Assets/drawing/blueRose.jpg") ;
@@ -20,6 +16,13 @@
   font-size: 34px;
   align-self: flex-start;
   color: #fff;
+}
+
+.auth_drawing_image span {
+  color: #aaa;
+  z-index: 99;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .brightness {
