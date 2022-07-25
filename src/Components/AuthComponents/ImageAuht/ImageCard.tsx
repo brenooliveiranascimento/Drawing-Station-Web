@@ -4,13 +4,17 @@ import './styles.css';
 
 function ImageCard() {
   return (
-    <section className="auth_image_container">
-      <img
-        className="auth_drawing_image"
-        src={require('../../../Assets/drawing/blueRose.jpg')}
-        // src="../../../Assets/blob-scene-haikei (3).svg"
-        alt="awdjowpa"
-      />
+    <section className="auth_drawing_image">
+      <section className="brightness" />
+      <section className="centralizeContent">
+        <img
+          className="logo"
+          src={require('../../../Assets/drawing/logo1.png')}
+          alt="awdjowpa"
+        />
+        <h1>Levado voce ao próximo nivel</h1>
+      </section>
+
     </section>
   );
 }

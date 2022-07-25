@@ -3,8 +3,51 @@
 }
 
 .auth_drawing_image {
-  width: 400px;
+  width: 776px;
   height: 600px;
   height: auto - 90px;
-  filter: brightness(40%);
+  background: url("../../../Assets/drawing/blueRose.jpg") ;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  justify-content: center;
+}
+
+.auth_drawing_image h1 {
+  font-size: 34px;
+  align-self: flex-start;
+  color: #fff;
+}
+
+.brightness {
+  display: flex;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 500px;
+  height: 600px;
+}
+
+.auth_drawing_image h1 {
+  color: #fff;
+  z-index: 99;
+  align-self: flex-start;
+}
+
+.centralizeContent {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+}
+
+.logo {
+  width: 400px;
+  height: 250px;
+  z-index: 99;
+  margin-left: -20px ;
 }

@@ -6,8 +6,8 @@ import { CardContainer } from './AuthCardStyle';
 function AuthCard() {
   return (
     <CardContainer>
-      <AuthFormComponent />
       <ImageCard />
+      <AuthFormComponent />
     </CardContainer>
   );
 }

@@ -17,9 +17,11 @@ export const InputAuth = styled.input`
   width: 300px;
   height: 30px;
   padding: 10px;
-  border-radius: 40px;
   margin: 10px;
-  border: 1px solid #000;
+  background-color: rgba(124, 74, 124, 0.4);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
 `;
 
 export const BtnSignIn = styled.button`
