@@ -11,9 +11,8 @@
 
 .backgroundImage {
   display: flex;  
-  height: 100ch;
+  height: 97.1vh;
   width: 100%;
-  background: url("../../Assets/newBlack.svg") fixed center;
   background-size: cover;
   align-items: center;
   justify-content: center;
