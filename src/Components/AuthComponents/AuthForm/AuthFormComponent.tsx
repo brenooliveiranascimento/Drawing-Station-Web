@@ -68,7 +68,7 @@ class AuthForm extends React.Component {
     }: any = this.state;
 
     if (password !== confirmPassword) {
-      this.setState({ passwordDifferent: 'red' });
+      this.setState({ passwordDifferent: '#c4354f' });
     } else {
       this.setState({ passwordDifferent: 'white' });
     }
@@ -112,7 +112,7 @@ class AuthForm extends React.Component {
     return (
       <FormContainer>
         {
-          passwordDifferent === 'red' && (
+          passwordDifferent === '#c4354f' && (
             <span className="errorMessage">As Senhas Não Condizem</span>
           )
         }
@@ -143,7 +143,7 @@ class AuthForm extends React.Component {
         <FormLabel htmlFor="password">
           <FiLock className="Icons" />
           <InputAuth
-            style={{ borderBottomColor: passwordDifferent }}
+            style={{ borderBottomColor: passwordDifferent, color: passwordDifferent }}
             autoComplete="off"
             type={showPassword ? 'text' : 'password'}
             name="password"
@@ -168,7 +168,7 @@ class AuthForm extends React.Component {
             <FormLabel htmlFor="confirmPassword">
               <FiLock className="Icons" />
               <InputAuth
-                style={{ borderBottomColor: passwordDifferent }}
+                style={{ borderBottomColor: passwordDifferent, color: passwordDifferent }}
                 autoComplete="off"
                 type={showPassword ? 'text' : 'password'}
                 name="confirmPassword"
