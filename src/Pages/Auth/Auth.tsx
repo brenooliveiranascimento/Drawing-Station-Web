@@ -1,11 +1,11 @@
 import React from 'react';
-import AuthForm from '../../Components/AuthForm/AuthFormComponent';
+import AuthCard from '../../Components/AuthComponents/AuthCard/AuthCard';
+import './styles.css';
 
 function Auth() {
   return (
-    <section>
-      <h1>dwamiodmwaiodjwaiopdjkwaiodj</h1>
-      <AuthForm />
+    <section className="backgroundImage">
+      <AuthCard />
     </section>
   );
 }

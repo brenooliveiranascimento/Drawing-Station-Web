@@ -1,0 +1,9 @@
+.backgroundImage {
+  display: flex;  
+  height: 97.1vh;
+  width: 100%;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
