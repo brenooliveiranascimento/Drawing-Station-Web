@@ -8,6 +8,13 @@
 Este projeto se trata da minha plataforma de ensino de desenhos realistas, estou aplicando
 oque venho aprendendo no curso da Trybe nos ultimos mese!
 
+<img src="https://user-images.githubusercontent.com/94801880/181120890-cc1de1ed-d5b4-483f-ad41-32f5aea75bb6.png" width=800>
+<div>
+<img src="https://user-images.githubusercontent.com/94801880/181121037-1ad3bd52-29d8-4e16-acd0-426e5ca34dcf.png" width=400>
+<img src="https://user-images.githubusercontent.com/94801880/181121053-314cef2b-01ce-4889-a9c1-565e0c1e46f7.png" width=400>
+<div>
+
+
 ### Recentemente publiquei o app da plataforma na [PlayStore](https://play.google.com/store/apps/details?id=com.drawingstation). Link do [repositorio](https://github.com/brenooliveiranascimento/Drawing-station-Redux) do app
 
 Tecnologias utilizadas:<br/>
