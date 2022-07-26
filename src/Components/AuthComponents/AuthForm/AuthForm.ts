@@ -32,24 +32,11 @@ export const FormLabel = styled.label`
   display: flex;
   align-items: center;
   justify-content: center;
-
   .Icons {
     color: #aaa;;
     font-size: 26px;
   }
 `;
-
-// export const InputAuth = styled.input`
-//   width: 300px;
-//   height: 35px;
-//   padding: 10px;
-//   margin: 10px;
-//   background-color: rgba(124, 74, 124, 0.7);
-//   border: none;
-//   font-size: 17px;
-//   border-radius: 20px;
-//   color: #fff;
-// `;
 
 export const InputAuth = styled.input`
   width: 300px;
@@ -59,10 +46,25 @@ export const InputAuth = styled.input`
   border-bottom: 2px solid white;
   background-color: rgba(124, 74, 124, 0.0);
   font-size: 17px;
+  
   color: #fff;
 
   ::placeholder {
     color: #ddd;
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
+  }
+`;
+
+export const RespansiveLogo = styled.img`
+  width: 50%;
+  height: 40%;
+  margin-top: -50px;
+  display: none;
+  @media screen and (max-width: 920px) {
+    display: flex;
   }
 `;
 
@@ -79,6 +81,10 @@ export const BtnSignIn = styled.button`
   margin: 5px;
   border: none;
   cursor: ${({ disabled }: any) => (disabled ? 'not-allowed' : 'pointer')};
+
+  @media screen and (max-width: 920px) {
+    width: 40%;
+  }
 `;
 
 export const BtnRegister = styled.button`
@@ -93,6 +99,10 @@ export const BtnRegister = styled.button`
   border: 1px solid #fff;
   background-color: rgba(0,0,0,0.0);
   color: #fff;
+
+  @media screen and (max-width: 920px) {
+    width: 40%;
+  }
 `;
 
 export const LinksArea = styled.nav`
@@ -114,9 +124,25 @@ export const LinkBtn = styled.a`
 `;
 
 export const BtnShow = styled.button`
-  position: absolute;
   right: 40px;
   color: white;
   background-color: rgba(0,0,0,0.0);
   font-size:20px ;
+  margin-left: -20px;
+
+  /* @media screen and (max-width: 920px) {
+    right: 28%;
+  }
+
+  @media screen and (max-width: 840px) {
+    right: 25%;
+  }
+
+  @media screen and (max-width: 700px) {
+    right: 18%;
+  }
+
+  @media screen and (max-width: 580px) {
+    right: 13%;
+  } */
 `;

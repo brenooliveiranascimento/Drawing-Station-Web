@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-alert */
@@ -12,7 +13,7 @@ import { emailVerification, passwordVerification } from '../../../Services/email
 import {
   BtnRegister,
   BtnShow,
-  BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea,
+  BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo,
 } from './AuthForm';
 
 class AuthForm extends React.Component {
@@ -111,6 +112,10 @@ class AuthForm extends React.Component {
     }: any = this.state;
     return (
       <FormContainer>
+        <RespansiveLogo
+          src={require('../../../Assets/drawing/logo1.png')}
+          alt="logo"
+        />
         {
           passwordDifferent === '#c4354f' && (
             <span className="errorMessage">As Senhas Não Condizem</span>
