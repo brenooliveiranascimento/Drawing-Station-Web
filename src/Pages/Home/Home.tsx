@@ -1,8 +1,12 @@
 import React from 'react';
+import SideBarHome from '../../Components/HomeComponents/SideBarHome/SidebarHome';
+import './styles.css';
 
 function Home() {
   return (
-    <h1>Home Area</h1>
+    <section className="home_container">
+      <SideBarHome />
+    </section>
   );
 }
 

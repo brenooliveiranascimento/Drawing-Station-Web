@@ -1,0 +1,8 @@
+.home_container {
+  /* background: url("../../Assets/home.svg") fixed center; */
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  background-color: #1f2730;
+  width: 100%;
+}

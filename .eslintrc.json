@@ -38,6 +38,7 @@
         "arrow-body-style":"off",
         "no-console":"off",
         "no-alert": "off",
-        "func-names": "off"
+        "func-names": "off",
+        "consistent-return": "off"
       }
 }

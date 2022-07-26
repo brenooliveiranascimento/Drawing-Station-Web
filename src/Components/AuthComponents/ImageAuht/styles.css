@@ -1,5 +1,5 @@
 .auth_drawing_image {
-  width: 775px;
+  width: 776px;
   height: 600px;
   height: auto - 90px;
   background: url("../../../Assets/drawing/blueRose.jpg") ;
@@ -18,11 +18,19 @@
   color: #fff;
 }
 
-.auth_drawing_image span {
+.message {
   color: #aaa;
   z-index: 99;
   font-size: 20px;
   font-weight: 500;
+  margin-top: 10px;
+}
+
+.me_area {
+  font-size: 14px;
+  color: #aaa;
+  z-index: 99;
+  align-self: center;
 }
 
 .brightness {
@@ -53,4 +61,10 @@
   height: 250px;
   z-index: 99;
   margin-left: -20px ;
+}
+
+@media screen and (max-width: 920px){  
+  .auth_drawing_image {
+    display: none;
+  }
 }

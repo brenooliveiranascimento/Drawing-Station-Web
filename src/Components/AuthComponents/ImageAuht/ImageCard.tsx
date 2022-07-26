@@ -12,11 +12,10 @@ function ImageCard() {
           src={require('../../../Assets/drawing/logo1.png')}
           alt="awdjowpa"
         />
-        <h1>Levado voce ao próximo nivel</h1>
-        <span>Desenhos realistas com Lápis de cor</span>
-
+        <h1>Te Levando Para o Próximo Nível</h1>
+        <span className="message">Desenhos realistas com Lápis de cor</span>
       </section>
-
+      <span className="me_area">Desenvolvido e mantido por @Breno Nascimento</span>
     </section>
   );
 }

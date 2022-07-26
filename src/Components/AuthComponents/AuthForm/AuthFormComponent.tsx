@@ -1,15 +1,19 @@
+/* eslint-disable global-require */
+/* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-alert */
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-  FiLock, FiMail, FiUser, FiXCircle, FiCheckCircle,
+  FiLock, FiMail, FiUser, FiXCircle, FiCheckCircle, FiEye,
 } from 'react-icons/fi';
+import { FaEye, FaEyeSlash, FaGooglePlay } from 'react-icons/fa';
 import { createUserCount, signIn } from '../../../Redux/actions/authActions/authActions';
 import { emailVerification, passwordVerification } from '../../../Services/emailAndPasswordVerificaion/emailAndPasswordVerificaion';
 import {
   BtnRegister,
-  BtnSignIn, FormContainer, FormLabel, InputAuth,
+  BtnShow,
+  BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo,
 } from './AuthForm';
 
 class AuthForm extends React.Component {
@@ -23,21 +27,55 @@ class AuthForm extends React.Component {
       confirmPassword: '',
       isRegister: false,
       btnDisabled: true,
+      passwordDifferent: 'white',
+      showPassword: false,
     };
   }
 
   updateUserState = (name: any, value: any) => this.setState({ [name]: value }, () => {
+    const { isRegister }: any = this.state;
+    if (isRegister) return this.checkUserInfRegister();
     this.checkUserInf();
   });
 
-  changeMode = () => this.setState(({ isRegister }: any) => ({ isRegister: !isRegister }));
+  handlePassword = () => {
+    this.setState(({ showPassword }: any) => ({ showPassword: !showPassword }));
+  };
+
+  changeMode = () => {
+    this.setState(({ isRegister }: any) => ({
+      isRegister: !isRegister,
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      btnDisabled: true,
+      passwordDifferent: 'white',
+    }));
+  };
 
   checkUserInf = () => {
+    const { email, password }: any = this.state;
+    if (emailVerification(email) && passwordVerification(password)) {
+      this.setState({ btnDisabled: false });
+      return;
+    }
+    this.setState({ btnDisabled: true });
+  };
+
+  checkUserInfRegister = () => {
     const {
       email, password, name, confirmPassword,
     }: any = this.state;
-    if (emailVerification(email) && passwordVerification(password)) {
-      this.setState({ btnDisabled: false });
+
+    if (password !== confirmPassword) {
+      this.setState({ passwordDifferent: '#c4354f' });
+    } else {
+      this.setState({ passwordDifferent: 'white' });
+    }
+    if (emailVerification(email) && passwordVerification(password) && name.length
+      && passwordVerification(confirmPassword)) {
+      this.setState({ btnDisabled: false, passwordDifferent: 'white' });
       return;
     }
     this.setState({ btnDisabled: true });
@@ -64,15 +102,25 @@ class AuthForm extends React.Component {
       signInUser(this.state);
       return;
     }
-    alert('erro signIn');
+    alert('Erro ao logar');
   };
 
   render() {
     const {
-      name, email, password, confirmPassword, isRegister, btnDisabled,
+      name, email, password, confirmPassword, isRegister, btnDisabled, passwordDifferent,
+      showPassword,
     }: any = this.state;
     return (
       <FormContainer>
+        <RespansiveLogo
+          src={require('../../../Assets/drawing/logo1.png')}
+          alt="logo"
+        />
+        {
+          passwordDifferent === '#c4354f' && (
+            <span className="errorMessage">As Senhas Não Condizem</span>
+          )
+        }
         {
           isRegister && (
             <FormLabel htmlFor="name">
@@ -80,6 +128,7 @@ class AuthForm extends React.Component {
               <InputAuth
                 name="name"
                 placeholder="Name"
+                autoComplete="off"
                 value={name}
                 onChange={({ target }) => this.updateUserState(target.name, target.value)}
               />
@@ -90,6 +139,7 @@ class AuthForm extends React.Component {
           <FiMail className="Icons" />
           <InputAuth
             placeholder="Email"
+            autoComplete="off"
             name="email"
             value={email}
             onChange={({ target }) => this.updateUserState(target.name, target.value)}
@@ -98,19 +148,34 @@ class AuthForm extends React.Component {
         <FormLabel htmlFor="password">
           <FiLock className="Icons" />
           <InputAuth
-            type="password"
+            style={{ borderBottomColor: passwordDifferent, color: passwordDifferent }}
+            autoComplete="off"
+            type={showPassword ? 'text' : 'password'}
             name="password"
             placeholder="Password"
             value={password}
             onChange={({ target }) => this.updateUserState(target.name, target.value)}
           />
+          <BtnShow
+            onClick={this.handlePassword}
+          >
+            {
+              !showPassword ? (
+                <FaEye />
+              ) : (
+                <FaEyeSlash />
+              )
+            }
+          </BtnShow>
         </FormLabel>
         {
           isRegister && (
-            <FormLabel htmlFor="confirmPassword">
+            <FormLabel htmlFor="confirm Password">
               <FiLock className="Icons" />
               <InputAuth
-                type="password"
+                style={{ borderBottomColor: passwordDifferent, color: passwordDifferent }}
+                autoComplete="off"
+                type={showPassword ? 'text' : 'password'}
                 name="confirmPassword"
                 placeholder="confirmPassword"
                 value={confirmPassword}
@@ -120,17 +185,33 @@ class AuthForm extends React.Component {
           )
         }
         <BtnSignIn
-          color={btnDisabled ? 'rgba(124, 74, 124, 0.2) ' : 'rgba(124, 74, 124, 0.4)'}
+          color={btnDisabled ? 'rgba(124, 74, 124, 0.4) ' : 'rgba(124, 74, 124, 0.9)'}
           disabled={btnDisabled}
           onClick={() => (isRegister ? this.register() : this.signIn())}
         >
-          Signin
+          { !isRegister ? 'Entrar' : 'Registrar' }
         </BtnSignIn>
         <BtnRegister
           onClick={this.changeMode}
         >
-          Registrar
+          { !isRegister ? 'Registrar' : 'Já possuo conta' }
         </BtnRegister>
+        <BtnRegister>
+          Entrar Como Visitante
+        </BtnRegister>
+        <LinksArea>
+          <LinkBtn
+            target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.drawingstation"
+          >
+            <FaGooglePlay
+              size={20}
+            />
+            <span>
+              Baixe o App
+            </span>
+          </LinkBtn>
+        </LinksArea>
       </FormContainer>
     );
   }

@@ -1,17 +1,19 @@
 .LoadingContainer {
   display: flex;
   width: 100%;
-  background: url("../../Assets//newBlack.svg") fixed center;
+  height: 100vh;
+  background: url("../../Assets/layered-waves-haikei (40).svg") fixed center;
   background-size: cover;
-  height: 102.9vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
 .Logo {
-  width: 500px;
-  height: 300px;
-  margin-top: -50px;
-  margin-bottom: -80px;
+  width: 530px;
+  height: 350px;
+  margin-bottom: 400px;
+  margin-top: -100px;
+  align-self: center;
+  justify-self: center;
 }
