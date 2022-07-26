@@ -1,9 +1,0 @@
-.containerCard {
-  display: flex;
-  width: 100%;
-  background: url("../../../Assets/newBlack.svg") fixed center;
-  background-size: cover;
-  height: 102.9vh;
-  align-items: center;
-  justify-content: center;
-}

@@ -1,7 +1,8 @@
 .backgroundImage {
   display: flex;  
-  height: 97.1vh;
+  height: 100vh;
   width: 100%;
+  background: url("../../Assets/strong3-1.svg")fixed center;
   background-size: cover;
   align-items: center;
   justify-content: center;

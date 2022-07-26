@@ -12,7 +12,7 @@ function ImageCard() {
           src={require('../../../Assets/drawing/logo1.png')}
           alt="awdjowpa"
         />
-        <h1>Levado voce ao próximo nivel</h1>
+        <h1>Te Levando Para o Próximo Nível</h1>
         <span>Desenhos realistas com Lápis de cor</span>
 
       </section>

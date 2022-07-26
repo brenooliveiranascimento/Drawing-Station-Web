@@ -1,17 +1,16 @@
 .LoadingContainer {
   display: flex;
   width: 100%;
-  background: url("../../Assets//newBlack.svg") fixed center;
+  height: 100vh;
+  background: url("../../Assets/strong3-1.svg") fixed center;
   background-size: cover;
-  height: 102.9vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
 .Logo {
-  width: 500px;
-  height: 300px;
+  width: 400px;
+  height: 200px;
   margin-top: -50px;
-  margin-bottom: -80px;
 }

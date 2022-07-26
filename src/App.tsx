@@ -7,6 +7,7 @@ import { accessLocalStore } from './globalFuncions/localStoreControl';
 import { DRAWING_STATION_USER } from './__GlobalTypes/globalTypes';
 import { signedUser } from './Redux/actions/authActions/authActions';
 import Routes from './Routes/Routes';
+import './app.css';
 
 function App() {
   const dispatch = useDispatch();
