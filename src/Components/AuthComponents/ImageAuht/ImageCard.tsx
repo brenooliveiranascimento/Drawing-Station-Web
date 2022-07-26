@@ -13,10 +13,9 @@ function ImageCard() {
           alt="awdjowpa"
         />
         <h1>Te Levando Para o Próximo Nível</h1>
-        <span>Desenhos realistas com Lápis de cor</span>
-
+        <span className="message">Desenhos realistas com Lápis de cor</span>
       </section>
-
+      <span className="me_area">Desenvolvido e mantido por @Breno Nascimento</span>
     </section>
   );
 }

@@ -165,7 +165,7 @@ class AuthForm extends React.Component {
         </FormLabel>
         {
           isRegister && (
-            <FormLabel htmlFor="confirmPassword">
+            <FormLabel htmlFor="confirm Password">
               <FiLock className="Icons" />
               <InputAuth
                 style={{ borderBottomColor: passwordDifferent, color: passwordDifferent }}

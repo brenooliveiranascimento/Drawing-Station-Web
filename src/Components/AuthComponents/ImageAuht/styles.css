@@ -18,11 +18,19 @@
   color: #fff;
 }
 
-.auth_drawing_image span {
+.message {
   color: #aaa;
   z-index: 99;
   font-size: 20px;
   font-weight: 500;
+  margin-top: 10px;
+}
+
+.me_area {
+  font-size: 14px;
+  color: #aaa;
+  z-index: 99;
+  align-self: center;
 }
 
 .brightness {
