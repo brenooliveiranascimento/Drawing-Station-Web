@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-alert */
 import React from 'react';
@@ -26,16 +27,13 @@ class AuthForm extends React.Component {
       isRegister: false,
       btnDisabled: true,
       passwordDifferent: 'white',
-      showPassword: true,
+      showPassword: false,
     };
   }
 
   updateUserState = (name: any, value: any) => this.setState({ [name]: value }, () => {
     const { isRegister }: any = this.state;
-    if (isRegister) {
-      this.checkUserInfRegister();
-      return;
-    }
+    if (isRegister) return this.checkUserInfRegister();
     this.checkUserInf();
   });
 
@@ -56,9 +54,7 @@ class AuthForm extends React.Component {
   };
 
   checkUserInf = () => {
-    const {
-      email, password,
-    }: any = this.state;
+    const { email, password }: any = this.state;
     if (emailVerification(email) && passwordVerification(password)) {
       this.setState({ btnDisabled: false });
       return;
@@ -70,6 +66,7 @@ class AuthForm extends React.Component {
     const {
       email, password, name, confirmPassword,
     }: any = this.state;
+
     if (password !== confirmPassword) {
       this.setState({ passwordDifferent: 'red' });
     } else {
@@ -90,10 +87,6 @@ class AuthForm extends React.Component {
 
     const { registerUser }: any = this.props;
     if (!name.length && confirmPassword !== password) return;
-    if (password !== confirmPassword) {
-      this.setState({ passwordDifferent: 'red' });
-      return;
-    }
     if (emailVerification(email) && passwordVerification(password)) {
       registerUser(this.state);
       return;
@@ -108,7 +101,7 @@ class AuthForm extends React.Component {
       signInUser(this.state);
       return;
     }
-    alert('erro signIn');
+    alert('Erro ao logar');
   };
 
   render() {
@@ -162,7 +155,7 @@ class AuthForm extends React.Component {
             onClick={this.handlePassword}
           >
             {
-              showPassword ? (
+              !showPassword ? (
                 <FaEye />
               ) : (
                 <FaEyeSlash />
@@ -197,6 +190,9 @@ class AuthForm extends React.Component {
           onClick={this.changeMode}
         >
           { !isRegister ? 'Registrar' : 'Já possuo conta' }
+        </BtnRegister>
+        <BtnRegister>
+          Entrar Como Visitante
         </BtnRegister>
         <LinksArea>
           <LinkBtn
