@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import LoadingPage from '../Pages/LoadingPage/LoadingPage';
 import AppRoutes from './AppRoutes';
 import AuthRoutes from './AuthRoutes';
+import LoadingPage from '../Components/LoadingPage/LoadingPage';
 
-const LOADING_TIME = 1500;
+const LOADING_TIME = 2000;
 
 function Routes() {
   const isLoged = useSelector(({ userData }: any) => userData.loged);
