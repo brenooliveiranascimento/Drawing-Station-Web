@@ -12,7 +12,7 @@ function Modules() {
 
   useLayoutEffect(
     useCallback(() => {
-      setTimeout(() => setLoadingData(false), 1000);
+      setTimeout(() => setLoadingData(false), 3000);
     }, []),
   );
 

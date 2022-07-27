@@ -13,7 +13,7 @@ export const ModulesContain = styled.nav`
   -webkit-backdrop-filter: blur(15px);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   margin-top: 5rem;
-  border-radius: 30px;
+  border-radius: 0px;
 
   @media screen and(max-width: 1300px) {
     justify-content: center;
@@ -48,8 +48,8 @@ export const ModuleCard = styled.a`
   img {
     /* width: 290px; */
     width: 100%;
-    height: 220px;
-    margin-top: -90px;
+    height: 260px;
+    margin-top: -70px;
     filter: brightness(80%);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -103,6 +103,7 @@ export const ModuleCard = styled.a`
 
   @media screen and (max-width: 990px){
     width: 40%;
+    height: 220px;
   }
 `;
 
