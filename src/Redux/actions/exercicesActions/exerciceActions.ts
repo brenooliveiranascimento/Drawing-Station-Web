@@ -1,11 +1,12 @@
 import { Dispatch } from 'react';
 import { errorMessageConsole } from '../../../globalFuncions/errorMessage';
-import { getProductionData } from '../../../Services/versionControlFirebase/versionControlFirebase';
+import { getProductioModulesData, getProductionData } from '../../../Services/versionControlFirebase/versionControlFirebase';
 import { updateExerciceStore, updateExerciceStoreFail, updateExerciceStoreInit } from './genericActions';
 
 export const updateExerciceState = async (dispatch: Dispatch<any>) => {
   const fetchExerciceData = await getProductionData();
-  dispatch(updateExerciceStore(fetchExerciceData));
+  const fetchModulesData = await getProductioModulesData();
+  dispatch(updateExerciceStore(fetchExerciceData, fetchModulesData));
 };
 
 export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
