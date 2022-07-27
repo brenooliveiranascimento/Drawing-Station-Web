@@ -14,13 +14,15 @@ export const ModulesContain = styled.nav`
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   margin-top: 5rem;
   border-radius: 0px;
+  justify-content: flex-start;
+
 
   @media screen and(max-width: 1300px) {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   @media screen and (max-width: 990px){
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   @media screen and (max-width: 690px){
@@ -30,10 +32,11 @@ export const ModulesContain = styled.nav`
 `;
 
 export const ModuleCard = styled.a`
-  width: 320px;
-  height: 360px;
+  width: 290px;
+  height: 290px;
   align-self: flex-start;
   display: flex;
+  justify-self: flex-start;
   flex-direction: column;
   padding: 20px;
   border-top-left-radius: 20px;
@@ -48,7 +51,7 @@ export const ModuleCard = styled.a`
   img {
     /* width: 290px; */
     width: 100%;
-    height: 260px;
+    height: 190px;
     margin-top: -70px;
     filter: brightness(80%);
     border-top-left-radius: 20px;
@@ -61,19 +64,19 @@ export const ModuleCard = styled.a`
     left: 10px;
     font-size: 24px;
     font-weight: 800;
-    bottom: 80px;
+    bottom: 55px;
     left: 23px;
   }
 
   span {
     z-index: 99;
     position: absolute;
-    bottom: 60px;
+    bottom: 35px;
     left: 23px;
   }
 
   .Construct_mode {
-      bottom: 10px;
+      bottom: 5px;
       font-weight: 500;
       color: #fff;
       font-size: 20px;
