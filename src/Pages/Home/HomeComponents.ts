@@ -17,9 +17,8 @@ export const MainLimit = styled.section`
   width: 1140px;
   display: flex;
   flex-direction: column;
-  background-color: blue;
   height: auto;
-
+  margin-top: 4rem;
   @media screen and (max-width: 1300px){
     width: 80%;
     margin-top: 20px;

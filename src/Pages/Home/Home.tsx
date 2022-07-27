@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderContent } from '../../Components/HomeComponents/Header/headerComponents';
+import HeaderHome from '../../Components/HomeComponents/Header/HeaderHome';
 import SideBarHome from '../../Components/HomeComponents/SideBarHome/SidebarHome';
 import { MainContent, MainLimit } from './HomeComponents';
 import './styles.css';
@@ -10,7 +10,7 @@ function Home() {
       <SideBarHome />
       <MainContent>
         <MainLimit>
-          <HeaderContent />
+          <HeaderHome />
         </MainLimit>
       </MainContent>
     </section>
