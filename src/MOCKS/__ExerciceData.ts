@@ -1,4 +1,6 @@
 /* eslint-disable import/prefer-default-export */
+// import firebase from '../Services/firebase_connection';
+
 export const exerciceBaseData = {
   basics: [
     {
@@ -127,6 +129,20 @@ export const exerciceBaseData = {
       finished: false,
       descricao: 'Em Breve',
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FIMG_20220206_150724_464%20(1).jpg?alt=media&token=b0241de3-8964-4c31-aa17-10d7855301cc',
+    },
+  ],
+};
+
+export const modules = {
+  items: [
+    {
+      name: 'Praticando pintura', id: 'Pintura', details: 'Hora de por a mão na massa!!', conclude: true, image: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FcapaRosa.jpg?alt=media&token=bba4de36-afe5-4e6a-bbd7-9785fa1a3cb2',
+    },
+    {
+      name: 'Materiais', id: 'Materiais', details: 'Materiais recomendados', conclude: false, image: null,
+    },
+    {
+      name: 'Praticando esboço', id: 'Esboço', details: 'Vamos praticar um pouco de esboço?', conclude: false, image: null,
     },
   ],
 };

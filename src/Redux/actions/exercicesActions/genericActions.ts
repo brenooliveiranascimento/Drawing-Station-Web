@@ -1,8 +1,9 @@
 import { FETCH_EXERCICE_FAIL, FETCH_EXERCICE_INIT, FETCH_EXERCICE_SUCCESS } from '../../modules/exerciceData/exerciceDataTypes';
 
-export const updateExerciceStore = (exerciceData: any): any => ({
+export const updateExerciceStore = (exerciceData: any, modulesData: any): any => ({
   type: FETCH_EXERCICE_SUCCESS,
   payLoad: exerciceData,
+  modules: modulesData,
 });
 
 export const updateExerciceStoreInit = () => ({
