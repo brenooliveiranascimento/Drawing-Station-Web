@@ -6,7 +6,7 @@ export const ModulesContain = styled.nav`
   padding: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   background-color: rgba(33, 38, 48, 0.3);;
   backdrop-filter: blur(15px);
@@ -14,26 +14,34 @@ export const ModulesContain = styled.nav`
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   margin-top: 5rem;
   border-radius: 0px;
+  justify-content: flex-start;
+  padding-left: 6%;
+
 
   @media screen and(max-width: 1300px) {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   @media screen and (max-width: 990px){
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   @media screen and (max-width: 690px){
     justify-content: flex-start;
     padding: 0px;
   }
+
+  @media screen and (max-width: 514px){
+    justify-content: center;
+  }
 `;
 
 export const ModuleCard = styled.a`
-  width: 320px;
-  height: 360px;
+  width: 290px;
+  height: 320px;
   align-self: flex-start;
   display: flex;
+  justify-self: flex-start;
   flex-direction: column;
   padding: 20px;
   border-top-left-radius: 20px;
@@ -48,8 +56,8 @@ export const ModuleCard = styled.a`
   img {
     /* width: 290px; */
     width: 100%;
-    height: 260px;
-    margin-top: -70px;
+    height: 190px;
+    margin-top: -100px;
     filter: brightness(80%);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -61,19 +69,19 @@ export const ModuleCard = styled.a`
     left: 10px;
     font-size: 24px;
     font-weight: 800;
-    bottom: 80px;
+    bottom: 70px;
     left: 23px;
   }
 
   span {
     z-index: 99;
     position: absolute;
-    bottom: 60px;
+    bottom: 27px;
     left: 23px;
   }
 
   .Construct_mode {
-      bottom: 10px;
+      bottom: 2px;
       font-weight: 500;
       color: #fff;
       font-size: 20px;
@@ -105,6 +113,11 @@ export const ModuleCard = styled.a`
     width: 40%;
     height: 220px;
   }
+
+  @media screen and (max-width: 514px){
+    width: 80%;
+    height: 300px;
+  }
 `;
 
 export const ContentHeader = styled.section`
@@ -121,4 +134,13 @@ export const ContentHeader = styled.section`
     color: white;
     font-size: 29px;
   }
+`;
+
+export const SelectArea = styled.section`
+  width: 50%;
+  margin-top: 2rem;
+  margin-bottom: -2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 `;

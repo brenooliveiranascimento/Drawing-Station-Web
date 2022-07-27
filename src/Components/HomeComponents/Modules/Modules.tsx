@@ -3,7 +3,10 @@ import React, {
 } from 'react';
 import { useSelector } from 'react-redux';
 import Lottie from 'react-lottie';
-import { ContentHeader, ModuleCard, ModulesContain } from './modulesComponents';
+import { Link } from 'react-router-dom';
+import {
+  ContentHeader, ModuleCard, ModulesContain, SelectArea,
+} from './modulesComponents';
 import animationLoading from '../../../Assets/Lottie/lf30_editor_0ktlr6ix.json';
 
 function Modules() {
@@ -30,6 +33,15 @@ function Modules() {
     <section>
       <ContentHeader>
         <h1>Módulos</h1>
+        <SelectArea>
+          <Link to="/Modulos">
+            <span>Modulos</span>
+          </Link>
+
+          <Link to="/Blog">
+            <span>Blog</span>
+          </Link>
+        </SelectArea>
       </ContentHeader>
       <ModulesContain>
         {
