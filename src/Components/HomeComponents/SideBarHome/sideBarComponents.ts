@@ -20,6 +20,22 @@ export const SideContent = styled.aside`
   .Menu_Icon {
     margin-bottom: 50px;
   }
+
+  @media screen and (max-width: 1300px){
+    width: 100%;
+    height: 4rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .Side_bar_Icons {
+    margin-top: -30px;
+    }
+
+    .Menu_Icon {
+      margin-bottom: 0px;
+    }
+  }
 `;
 
 export const SideBarBtn = styled.button`
@@ -37,5 +53,9 @@ export const SideBarBtn = styled.button`
 
   :hover {
     color: #aaa;
+  }
+
+  @media screen and (max-width: 1300px){
+    font-size: 26px;
   }
 `;

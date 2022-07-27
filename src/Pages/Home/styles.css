@@ -6,3 +6,9 @@
   background-color: #1f2730;
   width: 100%;
 }
+
+@media screen and (max-width: 1300px){
+  .home_container {
+    flex-direction: column;
+  }
+}
