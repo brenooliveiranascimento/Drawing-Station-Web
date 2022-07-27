@@ -26,6 +26,13 @@ function Modules() {
             <span>
               {module.details}
             </span>
+            {
+              !module.conclude && (
+                <span className="Construct_mode">
+                  Em construção
+                </span>
+              )
+            }
           </ModuleCard>
         ))
       }

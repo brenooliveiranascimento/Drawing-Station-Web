@@ -22,6 +22,11 @@ export const ModulesContain = styled.nav`
   @media screen and (max-width: 990px){
     justify-content: center;
   }
+
+  @media screen and (max-width: 690px){
+    justify-content: flex-start;
+    padding: 0px;
+  }
 `;
 
 export const ModuleCard = styled.a`
@@ -67,6 +72,13 @@ export const ModuleCard = styled.a`
     left: 23px;
   }
 
+  .Construct_mode {
+      bottom: 10px;
+      font-weight: 500;
+      color: #fff;
+      font-size: 20px;
+    }
+
   @media screen and (max-width: 990px){
     width: 200px;
     height: 200px;
@@ -83,6 +95,14 @@ export const ModuleCard = styled.a`
     span {
       bottom: 30px;
     }
+
+    .Construct_mode {
+      bottom: 65px;
+    }
+  }
+
+  @media screen and (max-width: 990px){
+    width: 40%;
   }
 `;
 

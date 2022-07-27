@@ -1,6 +1,6 @@
 import { accessLocalStore } from '../../../globalFuncions/localStoreControl';
-import { exerciceBaseData, modules } from '../../../MOCKS/__ExerciceData';
-import { DRAWING_STATION_LOCAL_DATA } from '../../../__GlobalTypes/globalTypes';
+import { exerciceBaseData } from '../../../MOCKS/__ExerciceData';
+import { DRAWING_STATION_LOCAL_DATA_MODULES } from '../../../__GlobalTypes/globalTypes';
 import {
   FETCH_EXERCICE_FAIL, FETCH_EXERCICE_INIT, FETCH_EXERCICE_SUCCESS, SET_NOW_EXERCICE,
 } from './exerciceDataTypes';
@@ -8,7 +8,7 @@ import {
 const STATE_INITIAL_VALUE = {
   exercices: exerciceBaseData,
   nowExerciceData: {},
-  modules,
+  modules: accessLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES),
   loading: false,
   error: '',
 };
@@ -19,8 +19,6 @@ const ACTION_INITIAL_STATE = {
   error: '',
   modules: {},
 };
-
-console.log(accessLocalStore(DRAWING_STATION_LOCAL_DATA));
 
 function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE) {
   switch (action.type) {
