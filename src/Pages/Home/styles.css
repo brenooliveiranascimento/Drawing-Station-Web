@@ -15,6 +15,15 @@
   width: 100%;
 }
 
+.Logo_In_Home {
+  width: 200px;
+  height: 100px;
+  margin-top: -10px;
+  margin-left: 10px;
+  margin-right: -50px;
+
+}
+
 @media screen and (max-width: 1300px){
   .home_container {
     flex-direction: column;
@@ -23,5 +32,12 @@
 
   .Darkess {
     height: 1920px;
+  }
+
+  .Logo_In_Home {
+    align-self: center;
+    width: 250px;
+    height: 125px;
+    margin-bottom: -30px;
   }
 }

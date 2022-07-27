@@ -15,7 +15,7 @@ function Modules() {
 
   useLayoutEffect(
     useCallback(() => {
-      setTimeout(() => setLoadingData(false), 3000);
+      setTimeout(() => setLoadingData(false), 1000);
     }, []),
   );
 
@@ -59,7 +59,7 @@ function Modules() {
                   options={defaultOptionsLoading}
                 />
               ) : (
-                <>
+                <Link to={module.id}>
                   <h1 className="Name_Of_Module">{module.name}</h1>
                   {
               module.image && (
@@ -79,7 +79,7 @@ function Modules() {
                 </span>
               )
             }
-                </>
+                </Link>
               )
             }
 
