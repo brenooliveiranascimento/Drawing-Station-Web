@@ -1,15 +1,11 @@
 .home_container {
-  background: url("../../Assets/blackBlob2.svg");
+  background: url("../../Assets/blackBlob2.svg") fixed ;
   background-size: cover;
   display: flex;
   height: 100vh;
   width: 100%;
-}
 
-@media screen and (max-width: 1300px){
-  .home_container {
-    flex-direction: column;
-  }
+
 }
 
 .Darkess {
@@ -18,4 +14,15 @@
   background-color: rgba(0,0,0,0.7);
   height: 100vh;
   width: 100%;
+}
+
+@media screen and (max-width: 1300px){
+  .home_container {
+    flex-direction: column;
+    height: 300vh;
+  }
+
+  .Darkess {
+    height: 300vh;
+  }
 }
