@@ -12,6 +12,7 @@ export const SideContent = styled.aside`
   background-color: #08111c;;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  z-index: 99;
 
   .Side_bar_Icons {
     margin-top: 20px;

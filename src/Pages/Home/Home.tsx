@@ -8,6 +8,7 @@ function Home() {
   return (
     <section className="home_container">
       <SideBarHome />
+      <section className="Darkess" />
       <MainContent>
         <MainLimit>
           <HeaderHome />

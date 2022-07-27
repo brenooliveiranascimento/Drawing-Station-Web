@@ -7,6 +7,7 @@ export const MainContent = styled.section`
   flex-direction: column;
   align-self: center;
   align-items: center;
+  z-index: 99;
   h1 {
     color: #fff;
   }
