@@ -18,6 +18,10 @@ export const ModulesContain = styled.nav`
   @media screen and(max-width: 1300px) {
     justify-content: center;
   }
+
+  @media screen and (max-width: 990px){
+    justify-content: flex-start;
+  }
 `;
 
 export const ModuleCard = styled.a`
@@ -37,9 +41,10 @@ export const ModuleCard = styled.a`
   align-items: center;
   justify-content: center;
   img {
-    width: 290px;
-    height: 290px;
-    margin-top: -20px;
+    /* width: 290px; */
+    width: 100%;
+    height: 220px;
+    margin-top: -90px;
     filter: brightness(60%);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -49,9 +54,26 @@ export const ModuleCard = styled.a`
     position: absolute;
     z-index: 99;
     left: 10px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
     bottom: 80px;
-    left: 20px;
+    left: 23px;
+  }
+
+  span {
+    z-index: 99;
+    position: absolute;
+    bottom: 60px;
+    left: 23px;
+  }
+
+  @media screen and (max-width: 990px){
+    width: 200px;
+    height: 200px;
+
+    img {
+      height: 180px;
+      margin-top: 5px;
+    }
   }
 `;

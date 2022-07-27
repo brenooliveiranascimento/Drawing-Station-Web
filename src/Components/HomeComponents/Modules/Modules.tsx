@@ -19,6 +19,9 @@ function Modules() {
                 />
               )
             }
+            <span>
+              {module.details}
+            </span>
           </ModuleCard>
         ))
       }
