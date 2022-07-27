@@ -1,5 +1,5 @@
-import { getProductionData, getProductionVersion } from '../Services/versionControlFirebase/versionControlFirebase';
-import { DRAWING_STATION_LOCAL_DATA, DRAWING_STATION_LOCAL_VERSION } from '../__GlobalTypes/globalTypes';
+import { getProductioModulesData, getProductionData, getProductionVersion } from '../Services/versionControlFirebase/versionControlFirebase';
+import { DRAWING_STATION_LOCAL_DATA, DRAWING_STATION_LOCAL_DATA_MODULES, DRAWING_STATION_LOCAL_VERSION } from '../__GlobalTypes/globalTypes';
 import { accessLocalStore, setDataInLocalStore } from './localStoreControl';
 
 export const thereIsANewVersion = async () => {
@@ -12,4 +12,5 @@ export const thereIsANewVersion = async () => {
 export const updateVersion = async () => {
   setDataInLocalStore(DRAWING_STATION_LOCAL_VERSION, await getProductionVersion());
   setDataInLocalStore(DRAWING_STATION_LOCAL_DATA, await getProductionData());
+  setDataInLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES, await getProductioModulesData());
 };

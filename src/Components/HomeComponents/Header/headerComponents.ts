@@ -4,7 +4,7 @@ export const HeaderContent = styled.section`
   display: flex;
   width: 100%;
   height: 6rem;
-  background-color: rgba(255, 255, 255, 0.1000);;
+  background-color: rgba(33, 38, 48, 0.3);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;

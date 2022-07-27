@@ -16,7 +16,5 @@ export const getProductionData = async () => {
 export const getProductioModulesData = async () => {
   const productionData: any = await firebase.firestore()
     .collection('modules').doc('data').get();
-  alert('atualizou');
-  console.log(productionData.data().items);
   return productionData.data().items;
 };

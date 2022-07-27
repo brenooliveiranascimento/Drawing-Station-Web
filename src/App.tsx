@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { BrowserRouter, Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,6 +28,10 @@ function App() {
       dispatch(signedUser(fetchUserInf?.uid));
     }
   };
+
+  // const updateExercice = async () => {
+  //   dispatch(updateExerciceData());
+  // };
 
   useEffect(() => {
     checkVersion();
