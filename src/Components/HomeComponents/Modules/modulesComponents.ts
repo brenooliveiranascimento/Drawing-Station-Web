@@ -55,7 +55,7 @@ export const ModuleCard = styled.a`
   justify-content: center;
   img {
     /* width: 290px; */
-    width: 100%;
+    width: 250px;
     height: 190px;
     margin-top: -100px;
     filter: brightness(80%);
@@ -94,6 +94,7 @@ export const ModuleCard = styled.a`
     img {
       height: 180px;
       margin-top: 5px;
+      width: 190px;
     }
 
     .Name_Of_Module {
@@ -112,11 +113,20 @@ export const ModuleCard = styled.a`
   @media screen and (max-width: 990px){
     width: 40%;
     height: 220px;
+
+    img {
+      width: 140px;
+    }
+
   }
 
   @media screen and (max-width: 514px){
     width: 80%;
     height: 300px;
+
+    img {
+      width: 270px;
+    }
   }
 `;
 
@@ -142,5 +152,9 @@ export const SelectArea = styled.section`
   margin-bottom: -2.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+
+  span {
+    margin: 40px
+  }
 `;
