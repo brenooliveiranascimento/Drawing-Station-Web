@@ -1,10 +1,16 @@
 import React from 'react';
+import {
+  FiHelpCircle, FiHome, FiMenu, FiUser,
+} from 'react-icons/fi';
 import { SideContent } from './sideBarComponents';
 
 function SideBarHome() {
   return (
     <SideContent>
-      <h1>Side bar da Alegria</h1>
+      <FiMenu className="Side_bar_Icons Menu_Icon" />
+      <FiHome className="Side_bar_Icons" />
+      <FiUser className="Side_bar_Icons" />
+      <FiHelpCircle className="Side_bar_Icons" />
     </SideContent>
   );
 }
