@@ -50,7 +50,7 @@ export const ModuleCard = styled.a`
     width: 100%;
     height: 220px;
     margin-top: -90px;
-    filter: brightness(60%);
+    filter: brightness(80%);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     object-fit: cover;
