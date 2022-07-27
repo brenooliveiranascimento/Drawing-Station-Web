@@ -133,19 +133,17 @@ export const exerciceBaseData = {
   ],
 };
 
-export const modules = {
-  items: [
-    {
-      name: 'Praticando pintura', id: 'Pintura', details: 'Hora de por a mão na massa!!', conclude: true, image: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FcapaRosa.jpg?alt=media&token=bba4de36-afe5-4e6a-bbd7-9785fa1a3cb2',
-    },
-    {
-      name: 'Materiais', id: 'Materiais', details: 'Materiais recomendados', conclude: false, image: null,
-    },
-    {
-      name: 'Praticando esboço', id: 'Esboço', details: 'Vamos praticar um pouco de esboço?', conclude: false, image: null,
-    },
-  ],
-};
+export const modules = [
+  {
+    name: 'Praticando pintura', id: 'Pintura', details: 'Hora de por a mão na massa!!', conclude: true, image: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FcapaRosa.jpg?alt=media&token=bba4de36-afe5-4e6a-bbd7-9785fa1a3cb2',
+  },
+  {
+    name: 'Materiais', id: 'Materiais', details: 'Materiais recomendados', conclude: false, image: null,
+  },
+  {
+    name: 'Praticando esboço', id: 'Esboço', details: 'Vamos praticar um pouco de esboço?', conclude: false, image: null,
+  },
+];
 
 export const userDataBase = (email: any, uid: any, name: any): any => ({
   email,

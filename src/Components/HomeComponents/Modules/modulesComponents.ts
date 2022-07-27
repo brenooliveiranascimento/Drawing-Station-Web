@@ -8,7 +8,7 @@ export const ModulesContain = styled.nav`
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.1000);;
+  background-color: rgba(33, 38, 48, 0.3);;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
@@ -20,7 +20,7 @@ export const ModulesContain = styled.nav`
   }
 
   @media screen and (max-width: 990px){
-    justify-content: flex-start;
+    justify-content: center;
   }
 `;
 
@@ -75,5 +75,29 @@ export const ModuleCard = styled.a`
       height: 180px;
       margin-top: 5px;
     }
+
+    .Name_Of_Module {
+      top: 10px;
+    }
+
+    span {
+      bottom: 30px;
+    }
+  }
+`;
+
+export const ContentHeader = styled.section`
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 4rem;
+  z-index: 99;
+  flex-direction: column;
+  h1 {
+    color: white;
+    font-size: 29px;
   }
 `;

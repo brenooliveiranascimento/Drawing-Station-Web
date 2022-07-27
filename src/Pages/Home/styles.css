@@ -1,5 +1,6 @@
 .home_container {
-  background: url("../../Assets/blackBlob2.svg") fixed ;
+  /* background: url("../../Assets/blackBlob2.svg") fixed ; */
+  background-color: rgba(33, 38, 48);
   background-size: cover;
   display: flex;
   height: 100vh;
@@ -11,7 +12,6 @@
 .Darkess {
   z-index: 0;
   position: absolute;
-  background-color: rgba(0,0,0,0.7);
   height: 100vh;
   width: 100%;
 }

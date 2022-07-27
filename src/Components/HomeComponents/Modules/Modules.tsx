@@ -1,13 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { ModuleCard, ModulesContain } from './modulesComponents';
+import { ContentHeader, ModuleCard, ModulesContain } from './modulesComponents';
 
 function Modules() {
-  const modulesData = useSelector(({ exerciceData }: any) => exerciceData.modules.items);
+  const modulesData = useSelector(({ exerciceData }: any) => exerciceData.modules);
   console.log(modulesData);
   return (
-    <ModulesContain>
-      {
+    <section>
+      <ContentHeader>
+        <h1>Módulos</h1>
+      </ContentHeader>
+      <ModulesContain>
+        {
         modulesData.map((module: any) => (
           <ModuleCard key={module.name}>
             <h1 className="Name_Of_Module">{module.name}</h1>
@@ -25,7 +29,8 @@ function Modules() {
           </ModuleCard>
         ))
       }
-    </ModulesContain>
+      </ModulesContain>
+    </section>
   );
 }
 
