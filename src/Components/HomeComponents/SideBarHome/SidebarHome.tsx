@@ -2,15 +2,23 @@ import React from 'react';
 import {
   FiHelpCircle, FiHome, FiMenu, FiUser,
 } from 'react-icons/fi';
-import { SideContent } from './sideBarComponents';
+import { SideBarBtn, SideContent } from './sideBarComponents';
 
 function SideBarHome() {
   return (
     <SideContent>
-      <FiMenu className="Side_bar_Icons Menu_Icon" />
-      <FiHome className="Side_bar_Icons" />
-      <FiUser className="Side_bar_Icons" />
-      <FiHelpCircle className="Side_bar_Icons" />
+      <SideBarBtn>
+        <FiMenu className="Side_bar_Icons Menu_Icon" />
+      </SideBarBtn>
+      <SideBarBtn>
+        <FiHome className="Side_bar_Icons" />
+      </SideBarBtn>
+      <SideBarBtn>
+        <FiUser className="Side_bar_Icons" />
+      </SideBarBtn>
+      <SideBarBtn>
+        <FiHelpCircle className="Side_bar_Icons" />
+      </SideBarBtn>
     </SideContent>
   );
 }
