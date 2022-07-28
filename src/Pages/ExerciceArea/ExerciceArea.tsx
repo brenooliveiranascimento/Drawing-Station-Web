@@ -1,10 +1,13 @@
 import React from 'react';
+import ExerciceSide from '../../Components/ExerciceComponents/ExerciceSide';
+import { ExerciceContainer } from './ExerciceComponents';
 
 function ExerciceArea() {
   return (
-    <section>
-      <h1>tatakae</h1>
-    </section>
+    <ExerciceContainer>
+      <h1>dawidjwaiodjawdwaojdkawopdjkwaopkdpwaokdwapokdopwakdwpoawaiodjo</h1>
+      <ExerciceSide />
+    </ExerciceContainer>
   );
 }
 
