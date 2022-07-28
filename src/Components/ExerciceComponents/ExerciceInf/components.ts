@@ -14,8 +14,9 @@ export const ExerciceInfContainer = styled.article`
     color: #12843e;
     align-self: center;
     justify-self: center;
-    margin-bottom: -2px;
-    margin-right: 2px;
+    margin-bottom: -4px;
+    font-size: 25px;
+    margin-left: 10px;
   }
 
   .check_icon_no_check {

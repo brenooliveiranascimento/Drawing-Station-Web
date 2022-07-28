@@ -10,6 +10,7 @@ import {
 function ExerciceSide() {
   const exercicesData = useSelector(({ exerciceData }: any) => exerciceData.exercices);
   const userProgressData = useSelector(({ exerciceProgress }: any) => exerciceProgress);
+  console.log(exercicesData);
   const dificultys = Object.keys(exercicesData);
   const [nowModule, setNowModule] = useState('');
 
@@ -38,29 +39,32 @@ function ExerciceSide() {
               nowModule === dificulty && (
                 <Exercicelist>
                   {
-                    exercicesData[dificulty].map((exercice: any, exerciceIndex:any) => (
-                      <ExerciceListItem key={exercice.id}>
-                        <button
-                          type="button"
-                        >
-                          <span>
-                            {
-                              userProgressData[dificulty].exercice ? (
-                                <AiFillCheckCircle className="check_icon_check" />
-                              ) : (
-                                <AiFillCloseCircle className="check_icon_no_check" />
-                              )
-                            }
-                            {exerciceIndex + 1}
-                            #
-                            {' '}
-                            {exercice.name}
-                            {' '}
-                            {exercice.description}
-                          </span>
-                        </button>
-                      </ExerciceListItem>
-                    ))
+                    exercicesData[dificulty].map((exercice: any, exerciceIndex:any) => {
+                      console.log(userProgressData[dificulty][exercice.name]);
+                      return (
+                        <ExerciceListItem key={exercice.id}>
+                          <button
+                            type="button"
+                          >
+                            <span>
+                              {
+                                userProgressData[dificulty][exercice.name] ? (
+                                  <AiFillCheckCircle className="check_icon_check" />
+                                ) : (
+                                  <AiFillCloseCircle className="check_icon_no_check" />
+                                )
+                              }
+                              {exerciceIndex + 1}
+                              #
+                              {' '}
+                              {exercice.name}
+                              {' '}
+                              {exercice.description}
+                            </span>
+                          </button>
+                        </ExerciceListItem>
+                      );
+                    })
                   }
                 </Exercicelist>
               )

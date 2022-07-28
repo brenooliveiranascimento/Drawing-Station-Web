@@ -11,7 +11,7 @@ export const exerciceBaseData = {
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2Fdegrade.jpg?alt=media&token=fadab5e1-d5a9-45fb-8d4c-50d7eec214ed',
       video: 'DXqcoe8bSKM',
       multiExample: true,
-      id: 'degA',
+      id: 'Degrade',
       colors: {
         red: [
           { cor: 'Preto' },
@@ -104,6 +104,7 @@ export const exerciceBaseData = {
       name: 'Cabelo curto',
       dificulty: 'intermediary',
       finished: false,
+      id: 'shortHair',
       descricao: 'cabelo castanho curto',
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FCapaCavelo.png?alt=media&token=82f72d1f-d81a-45fe-9bda-eb4b9cc1a265',
     },
@@ -111,6 +112,7 @@ export const exerciceBaseData = {
       name: 'Rosa Azul',
       dificulty: 'intermediary',
       finished: false,
+      id: 'blueRose',
       descricao: 'Rosa Azul com fundo',
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/rosaicon.jpg?alt=media&token=7d2640a3-624a-4c73-96d3-12de0d478e5d',
     },
@@ -119,6 +121,7 @@ export const exerciceBaseData = {
     {
       name: 'Terry Crews',
       dificulty: 'advanced',
+      id: 'Terry',
       finished: false,
       descricao: 'Em Breve',
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FIMG_20220206_140140_972.jpg?alt=media&token=23432fec-dbc8-462f-8120-e3770f26b908',
@@ -126,6 +129,7 @@ export const exerciceBaseData = {
     {
       name: 'Hulk Buster',
       dificulty: 'advanced',
+      id: 'HulkBuster',
       finished: false,
       descricao: 'Em Breve',
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FIMG_20220206_150724_464%20(1).jpg?alt=media&token=b0241de3-8964-4c31-aa17-10d7855301cc',
@@ -151,10 +155,10 @@ export const userDataBase = (email: any, uid: any, name: any): any => ({
   name,
   progress: {
     basics: {
-      degrade: false,
-      ball: false,
-      petal: false,
-      rose: false,
+      Degrade: false,
+      Bola: false,
+      Pétala: false,
+      Rosa: false,
     },
     intermediary: {
       shortHair: false,
