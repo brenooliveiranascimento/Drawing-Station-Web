@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
+import { AiFillCheckCircle, AiFillCloseCircle, AiOutlineArrowRight } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
-import { ExerciceInfContainer } from './components';
+import {
+  BtnAreas, ExerciceInfContainer, MaterialBtn, NextBtn,
+} from './components';
 
 function ExerciceInf() {
   const userprogress = useSelector(({ exerciceProgress }: any) => exerciceProgress);
@@ -10,14 +12,28 @@ function ExerciceInf() {
 
   return (
     <ExerciceInfContainer>
-      <h1>{nowExercice.name}</h1>
       {
         userprogress[nowExercice.dificulty][nowExercice.name] ? (
-          <AiFillCheckCircle className="check_icon_check" />
+          <h1>
+            {nowExercice.name}
+            <AiFillCheckCircle className="check_icon_check" />
+          </h1>
         ) : (
-          <AiFillCloseCircle className="check_icon_no_check" />
+          <h1>
+            {nowExercice.name}
+            <AiFillCloseCircle className="check_icon_no_check" />
+          </h1>
         )
       }
+      <BtnAreas>
+        <MaterialBtn>
+          <span>Matériais</span>
+        </MaterialBtn>
+        <NextBtn>
+          <span>Próxima aula</span>
+          <AiOutlineArrowRight className="change_exercice" />
+        </NextBtn>
+      </BtnAreas>
     </ExerciceInfContainer>
   );
 }

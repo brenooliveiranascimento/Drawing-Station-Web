@@ -22,15 +22,6 @@ export const ModulesContain = styled.nav`
     justify-content: flex-start;
   }
 
-  @media screen and (max-width: 990px){
-    justify-content: flex-start;
-  }
-
-  @media screen and (max-width: 690px){
-    justify-content: flex-start;
-    padding: 0px;
-  }
-
   @media screen and (max-width: 514px){
     justify-content: center;
   }

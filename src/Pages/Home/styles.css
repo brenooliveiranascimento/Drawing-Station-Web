@@ -27,11 +27,11 @@
 @media screen and (max-width: 1300px){
   .home_container {
     flex-direction: column;
-    height: 1920px;
+    height: auto;
   }
 
   .Darkess {
-    height: 1920px;
+    height: auto;
   }
 
   .Logo_In_Home {
