@@ -39,6 +39,7 @@
         "no-console":"off",
         "no-alert": "off",
         "func-names": "off",
-        "consistent-return": "off"
+        "consistent-return": "off",
+        "no-unused-vars": "off"
       }
 }
