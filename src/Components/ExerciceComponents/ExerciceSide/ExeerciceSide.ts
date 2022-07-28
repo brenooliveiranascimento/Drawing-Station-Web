@@ -7,7 +7,7 @@ export const ContentContainer = styled.section`
 `;
 
 export const SideContent = styled.aside`
-  width: 340px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   padding: 10px;

@@ -7,7 +7,9 @@ import {
 
 const STATE_INITIAL_VALUE = {
   exercices: exerciceBaseData,
-  nowExerciceData: {},
+  nowExerciceData: {
+    ...exerciceBaseData.basics[0],
+  },
   modules: accessLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES),
   loading: false,
   error: '',

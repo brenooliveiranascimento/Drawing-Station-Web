@@ -1,11 +1,12 @@
 import React from 'react';
-import ExerciceSide from '../../Components/ExerciceComponents/ExerciceSide';
+import ExerciceSide from '../../Components/ExerciceComponents/ExerciceSide/ExerciceSide';
+import VideoPlayer from '../../Components/ExerciceComponents/Video/VideoPlayer';
 import { ExerciceContainer } from './ExerciceComponents';
 
 function ExerciceArea() {
   return (
     <ExerciceContainer>
-      <h1>dawidjwaiodjawdwaojdkawopdjkwaopkdpwaokdwapokdopwakdwpoawaiodjo</h1>
+      <VideoPlayer />
       <ExerciceSide />
     </ExerciceContainer>
   );
