@@ -1,0 +1,14 @@
+.VideoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-right: 10px;
+}
+
+.Video {
+  height: 70%;
+  width: 100%;
+  margin-top: -40px;
+  border-radius: 6px;
+}
