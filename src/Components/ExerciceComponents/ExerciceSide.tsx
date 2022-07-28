@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
 import {
   ContentContainer,
   Divise, Exercicelist, ExerciceListItem, ModulesNameContent, SideContent, SideSearch,
@@ -8,6 +9,7 @@ import {
 
 function ExerciceSide() {
   const exercicesData = useSelector(({ exerciceData }: any) => exerciceData.exercices);
+  const userProgressData = useSelector(({ exerciceProgress }: any) => exerciceProgress);
   const dificultys = Object.keys(exercicesData);
   const [nowModule, setNowModule] = useState('');
 
@@ -26,7 +28,7 @@ function ExerciceSide() {
                 <strong>
                   Módulo
                   {' '}
-                  {index}
+                  {index + 1}
                   :
                   {' '}
                 </strong>
@@ -43,7 +45,14 @@ function ExerciceSide() {
                           type="button"
                         >
                           <span>
-                            {exerciceIndex}
+                            {
+                              userProgressData[dificulty].exercice ? (
+                                <AiFillCheckCircle className="check_icon_check" />
+                              ) : (
+                                <AiFillCloseCircle className="check_icon_no_check" />
+                              )
+                            }
+                            {exerciceIndex + 1}
                             #
                             {' '}
                             {exercice.name}

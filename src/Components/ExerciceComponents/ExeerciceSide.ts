@@ -58,6 +58,22 @@ export const ExerciceListItem = styled.li`
   display: flex;
   margin-top: 15px;
 
+  .check_icon_check {
+    color: #12843e;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: -2px;
+    margin-right: 2px;
+  }
+
+  .check_icon_no_check {
+    color: #ff4242;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: -2px;
+    margin-right: 2px;
+  }
+
   span {
     font-size: 16px;
   }
