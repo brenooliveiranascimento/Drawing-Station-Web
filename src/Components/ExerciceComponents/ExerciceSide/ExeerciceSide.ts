@@ -56,7 +56,13 @@ export const Exercicelist = styled.ul`
 
 export const ExerciceListItem = styled.li`
   display: flex;
-  margin-top: 15px;
+  margin-top: 10px;
+  background-color: ${({ color }: any) => color};
+  border-radius: 3px;
+  padding: 10px;
+  width: auto;
+  align-items: center;
+  justify-content: flex-start;
 
   .check_icon_check {
     color: #12843e;

@@ -3,12 +3,21 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-right: 10px;
+  padding-right: 15px;
+  flex-direction: column;
+}
+
+.Video_general_containet {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .Video {
-  height: 70%;
+  height: 550px;
   width: 100%;
-  margin-top: -40px;
+  margin-top: 40px;
   border-radius: 6px;
 }
