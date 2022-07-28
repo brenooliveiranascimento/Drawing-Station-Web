@@ -7,8 +7,8 @@ export const ExerciceInfContainer = styled.article`
   align-items: center;
   justify-content: space-between;
   h1 {
-    font-size: 30px;
-    margin-top: 10px;
+    font-size: 25px;
+    margin-top: 20px;
     margin-bottom: 10px;
   }
 

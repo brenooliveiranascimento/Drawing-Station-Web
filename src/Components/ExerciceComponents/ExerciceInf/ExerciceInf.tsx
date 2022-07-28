@@ -16,11 +16,15 @@ function ExerciceInf() {
         userprogress[nowExercice.dificulty][nowExercice.name] ? (
           <h1>
             {nowExercice.name}
+            {' '}
+            {nowExercice.description}
             <AiFillCheckCircle className="check_icon_check" />
           </h1>
         ) : (
           <h1>
             {nowExercice.name}
+            {' '}
+            {nowExercice.description}
             <AiFillCloseCircle className="check_icon_no_check" />
           </h1>
         )
