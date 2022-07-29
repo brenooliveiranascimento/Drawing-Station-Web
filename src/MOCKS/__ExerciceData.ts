@@ -63,7 +63,7 @@ export const exerciceBaseData = {
       finished: true,
       description: 'Praticando um pouco mais',
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FcapaPetalas.jpg?alt=media&token=24064f35-3bdc-41c1-b93c-a22b10bfbcad',
-      video: 'yZ7qqDUzMFc&t=409s',
+      video: 'yZ7qqDUzMFc',
       multiExample: false,
       id: 'petal',
       colors: [
