@@ -12,13 +12,17 @@ export const ExerciceInfContainer = styled.article`
     margin-bottom: 10px;
   }
 
+  .btn_conclude {
+    background-color: #08111C;
+  }
+
   .check_icon_check {
     color: #12843e;
     align-self: center;
     justify-self: center;
-    margin-bottom: -4px;
     font-size: 25px;
     margin-left: 10px;
+    margin-bottom: -6px;
   }
 
   .check_icon_no_check {
@@ -28,6 +32,7 @@ export const ExerciceInfContainer = styled.article`
     margin-bottom: -4px;
     font-size: 25px;
     margin-left: 10px;
+    margin-bottom: -6px;
   }
 `;
 

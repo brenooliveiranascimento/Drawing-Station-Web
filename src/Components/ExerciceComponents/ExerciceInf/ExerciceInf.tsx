@@ -14,19 +14,29 @@ function ExerciceInf() {
     <ExerciceInfContainer>
       {
         userprogress[nowExercice.dificulty][nowExercice.name] ? (
-          <h1>
-            {nowExercice.name}
-            {' '}
-            {nowExercice.description}
-            <AiFillCheckCircle className="check_icon_check" />
-          </h1>
+          <button
+            className="btn_conclude"
+            type="button"
+          >
+            <h1>
+              {nowExercice.name}
+              {' '}
+              {nowExercice.description}
+              <AiFillCheckCircle className="check_icon_check" />
+            </h1>
+          </button>
         ) : (
-          <h1>
-            {nowExercice.name}
-            {' '}
-            {nowExercice.description}
-            <AiFillCloseCircle className="check_icon_no_check" />
-          </h1>
+          <button
+            className="btn_conclude"
+            type="button"
+          >
+            <h1>
+              {nowExercice.name}
+              {' '}
+              {nowExercice.description}
+              <AiFillCloseCircle className="check_icon_no_check" />
+            </h1>
+          </button>
         )
       }
       <BtnAreas>
