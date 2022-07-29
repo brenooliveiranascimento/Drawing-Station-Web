@@ -6,7 +6,7 @@ const updateStoreProfress = (userData: string, dificulty: any, exercice: string)
   exercice,
 });
 
-export const updateuserProgress = (): any => {
+export const updateuserProgress = (name: string, dificulty: string): any => {
   return async (dispatch: Dispatch<any>, { userData, exerciceProgress }: any) => {
 
   };
