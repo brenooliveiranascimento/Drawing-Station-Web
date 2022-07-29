@@ -1,6 +1,6 @@
 import { FETCH_PROGRESS, PROGRESS_DECREMENT, PROGRESS_INCREMENT } from './exerciceProgressTypes';
 
-const STATE_INITIAL_VALUE = {
+const STATE_INITIAL_VALUE: any = {
   basics: {
     degrade: false,
     ball: false,
@@ -42,6 +42,7 @@ function exerciceProgress(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_S
       return {
         ...state,
         [action.dificulty]: {
+          ...state[action.dificulty],
           [action.exercice]: true,
         },
         all: state.all + 1,
@@ -50,6 +51,7 @@ function exerciceProgress(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_S
       return {
         ...state,
         [action.dificulty]: {
+          ...state[action.dificulty],
           [action.exercice]: false,
         },
         all: state.all - 1,

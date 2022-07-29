@@ -159,14 +159,17 @@ export const userDataBase = (email: any, uid: any, name: any): any => ({
       Bola: false,
       Pétala: false,
       Rosa: false,
+      concldes: 0,
     },
     intermediary: {
       shortHair: false,
       blueRose: false,
+      concldes: 0,
     },
     advanced: {
       TerryCrews: false,
       HulkBuster: false,
+      concldes: 0,
     },
     all: 0,
   },

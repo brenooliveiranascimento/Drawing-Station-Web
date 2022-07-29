@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { AiFillCheckCircle, AiFillCloseCircle, AiOutlineArrowRight } from 'react-icons/ai';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateuserProgress } from '../../../Redux/actions/updateProgressActions/updateProgressActions';
 import {
   BtnAreas, ExerciceInfContainer, MaterialBtn, NextBtn,
 } from './components';
 
 function ExerciceInf() {
+  const dispatch = useDispatch();
   const userprogress = useSelector(({ exerciceProgress }: any) => exerciceProgress);
   const nowExercice = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
 
@@ -15,6 +17,7 @@ function ExerciceInf() {
       {
         userprogress[nowExercice.dificulty][nowExercice.name] ? (
           <button
+            onClick={() => dispatch(updateuserProgress(nowExercice.name, nowExercice.dificulty))}
             className="btn_conclude"
             type="button"
           >
@@ -27,6 +30,7 @@ function ExerciceInf() {
           </button>
         ) : (
           <button
+            onClick={() => dispatch(updateuserProgress(nowExercice.name, nowExercice.dificulty))}
             className="btn_conclude"
             type="button"
           >
