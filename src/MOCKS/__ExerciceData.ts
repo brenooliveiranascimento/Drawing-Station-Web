@@ -63,7 +63,7 @@ export const exerciceBaseData = {
       finished: true,
       description: 'Praticando um pouco mais',
       url: 'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/capas%2FcapaPetalas.jpg?alt=media&token=24064f35-3bdc-41c1-b93c-a22b10bfbcad',
-      video: 'yZ7qqDUzMFc&t=409s',
+      video: 'yZ7qqDUzMFc',
       multiExample: false,
       id: 'petal',
       colors: [
@@ -159,14 +159,17 @@ export const userDataBase = (email: any, uid: any, name: any): any => ({
       Bola: false,
       Pétala: false,
       Rosa: false,
+      concldes: 0,
     },
     intermediary: {
       shortHair: false,
       blueRose: false,
+      concldes: 0,
     },
     advanced: {
       TerryCrews: false,
       HulkBuster: false,
+      concldes: 0,
     },
     all: 0,
   },

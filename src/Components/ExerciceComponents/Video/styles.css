@@ -21,3 +21,8 @@
   margin-top: 40px;
   border-radius: 6px;
 }
+
+.Video h1 {
+  align-self: center;
+  justify-self: center;
+}

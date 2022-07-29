@@ -4,6 +4,7 @@ export const ContentContainer = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
+  transition: all 1s;
 `;
 
 export const SideContent = styled.aside`
@@ -21,6 +22,8 @@ export const SideSearch = styled.input`
   width: 100%;
   border-radius: 3px;
   padding: 5px;
+  height: 40px;
+  font-size: 18px;
   color: #aaa;
   text-decoration: none;
 `;

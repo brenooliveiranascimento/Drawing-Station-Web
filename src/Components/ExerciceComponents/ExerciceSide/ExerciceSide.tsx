@@ -17,16 +17,16 @@ function ExerciceSide() {
   console.log(exercicesData);
   const dificultys = Object.keys(exercicesData);
   const [nowModule, setNowModule] = useState('');
-  const [nowExercice, setNowExercice] = useState('');
 
   const updateExercice = (exercice: any) => {
-    setNowExercice(exercice.name);
     dispatch(changeNowExercice(exercice));
   };
 
   return (
     <SideContent>
-      <SideSearch />
+      <SideSearch
+        placeholder="Buscar Exercicio"
+      />
       <Divise />
       {
         dificultys.map((dificulty, index) => (
@@ -53,7 +53,7 @@ function ExerciceSide() {
                       console.log(userProgressData[dificulty][exercice.name]);
                       return (
                         <ExerciceListItem
-                          color={nowExerciceState.name === exercice.name ? '#08111C' : '#212630'}
+                          color={nowExerciceState.name === exercice.name ? '#000' : '#212630'}
                           key={exercice.id}
                         >
                           <button
