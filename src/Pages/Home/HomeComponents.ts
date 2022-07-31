@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const MainContent = styled.section`
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: auto;
   flex-direction: column;
   align-self: center;
   align-items: center;
   z-index: 99;
+  background-color: rgba(33, 38, 48);
   h1 {
     color: #fff;
   }
