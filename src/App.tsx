@@ -29,10 +29,6 @@ function App() {
     }
   };
 
-  // const updateExercice = async () => {
-  //   dispatch(updateExerciceData());
-  // };
-
   useEffect(() => {
     checkVersion();
     checkIsLoged();

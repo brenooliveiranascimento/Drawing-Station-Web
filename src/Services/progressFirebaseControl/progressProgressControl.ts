@@ -20,13 +20,11 @@ export const updateUserProgressInDatabase = async (uid: any, exercice: string, d
     userData.progress[dificulty][exercice] = false;
     userData.progress.all = allExerciceConclude - 1;
     userData.progress[dificulty].concldes = exerciceConcludes - 1;
-    console.log(userData);
     updateDataBase(uid, userData);
     return;
   }
   userData.progress[dificulty][exercice] = true;
   userData.progress.all = allExerciceConclude + 1;
   userData.progress[dificulty].concldes = exerciceConcludes + 1;
-  console.log(userData);
   updateDataBase(uid, userData);
 };

@@ -28,7 +28,6 @@ function Modules() {
     },
   };
 
-  console.log(modulesData);
   return (
     <section>
       <ContentHeader>
