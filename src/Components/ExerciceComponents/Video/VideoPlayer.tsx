@@ -12,7 +12,6 @@ import './styles.css';
 function VideoPlayer() {
   const nowVideo = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
   const videoId = nowVideo.video;
-  console.log(typeof nowVideo.url);
   return (
     <section className="Video_general_containet">
       <ExerciceHeader />

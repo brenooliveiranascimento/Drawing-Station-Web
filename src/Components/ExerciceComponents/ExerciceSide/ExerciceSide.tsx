@@ -14,9 +14,8 @@ function ExerciceSide() {
   const nowExerciceState = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
 
   const dispatch = useDispatch();
-  console.log(exercicesData);
   const dificultys = Object.keys(exercicesData);
-  const [nowModule, setNowModule] = useState('');
+  const [nowModule, setNowModule] = useState('basics');
 
   const updateExercice = (exercice: any) => {
     dispatch(changeNowExercice(exercice));
