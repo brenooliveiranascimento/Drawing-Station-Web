@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import React from 'react';
 import {
   FiHelpCircle, FiHome, FiMenu, FiUser,
@@ -8,6 +9,7 @@ import { SideContainer } from './sideBarComponents';
 function SideBarHome() {
   return (
     <SideContainer>
+      <img alt="logo" src={require('../../../Assets/drawing/logo1.png')} />
       <Link className="Link" to="/">
         <FiMenu className="icon_side" />
         <span>Home</span>
