@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const MainContent = styled.section`
   display: flex;
-  width: 100%;
-  height: auto;
+  width: 70%;
+  height: 100%;
   flex-direction: column;
   align-self: center;
   align-items: center;
-  z-index: 99;
-  /* background-color: rgba(33, 38, 48); */
+  margin-left: 200px;
+  z-index: 1;
   h1 {
     color: #fff;
   }

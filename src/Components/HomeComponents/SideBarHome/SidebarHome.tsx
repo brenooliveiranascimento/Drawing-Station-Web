@@ -2,24 +2,29 @@ import React from 'react';
 import {
   FiHelpCircle, FiHome, FiMenu, FiUser,
 } from 'react-icons/fi';
-import { SideBarBtn, SideContent } from './sideBarComponents';
+import { Link } from 'react-router-dom';
+import { SideContainer } from './sideBarComponents';
 
 function SideBarHome() {
   return (
-    <SideContent>
-      <SideBarBtn>
-        <FiMenu className="Side_bar_Icons Menu_Icon" />
-      </SideBarBtn>
-      <SideBarBtn>
-        <FiHome className="Side_bar_Icons" />
-      </SideBarBtn>
-      <SideBarBtn>
-        <FiUser className="Side_bar_Icons" />
-      </SideBarBtn>
-      <SideBarBtn>
-        <FiHelpCircle className="Side_bar_Icons" />
-      </SideBarBtn>
-    </SideContent>
+    <SideContainer>
+      <Link className="Link" to="/">
+        <FiMenu className="icon_side" />
+        <span>Home</span>
+      </Link>
+      <Link className="Link" to="/">
+        <FiHome className="icon_side" />
+        <span>Home</span>
+      </Link>
+      <Link className="Link" to="/User">
+        <FiUser className="icon_side" />
+        <span>User</span>
+      </Link>
+      <Link className="Link" to="/User">
+        <FiHelpCircle className="icon_side" />
+        <span>Suporte</span>
+      </Link>
+    </SideContainer>
   );
 }
 

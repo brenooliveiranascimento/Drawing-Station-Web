@@ -12,7 +12,7 @@ body {
     sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 input:focus, textarea:focus, select:focus{
   outline: none;
