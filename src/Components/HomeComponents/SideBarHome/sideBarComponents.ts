@@ -2,19 +2,18 @@ import styled from 'styled-components';
 
 export const SideContent = styled.aside`
   width: 100%;
-  height: 7rem;
+  height: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   color: white;
   font-size: 30px;
-  background-color: #212630;;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   z-index: 99;
   padding: 100px;
-  padding-bottom:20px;
-  padding-top: 50px;
+  padding-bottom:40px;
+  padding-top: 10px;
 
   .Side_bar_Icons {
     margin-top: -30px;
@@ -24,21 +23,6 @@ export const SideContent = styled.aside`
       margin-bottom: 0px;
     }
 
-  @media screen and (max-width: 1300px){
-    width: 100%;
-    height: 4rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    .Side_bar_Icons {
-    margin-top: -30px;
-    }
-
-    .Menu_Icon {
-      margin-bottom: 0px;
-    }
-  }
 `;
 
 export const SideBarBtn = styled.button`

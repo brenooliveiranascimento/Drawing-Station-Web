@@ -11,11 +11,23 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
-
+::-webkit-scrollbar {
+  width: 10px;
+}
 input:focus, textarea:focus, select:focus{
   outline: none;
 }
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 button, a {
   cursor: pointer;
 }

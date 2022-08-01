@@ -116,7 +116,7 @@ export const ModuleCard = styled.a`
     height: 300px;
 
     img {
-      width: 270px;
+      width: 160px;
     }
   }
 `;
