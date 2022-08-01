@@ -1,18 +1,18 @@
 .home_container {
-  /* background: url("../../Assets/blackBlob2.svg") fixed ; */
-  background-color: rgba(33, 38, 48);
+  background: url("../../Assets/layered-waves-haikei (40).svg") fixed ;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
+  padding: 25px;
   width: 100%;
 }
 
 .Darkess {
   z-index: 0;
   position: absolute;
-  /* background-color: rgba(0,0,0,0.7); */
-  height: auto;
+  left: 0px;
   width: 100%;
 }
 
@@ -26,14 +26,10 @@
 }
 
 @media screen and (max-width: 1300px){
-  .home_container {
+  /* .home_container {
     flex-direction: column;
     height: auto;
-  }
-
-  .Darkess {
-    height: auto;
-  }
+  } */
 
   .Logo_In_Home {
     align-self: center;

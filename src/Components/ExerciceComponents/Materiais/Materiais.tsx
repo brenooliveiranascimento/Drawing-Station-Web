@@ -21,7 +21,7 @@ function Materiais() {
                   <h2>{nowColor}</h2>
                   {
                     nowExerciceColors.colors[nowColor].map(({ cor }: any) => (
-                      <h1>{cor}</h1>
+                      <span>{cor}</span>
                     ))
                   }
                 </ColorsArea>
