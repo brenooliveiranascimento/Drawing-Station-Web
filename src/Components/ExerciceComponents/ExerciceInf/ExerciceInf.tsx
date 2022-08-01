@@ -44,13 +44,24 @@ function ExerciceInf() {
         )
       }
       <BtnAreas>
-        <MaterialBtn>
-          <span>Matériais</span>
-        </MaterialBtn>
-        <NextBtn>
-          <span>Próxima aula</span>
-          <AiOutlineArrowRight className="change_exercice" />
-        </NextBtn>
+        {
+          nowExercice.finished ? (
+            <section>
+
+              <MaterialBtn>
+                <span>Matériais</span>
+              </MaterialBtn>
+              <NextBtn>
+                <span>Próxima aula</span>
+                <AiOutlineArrowRight className="change_exercice" />
+              </NextBtn>
+            </section>
+          ) : (
+            <MaterialBtn>
+              <span>Exercicio Incompleto</span>
+            </MaterialBtn>
+          )
+        }
       </BtnAreas>
     </ExerciceInfContainer>
   );

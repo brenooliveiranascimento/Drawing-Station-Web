@@ -5,8 +5,7 @@ export const ContentContainer = styled.section`
   flex-direction: column;
   width: 100%;
   transition: all 1s;
-
-  
+    
 `;
 
 export const SideContent = styled.aside`

@@ -4,6 +4,7 @@ import React, {
 import { useSelector } from 'react-redux';
 import Lottie from 'react-lottie';
 import { Link } from 'react-router-dom';
+import { BsPencilFill } from 'react-icons/bs';
 import {
   ContentHeader, ModuleCard, ModulesContain, SelectArea,
 } from './modulesComponents';
@@ -59,15 +60,8 @@ function Modules() {
                 />
               ) : (
                 <Link to={module.id}>
+                  <BsPencilFill className="Icon" />
                   <h1 className="Name_Of_Module">{module.name}</h1>
-                  {
-              module.image && (
-                <img
-                  alt={module.name}
-                  src={module.image}
-                />
-              )
-            }
                   <span>
                     {module.details}
                   </span>

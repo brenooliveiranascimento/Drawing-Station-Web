@@ -12,7 +12,6 @@ function Home() {
   return (
     <section className="home_container">
       <SideBarHome />
-      <section className="Darkess" />
       <MainContent>
         <Route path="/" exact component={ModulesArea} />
         <Route path="/Pintura" exact component={ExerciceArea} />

@@ -8,10 +8,6 @@ export const ModulesContain = styled.nav`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgba(33, 38, 48, 0.3);;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   margin-top: 5rem;
   border-radius: 0px;
   justify-content: flex-start;
@@ -35,17 +31,12 @@ export const ModuleCard = styled.a`
   justify-self: flex-start;
   flex-direction: column;
   padding: 20px;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: #2b2b2b;
   backdrop-filter: blur(15px);
   margin: 20px;
-  -webkit-backdrop-filter: blur(15px);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   align-items: center;
   justify-content: center;
-  img {
-    /* width: 290px; */
+  /* img {
     width: 250px;
     height: 190px;
     margin-top: -100px;
@@ -53,22 +44,32 @@ export const ModuleCard = styled.a`
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     object-fit: cover;
-  }
+  } */
   .Name_Of_Module {
-    position: absolute;
-    z-index: 99;
-    left: 10px;
     font-size: 24px;
     font-weight: 800;
-    bottom: 70px;
-    left: 23px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  a {
+    color: #7D2D49;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .Icon {
+      font-size: 60px;
+      align-self: center;
+      margin-bottom:30px;
+      position: absolute;
+      top: 60px;
+    }
   }
 
   span {
-    z-index: 99;
-    position: absolute;
-    bottom: 27px;
-    left: 23px;
+    margin-top: 10px;
+    line-height: 20px;
   }
 
   .Construct_mode {
