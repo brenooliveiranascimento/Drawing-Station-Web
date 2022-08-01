@@ -3,18 +3,20 @@ import ExerciceInf from '../../Components/ExerciceComponents/ExerciceInf/Exercic
 import ExerciceSide from '../../Components/ExerciceComponents/ExerciceSide/ExerciceSide';
 import Materiais from '../../Components/ExerciceComponents/Materiais/Materiais';
 import VideoPlayer from '../../Components/ExerciceComponents/Video/VideoPlayer';
-import { ExerciceContainer, VideoArea } from './ExerciceComponents';
+import { ExerciceContainer, Main, VideoArea } from './ExerciceComponents';
 
 function ExerciceArea() {
   return (
-    <ExerciceContainer>
-      <VideoArea>
-        <VideoPlayer />
-        <ExerciceInf />
-        <Materiais />
-      </VideoArea>
-      <ExerciceSide />
-    </ExerciceContainer>
+    <Main>
+      <ExerciceContainer>
+        <VideoArea>
+          <VideoPlayer />
+          <ExerciceInf />
+          <Materiais />
+        </VideoArea>
+        <ExerciceSide />
+      </ExerciceContainer>
+    </Main>
   );
 }
 

@@ -5,6 +5,8 @@ export const ContentContainer = styled.section`
   flex-direction: column;
   width: 100%;
   transition: all 1s;
+
+  
 `;
 
 export const SideContent = styled.aside`
@@ -15,6 +17,10 @@ export const SideContent = styled.aside`
   background-color: #212630;
   align-items: center;
   color: #fff;
+
+  @media screen and (max-width: 1300px){
+    display: none;
+  }
 `;
 
 export const SideSearch = styled.input`

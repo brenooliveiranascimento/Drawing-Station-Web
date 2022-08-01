@@ -12,7 +12,10 @@ export const MainContent = styled.section`
   h1 {
     color: #fff;
   }
-
+  @media screen and (max-width: 1300px){
+    margin-left: 0px;
+    margin-top: 90px;
+  }
 `;
 
 export const MainLimit = styled.section`
