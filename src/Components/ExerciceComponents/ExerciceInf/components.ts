@@ -77,9 +77,20 @@ export const MaterialBtn = styled.button`
   justify-content: center;
   align-self: center;
   align-items: center;
+
   span {
     font-size: 18px;
     align-self: flex-start;
     font-weight: 600;
   }
+`;
+
+export const IncompletBtn = styled.button`
+  width:auto;
+  padding: 5px;
+  background-color: #571C34;
+  display: flex;
+  height: auto;
+  font-size: 20px;
+  border-radius: 6px;
 `;
