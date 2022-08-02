@@ -19,5 +19,6 @@ export const ComentsContainer = styled.section`
     height: 25px;
     border-radius: 6px;
     padding: 10px;
+    font-size: 17px;
   };
 `;

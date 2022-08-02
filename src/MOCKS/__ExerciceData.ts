@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-// import firebase from '../Services/firebase_connection';
+import firebase from '../Services/firebase_connection';
 
 export const exerciceBaseData = {
   basics: [
@@ -136,6 +136,24 @@ export const exerciceBaseData = {
     },
   ],
 };
+
+const CommentMock = {
+  Comments: [
+    {
+      exercice: 'Name of exercice',
+      nameOfCreator: 'UserName',
+      coment: 'coment body',
+      id: 0,
+      ProfilePhoto: 'profile photo',
+    },
+  ],
+};
+
+// const setCommentsTest = async () => {
+//   firebase.firestore().collection('comments').doc('data').set(CommentMock);
+// };
+
+// setCommentsTest();
 
 export const modules = [
   {
