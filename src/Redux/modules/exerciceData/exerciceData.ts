@@ -2,7 +2,12 @@ import { accessLocalStore } from '../../../globalFuncions/localStoreControl';
 import { exerciceBaseData } from '../../../MOCKS/__ExerciceData';
 import { DRAWING_STATION_LOCAL_DATA_MODULES } from '../../../__GlobalTypes/globalTypes';
 import {
-  FETCH_EXERCICE_FAIL, FETCH_EXERCICE_INIT, FETCH_EXERCICE_SUCCESS, SET_NOW_EXERCICE,
+  FETCH_EXERCICE_FAIL,
+  FETCH_EXERCICE_INIT,
+  FETCH_EXERCICE_SUCCESS,
+  HIDDEN_MATERIALS,
+  SET_NOW_EXERCICE,
+  SHOWN_MATERIALS,
 } from './exerciceDataTypes';
 
 const STATE_INITIAL_VALUE = {
@@ -13,6 +18,7 @@ const STATE_INITIAL_VALUE = {
   modules: accessLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES),
   loading: false,
   error: '',
+  showMaterials: true,
 };
 
 const ACTION_INITIAL_STATE = {
@@ -34,6 +40,10 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
       return { ...state, loading: false, error: action.error };
     case SET_NOW_EXERCICE:
       return { ...state, nowExerciceData: action.payLoad };
+    case SHOWN_MATERIALS:
+      return { ...state, showMaterials: true };
+    case HIDDEN_MATERIALS:
+      return { ...state, showMaterials: false };
     default:
       return state;
   }
