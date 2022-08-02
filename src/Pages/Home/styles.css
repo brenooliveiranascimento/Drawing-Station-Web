@@ -1,19 +1,23 @@
 .home_container {
-  background: url("../../Assets/layered-waves-haikei (40).svg") fixed ;
+  /* background: url("../../Assets/layered-waves-haikei (40).svg") fixed ; */
   background-size: cover;
+  background-color: #191919;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  height: auto;
-  padding: 25px;
+  height: 100vh;
   width: 100%;
+  overflow:scroll;
+  overflow-x:hidden;
 }
 
 .Darkess {
   z-index: 0;
   position: absolute;
   left: 0px;
+  height: 100vh;
   width: 100%;
+  /* background-color: rgba(0,0,0,0.7); */
 }
 
 .Logo_In_Home {

@@ -1,50 +1,93 @@
 import styled from 'styled-components';
 
-export const SideContent = styled.aside`
-  width: 100%;
-  height: 2rem;
+export const SideContainer = styled.aside`
+  width: 70px;
+  height: 100%;
+  background-color: aqua;
+  position: fixed;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: white;
-  font-size: 30px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
   z-index: 99;
-  padding: 100px;
-  padding-bottom:40px;
-  padding-top: 10px;
-
-  .Side_bar_Icons {
-    margin-top: -30px;
-    }
-
-    .Menu_Icon {
-      margin-bottom: 0px;
-    }
-
-`;
-
-export const SideBarBtn = styled.button`
-  display: flex;
+  background-color: #08111C;
+  flex-direction: column;
+  transition: all 0.3s;
   align-items: center;
-  height: 35px;
-  width: 35px;
-  background-color: rgba(0,0,0,0.0);
-  align-items: center;
-  font-size: 30px;
-  justify-content: center;
-  margin-top: 30px;
-  border-radius: 100%;
-  margin: 20px;
-  color: white;
 
-  :hover {
-    color: #aaa;
+  img {
+    display: none;
   }
 
+  a {
+    transition: all 1s;
+  }
+  
+  a span{
+    display: none;
+    transition: all 1s;
+  }
+
+  .icon_side {
+    color:white;
+    font-size: 27px;
+  }
+
+  .icon_side:nth-child(1) {
+    margin-top: 30px;
+    margin-bottom: 2rem;
+  }
+
+  :hover {
+    width: 200px;
+    transition: all 0.3s;
+
+    a {
+      display: flex;
+      align-items: center;
+      transition: all 1s;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    a span{
+    transition: all 1s;
+      display: block;
+      margin-top: -25px;
+      margin-bottom: 10px;
+    }
+
   @media screen and (max-width: 1300px){
-    font-size: 26px;
-    margin-bottom: -30px;
+    width: 100%;
+  }
+  }
+
+  @media screen and (max-width: 1320px){
+    transition: none
+  }
+  @media screen and (max-width: 1300px){
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    transition: none;
+    justify-content: space-around;
+    img {
+      display: block;
+      width:200px;
+      margin-top: -20px;
+    }
+  :hover {
+    a {
+      display: block;
+      align-items: center;
+      transition: none;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    a span{
+    transition: none;
+      display: none;
+      margin-top: -25px;
+      margin-bottom: 10px;
+    }
+  }
   }
 `;

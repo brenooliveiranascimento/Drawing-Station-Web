@@ -11,7 +11,6 @@ import './styles.css';
 function Home() {
   return (
     <section className="home_container">
-      <section className="Darkess" />
       <SideBarHome />
       <MainContent>
         <Route path="/" exact component={ModulesArea} />

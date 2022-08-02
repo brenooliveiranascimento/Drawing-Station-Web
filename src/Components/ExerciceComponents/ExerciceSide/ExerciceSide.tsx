@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
+import { AiFillCheckCircle, AiFillCiCircle, AiFillCloseCircle } from 'react-icons/ai';
 import {
   ContentContainer,
   Divise, Exercicelist, ExerciceListItem, ModulesNameContent, SideContent, SideSearch,
@@ -61,10 +61,18 @@ function ExerciceSide() {
                           >
                             <span>
                               {
-                                userProgressData[dificulty][exercice.name] ? (
-                                  <AiFillCheckCircle className="check_icon_check" />
+                                exercice.finished ? (
+                                  <span>
+                                    {
+                                      userProgressData[dificulty][exercice.name] ? (
+                                        <AiFillCheckCircle className="check_icon_check" />
+                                      ) : (
+                                        <AiFillCloseCircle className="check_icon_no_check" />
+                                      )
+                                    }
+                                  </span>
                                 ) : (
-                                  <AiFillCloseCircle className="check_icon_no_check" />
+                                  <AiFillCiCircle />
                                 )
                               }
                               {exerciceIndex + 1}

@@ -7,7 +7,16 @@ export const ExerciceContainer = styled.section`
   margin-top: 5rem;
   padding: 15px;
   display: flex;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(8, 17, 28,0.22) 0px 15px 30px;
+  margin-left: 200px;
   justify-content: flex-end;
+  @media screen and (max-width: 1300px){
+    align-self: center;
+    justify-self: center;
+    margin-left: 0px;
+  }
 `;
 
 export const VideoArea = styled.section`
@@ -16,4 +25,19 @@ export const VideoArea = styled.section`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+`;
+
+export const Main = styled.section`
+  width: 1900px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: -200px;
+
+  @media screen and (max-width: 1300px){
+    width: 140%;
+    padding: 20px;
+    margin-left: 0px;
+  }
 `;
