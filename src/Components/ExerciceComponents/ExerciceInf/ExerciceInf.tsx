@@ -5,6 +5,7 @@ import {
   AiFillCheckCircle, AiFillCiCircle, AiFillCloseCircle, AiOutlineArrowRight,
 } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
+import { hiddenMaterial, showMaterial } from '../../../Redux/actions/exercicesActions/genericActions';
 import { updateuserProgress } from '../../../Redux/actions/updateProgressActions/updateProgressActions';
 import {
   BtnAreas, ExerciceInfContainer, IncompletBtn, MaterialBtn, NextBtn,
@@ -14,6 +15,12 @@ function ExerciceInf() {
   const dispatch = useDispatch();
   const userprogress = useSelector(({ exerciceProgress }: any) => exerciceProgress);
   const nowExercice = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
+  const showExerciceMaterials = useSelector(({ exerciceData }: any) => exerciceData.showMaterials);
+
+  const handleMaterials = () => {
+    if (showExerciceMaterials) return dispatch(hiddenMaterial());
+    dispatch(showMaterial());
+  };
 
   return (
     <ExerciceInfContainer>
@@ -90,7 +97,7 @@ function ExerciceInf() {
         {
           nowExercice.finished ? (
             <section style={{ display: 'flex' }}>
-              <MaterialBtn>
+              <MaterialBtn onClick={handleMaterials}>
                 <span>Matériais</span>
               </MaterialBtn>
               <NextBtn>

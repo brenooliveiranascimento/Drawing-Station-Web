@@ -18,7 +18,7 @@ const STATE_INITIAL_VALUE = {
   modules: accessLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES),
   loading: false,
   error: '',
-  showMaterials: false,
+  showMaterials: true,
 };
 
 const ACTION_INITIAL_STATE = {
