@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import ComentsArea from '../../Components/ExerciceComponents/Coments/ComentsAre';
 import ExerciceInf from '../../Components/ExerciceComponents/ExerciceInf/ExerciceInf';
 import ExerciceSide from '../../Components/ExerciceComponents/ExerciceSide/ExerciceSide';
 import Materiais from '../../Components/ExerciceComponents/Materiais/Materiais';
@@ -18,6 +19,7 @@ function ExerciceArea() {
           {
             nowExercice.showMaterials && nowExercice.nowExerciceData.finished && <Materiais />
           }
+          <ComentsArea />
         </VideoArea>
         <ExerciceSide />
       </ExerciceContainer>
