@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 export const MaterialsContainer = styled.section`
-  width: 100%;
+  width: 98%;
   height: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #212630;
+  border-radius: 6px;
+  margin-top: 10px;
   h2 {
     color: white;
-    margin-top: 1rem;
   }
 `;
 
