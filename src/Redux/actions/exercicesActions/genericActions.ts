@@ -4,7 +4,8 @@ import {
   FETCH_EXERCICE_SUCCESS,
   HIDDEN_MATERIALS,
   NEXT_EXERCICE,
-  PREV_EXERCICE, SET_NOW_EXERCICE, SHOWN_MATERIALS,
+  PREV_EXERCICE,
+  SET_COMMENTS, SET_NOW_EXERCICE, SHOWN_MATERIALS,
 } from '../../modules/exerciceData/exerciceDataTypes';
 
 export const updateExerciceStore = (exerciceData: any, modulesData: any): any => ({
@@ -41,4 +42,9 @@ export const showMaterial = () => ({
 
 export const hiddenMaterial = () => ({
   type: HIDDEN_MATERIALS,
+});
+
+export const setComments = (comments: any) => ({
+  type: SET_COMMENTS,
+  comments,
 });

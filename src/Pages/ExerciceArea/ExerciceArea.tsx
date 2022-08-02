@@ -10,7 +10,6 @@ import { ExerciceContainer, Main, VideoArea } from './ExerciceComponents';
 
 function ExerciceArea() {
   const nowExercice = useSelector(({ exerciceData }: any) => exerciceData);
-  console.log(nowExercice);
   return (
     <Main>
       <ExerciceContainer>
