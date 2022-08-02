@@ -4,8 +4,7 @@ export const ContentContainer = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition: all 1s;
-    
+  transition: all 0.3s;
 `;
 
 export const SideContent = styled.aside`
@@ -16,6 +15,7 @@ export const SideContent = styled.aside`
   background-color: #212630;
   align-items: center;
   color: #fff;
+  transition: all 0.3s;
 
   @media screen and (max-width: 1300px){
     display: none;
@@ -26,6 +26,7 @@ export const SideSearch = styled.input`
   background-color: #08111C;
   width: 100%;
   border-radius: 3px;
+  transition: all 0.3s;
   padding: 5px;
   height: 40px;
   font-size: 18px;
@@ -36,6 +37,7 @@ export const SideSearch = styled.input`
 export const Divise = styled.section`
   width: 100%;
   height: 0.2px;
+  transition: all 0.3s;
   margin: 20px;
   background-color: #aaa;
 `;
@@ -43,6 +45,7 @@ export const Divise = styled.section`
 export const ModulesNameContent = styled.button`
   width: 100%;
   height: auto;
+  transition: all 0.3s;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -54,6 +57,7 @@ export const ModulesNameContent = styled.button`
 export const Exercicelist = styled.ul`
   padding: 20px;
   padding-top: 7px;
+  transition: all 0.3s;
   display: flex;
   flex-direction: column;
 
@@ -68,6 +72,7 @@ export const ExerciceListItem = styled.li`
   background-color: ${({ color }: any) => color};
   border-radius: 3px;
   padding: 10px;
+  transition: all 0.3s;
   width: auto;
   align-items: center;
   justify-content: flex-start;
