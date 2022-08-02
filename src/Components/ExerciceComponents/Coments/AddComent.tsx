@@ -7,7 +7,7 @@ function AddComents() {
       <h1>Adicionar Comentario</h1>
       <input
         maxLength={500}
-        placeholder="Fique a vontade para tirar as duvidas"
+        placeholder="Fique a vontade para tirar as duvidas."
         type="text"
       />
     </ComentsContainer>

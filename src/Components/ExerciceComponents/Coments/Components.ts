@@ -8,7 +8,7 @@ export const ComentsContainer = styled.section`
   background-color: #212630;
   margin-top: 20px;
   flex-direction: column;
-  border-radius: 6px
+  border-radius: 6px;
   h1 {
     font-size: 20px;
     margin-bottom: 10px;
