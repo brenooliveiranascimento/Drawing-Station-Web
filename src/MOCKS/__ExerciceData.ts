@@ -143,8 +143,9 @@ const CommentMock = {
       exercice: 'Name of exercice',
       nameOfCreator: 'UserName',
       coment: 'coment body',
-      id: 0,
+      id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
       ProfilePhoto: 'profile photo',
+      uidOfCreator: 'user id',
     },
   ],
 };
@@ -152,7 +153,6 @@ const CommentMock = {
 // const setCommentsTest = async () => {
 //   firebase.firestore().collection('comments').doc('data').set(CommentMock);
 // };
-
 // setCommentsTest();
 
 export const modules = [
