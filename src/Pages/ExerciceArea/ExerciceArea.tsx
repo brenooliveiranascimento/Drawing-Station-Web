@@ -7,7 +7,7 @@ import VideoPlayer from '../../Components/ExerciceComponents/Video/VideoPlayer';
 import { ExerciceContainer, Main, VideoArea } from './ExerciceComponents';
 
 function ExerciceArea() {
-  const nowExercice = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
+  const nowExercice = useSelector(({ exerciceData }: any) => exerciceData);
   console.log(nowExercice);
   return (
     <Main>
@@ -16,7 +16,7 @@ function ExerciceArea() {
           <VideoPlayer />
           <ExerciceInf />
           {
-            nowExercice.finished && <Materiais />
+            nowExercice.showMaterials && nowExercice.nowExerciceData.finished && <Materiais />
           }
         </VideoArea>
         <ExerciceSide />
