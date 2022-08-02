@@ -19,6 +19,7 @@ const STATE_INITIAL_VALUE = {
   loading: false,
   error: '',
   showMaterials: true,
+  comments: [],
 };
 
 const ACTION_INITIAL_STATE = {
