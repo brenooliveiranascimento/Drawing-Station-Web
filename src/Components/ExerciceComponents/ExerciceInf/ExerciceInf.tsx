@@ -17,10 +17,8 @@ function ExerciceInf() {
   const nowExercice = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
   const showExerciceMaterials = useSelector(({ exerciceData }: any) => exerciceData.showMaterials);
 
-  const handleMaterials = () => {
-    if (showExerciceMaterials) return dispatch(hiddenMaterial());
-    dispatch(showMaterial());
-  };
+  const handleMaterials = () =>
+    (showExerciceMaterials ? dispatch(hiddenMaterial()) : dispatch(showMaterial()));
 
   return (
     <ExerciceInfContainer>
