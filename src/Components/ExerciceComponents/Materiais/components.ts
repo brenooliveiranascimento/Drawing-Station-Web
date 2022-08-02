@@ -19,6 +19,10 @@ export const MaterialArea = styled.article`
 
   span {
     font-size: 20px;
+
+    :nth-child(1) {
+      margin-top: 20px;
+    }
   }
 `;
 
@@ -37,5 +41,8 @@ export const ColorsArea = styled.article`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  
+  :nth-child(2) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 `;
