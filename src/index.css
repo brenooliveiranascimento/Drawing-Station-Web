@@ -12,20 +12,25 @@ body {
     sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
+  z-index: 99;
 }
 input:focus, textarea:focus, select:focus{
+  z-index: 99;
   outline: none;
 }
 ::-webkit-scrollbar-track {
+  z-index: 99;
   background: rgba(0,0,0,0.3);
 }
 ::-webkit-scrollbar-thumb {
+  z-index: 99;
   background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
+  z-index: 99;
   background: #555;
 }
 button, a {

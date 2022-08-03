@@ -55,8 +55,7 @@ export const UserDataComent = styled.section`
     justify-content: center;
     border-radius: 6px;
     font-size: 16px;
-    margin-left: 70%;
-
+    margin-left: 10px;
     :hover {
       font-weight: 700;
     }
