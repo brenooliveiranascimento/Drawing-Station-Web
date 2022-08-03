@@ -97,7 +97,7 @@ function ExerciceInf() {
           nowExercice.finished ? (
             <section className="btn_content">
               <MaterialBtn onClick={handleMaterials}>
-                <span>Matériais</span>
+                <span>Materiais</span>
               </MaterialBtn>
               <NextBtn>
                 <span>Próxima aula</span>
