@@ -6,7 +6,7 @@ import {
   AiFillCheckCircle, AiFillCiCircle, AiFillCloseCircle, AiOutlineArrowRight,
 } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
-import { hiddenMaterial, showMaterial } from '../../../Redux/actions/exercicesActions/genericActions';
+import { changeNowExercice, hiddenMaterial, showMaterial } from '../../../Redux/actions/exercicesActions/genericActions';
 import { updateuserProgress } from '../../../Redux/actions/updateProgressActions/updateProgressActions';
 import {
   BtnAreas, ExerciceInfContainer, IncompletBtn, MaterialBtn, NextBtn,
@@ -17,9 +17,24 @@ function ExerciceInf() {
   const userprogress = useSelector(({ exerciceProgress }: any) => exerciceProgress);
   const nowExercice = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
   const showExerciceMaterials = useSelector(({ exerciceData }: any) => exerciceData.showMaterials);
-
+  const allExercice = useSelector(({ exerciceData }: any) => exerciceData.exercices);
   const handleMaterials = () =>
     (showExerciceMaterials ? dispatch(hiddenMaterial()) : dispatch(showMaterial()));
+
+  const findExerciceIndex = () => allExercice[nowExercice.dificulty]
+    .findIndex((exercice: any) => exercice === nowExercice);
+
+  const findDificultyIndex = () => Object.keys(allExercice).findIndex((dificulty: any) =>
+    dificulty === nowExercice.dificulty) + 1;
+
+  const nextExercice = () => {
+    if (findExerciceIndex() + 1 === allExercice[nowExercice.dificulty].length) {
+      const nextDificulty = allExercice[Object.keys(allExercice)[findDificultyIndex()]];
+      dispatch(changeNowExercice(nextDificulty[0]));
+      return;
+    }
+    dispatch(changeNowExercice(allExercice[nowExercice.dificulty][findExerciceIndex() + 1]));
+  };
 
   return (
     <ExerciceInfContainer>
@@ -93,23 +108,18 @@ function ExerciceInf() {
           )
       }
       <BtnAreas>
-        {
-          nowExercice.finished ? (
-            <section className="btn_content">
-              <MaterialBtn onClick={handleMaterials}>
-                <span>Materiais</span>
-              </MaterialBtn>
-              <NextBtn>
-                <span>Próxima aula</span>
-                <AiOutlineArrowRight className="change_exercice" />
-              </NextBtn>
-            </section>
-          ) : (
-            <IncompletBtn>
-              <span>Exercicio Incompleto Incompleto</span>
-            </IncompletBtn>
-          )
-        }
+        <section className="btn_content">
+          <MaterialBtn onClick={handleMaterials}>
+            <span>Materiais</span>
+          </MaterialBtn>
+          <NextBtn
+            onClick={nextExercice}
+          >
+            <span>Próxima aula</span>
+            <AiOutlineArrowRight className="change_exercice" />
+          </NextBtn>
+        </section>
+
       </BtnAreas>
     </ExerciceInfContainer>
   );
