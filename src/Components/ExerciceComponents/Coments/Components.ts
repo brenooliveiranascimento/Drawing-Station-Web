@@ -44,5 +44,21 @@ export const CommentBody = styled.article`
 export const UserDataComent = styled.section`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  width: 100%;
+  
+  button {
+    color: white;
+    background-color: #212630;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 70%;
+
+    :hover {
+      font-weight: 700;
+    }
+  }
 `;

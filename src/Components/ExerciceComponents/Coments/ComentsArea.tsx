@@ -23,7 +23,13 @@ function ComentsArea() {
           <CommentBody>
             <UserDataComent>
               <h2>{coment.nameOfCreator}</h2>
-              { coment.uidOfCreator === userInf.uid && <span>Deletar</span> }
+              { coment.uidOfCreator === userInf.uid && (
+                <button
+                  type="button"
+                >
+                  Deletar
+                </button>
+              ) }
             </UserDataComent>
             <span>{coment.coment}</span>
           </CommentBody>
