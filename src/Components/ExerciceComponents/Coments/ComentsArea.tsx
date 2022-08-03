@@ -30,7 +30,9 @@ function ComentsArea() {
                 </button>
               ) }
             </UserDataComent>
-            <span>{coment.coment}</span>
+            <span>
+              {coment.coment}
+            </span>
           </CommentBody>
         ))
       }

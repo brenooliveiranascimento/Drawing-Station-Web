@@ -20,7 +20,7 @@ const STATE_INITIAL_VALUE = {
   modules: accessLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES),
   loading: false,
   error: '',
-  showMaterials: true,
+  showMaterials: false,
   comments: [],
 };
 
