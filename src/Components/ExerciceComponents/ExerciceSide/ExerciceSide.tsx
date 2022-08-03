@@ -49,7 +49,6 @@ function ExerciceSide() {
                 <Exercicelist>
                   {
                     exercicesData[dificulty].map((exercice: any, exerciceIndex:any) => {
-                      console.log(userProgressData[dificulty][exercice.name]);
                       return (
                         <ExerciceListItem
                           color={nowExerciceState.name === exercice.name ? '#000' : '#212630'}

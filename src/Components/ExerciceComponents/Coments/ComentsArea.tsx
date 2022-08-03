@@ -8,7 +8,6 @@ function ComentsArea() {
   const userInf = useSelector(({ userData }: any) => userData);
   const commentsFilter = () => {
     const filterComents = comments.filter((comment: any) => comment.exercice === nowExercice.name);
-    console.log(filterComents);
     return filterComents;
   };
   useEffect(() => {

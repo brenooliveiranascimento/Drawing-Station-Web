@@ -1,7 +1,7 @@
 import { Dispatch } from 'react';
 import { errorMessageConsole } from '../../../globalFuncions/errorMessage';
 import { setDataInLocalStore } from '../../../globalFuncions/localStoreControl';
-import { getAllComents } from '../../../Services/comentsControlFirebase/comentsControl';
+import { getAllComents, updateComentsDatabase } from '../../../Services/comentsControlFirebase/comentsControl';
 import { getProductioModulesData, getProductionData } from '../../../Services/versionControlFirebase/versionControlFirebase';
 import {
   DRAWING_STATION_LOCAL_DATA,
@@ -13,6 +13,7 @@ import {
   updateExerciceStoreFail,
   updateExerciceStoreInit,
 } from './genericActions';
+import firebase from '../../../Services/firebase_connection';
 
 export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
   dispatch(updateExerciceStoreFail(errorMessage));
@@ -39,7 +40,7 @@ export const updateExerciceData = (): any => {
 export const fetchComments = (): any => {
   return async (dispatch: Dispatch<any>) => {
     const getComments: any = await getAllComents();
-    dispatch(setComments(getComments.Comments));
+    dispatch(setComments(getComments.comments));
   };
 };
 
@@ -50,10 +51,11 @@ export const updateStoreComment = (comment: any): any => {
       nameOfCreator: getState().userData.name,
       coment: comment,
       id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
-      ProfilePhoto: undefined,
+      ProfilePhoto: 'sem',
       uidOfCreator: getState().userData.uid,
-      subComents: [],
     };
+    // firebase.firestore().collection('comments').doc('data').set({ commentData });
     dispatch(setComments(commentData));
+    updateComentsDatabase(commentData);
   };
 };

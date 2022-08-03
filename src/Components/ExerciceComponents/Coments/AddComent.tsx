@@ -8,6 +8,7 @@ function AddComents() {
   const dispatch = useDispatch();
 
   const sendComment = () => {
+    setComment('');
     dispatch(updateStoreComment(comment));
   };
 
