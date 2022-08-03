@@ -11,8 +11,7 @@ export const updateComentsDatabase = async (nowComments: any) => {
   const all: any = await getAllComents();
   const comments = [...all.comments, nowComments];
   try {
-    await firebase.firestore().collection('comments').doc('data').set({ comments })
-      .then(() => alert('dwaio'));
+    await firebase.firestore().collection('comments').doc('data').set({ comments });
   } catch (error: any) {
     console.log(error.message);
   }

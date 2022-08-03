@@ -8,6 +8,7 @@ import {
   DRAWING_STATION_LOCAL_DATA_MODULES,
 } from '../../../__GlobalTypes/globalTypes';
 import {
+  fetchCommentsData,
   setComments,
   updateExerciceStore,
   updateExerciceStoreFail,
@@ -40,7 +41,8 @@ export const updateExerciceData = (): any => {
 export const fetchComments = (): any => {
   return async (dispatch: Dispatch<any>) => {
     const getComments: any = await getAllComents();
-    dispatch(setComments(getComments.comments));
+    console.log(getComments.comments);
+    dispatch(fetchCommentsData(getComments.comments));
   };
 };
 
@@ -53,6 +55,8 @@ export const updateStoreComment = (comment: any): any => {
       id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
       ProfilePhoto: 'sem',
       uidOfCreator: getState().userData.uid,
+      subComments: [],
+      date: new Date(),
     };
     // firebase.firestore().collection('comments').doc('data').set({ commentData });
     dispatch(setComments(commentData));
