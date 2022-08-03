@@ -1,0 +1,26 @@
+.ExerciceNameContainer button {
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 910px) {
+  .ExerciceNameContainer button {
+    justify-content: flex-start;
+  }
+
+  .ExerciceNameContainer button h1{
+    font-size: 20px;
+    text-align: start;
+  }
+}
+
+.btn_content {
+  display: flex;
+}
+
+@media screen and (max-width: 650px) {
+  .btn_content {
+    flex-direction: column;
+  }
+}

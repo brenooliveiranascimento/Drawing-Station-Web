@@ -72,7 +72,7 @@ function ExerciceSide() {
                                     }
                                   </span>
                                 ) : (
-                                  <AiFillCiCircle />
+                                  <AiFillCiCircle className="incomplete_exercice" />
                                 )
                               }
                               {exerciceIndex + 1}

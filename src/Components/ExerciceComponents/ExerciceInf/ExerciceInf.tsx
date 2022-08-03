@@ -1,6 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import './styles.css';
 import {
   AiFillCheckCircle, AiFillCiCircle, AiFillCloseCircle, AiOutlineArrowRight,
 } from 'react-icons/ai';
@@ -24,7 +25,7 @@ function ExerciceInf() {
     <ExerciceInfContainer>
       {
           nowExercice.finished ? (
-            <section>
+            <section className="ExerciceNameContainer">
               {
               userprogress[nowExercice.dificulty][nowExercice.name] ? (
                 <button
@@ -58,7 +59,7 @@ function ExerciceInf() {
             }
             </section>
           ) : (
-            <section>
+            <section className="ExerciceNameContainer">
               {
              userprogress[nowExercice.dificulty][nowExercice.name] ? (
                <button
@@ -70,7 +71,7 @@ function ExerciceInf() {
                    {nowExercice.name}
                    {' '}
                    {nowExercice.description}
-                   <AiFillCheckCircle className="check_icon_check" />
+                   <AiFillCheckCircle />
                  </h1>
                </button>
              ) : (
@@ -83,7 +84,7 @@ function ExerciceInf() {
                    {nowExercice.name}
                    {' '}
                    {nowExercice.description}
-                   <AiFillCiCircle className="check_icon_no_check" />
+                   <AiFillCiCircle color="white" style={{ marginBottom: -5 }} />
                  </h1>
                </button>
              )
@@ -94,7 +95,7 @@ function ExerciceInf() {
       <BtnAreas>
         {
           nowExercice.finished ? (
-            <section style={{ display: 'flex' }}>
+            <section className="btn_content">
               <MaterialBtn onClick={handleMaterials}>
                 <span>Matériais</span>
               </MaterialBtn>
