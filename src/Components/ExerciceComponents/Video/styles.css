@@ -26,3 +26,15 @@
   align-self: center;
   justify-self: center;
 }
+
+@media screen and (max-width: 1100px) {
+  .Video {
+    height: 430px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Video {
+    height: 330px;
+  }
+}

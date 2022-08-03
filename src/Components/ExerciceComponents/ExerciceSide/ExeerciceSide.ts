@@ -93,6 +93,13 @@ export const ExerciceListItem = styled.li`
     margin-right: 2px;
   }
 
+  .incomplete_exercice {
+    align-self: center;
+    justify-self: center;
+    margin-bottom: -2px;
+    margin-right: 2px;
+  }
+
   span {
     font-size: 16px;
   }

@@ -42,6 +42,10 @@ export const BtnAreas = styled.section`
   height: auto;
   display: flex;
   justify-content: flex-end;
+
+  @media screen and (max-width: 760px){
+    flex-direction: column;
+  }
 `;
 
 export const NextBtn = styled.button`
@@ -61,6 +65,15 @@ export const NextBtn = styled.button`
   .change_exercice {
     font-size: 20px;
     color: white;
+  }
+
+  @media screen and (max-width: 777px){
+    margin-left: 30px;
+    margin-top: 5px;
+    span {
+      font-size: 16px;
+      width: 100px;
+    }
   }
 `;
 
@@ -82,6 +95,16 @@ export const MaterialBtn = styled.button`
     font-size: 18px;
     align-self: flex-start;
     font-weight: 600;
+  }
+
+  @media screen and (max-width: 760px){
+    width: 80px;
+    align-self: flex-end;
+    margin-right: -5px;
+    margin-top: 20px;
+    span {
+      font-size: 16px;
+    }
   }
 `;
 
