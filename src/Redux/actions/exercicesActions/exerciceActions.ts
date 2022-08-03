@@ -1,18 +1,20 @@
 import { Dispatch } from 'react';
 import { errorMessageConsole } from '../../../globalFuncions/errorMessage';
 import { setDataInLocalStore } from '../../../globalFuncions/localStoreControl';
-import { getAllComents } from '../../../Services/comentsControlFirebase/comentsControl';
+import { getAllComents, updateComentsDatabase } from '../../../Services/comentsControlFirebase/comentsControl';
 import { getProductioModulesData, getProductionData } from '../../../Services/versionControlFirebase/versionControlFirebase';
 import {
   DRAWING_STATION_LOCAL_DATA,
   DRAWING_STATION_LOCAL_DATA_MODULES,
 } from '../../../__GlobalTypes/globalTypes';
 import {
+  fetchCommentsData,
   setComments,
   updateExerciceStore,
   updateExerciceStoreFail,
   updateExerciceStoreInit,
 } from './genericActions';
+import firebase from '../../../Services/firebase_connection';
 
 export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
   dispatch(updateExerciceStoreFail(errorMessage));
@@ -39,6 +41,25 @@ export const updateExerciceData = (): any => {
 export const fetchComments = (): any => {
   return async (dispatch: Dispatch<any>) => {
     const getComments: any = await getAllComents();
-    dispatch(setComments(getComments.Comments));
+    console.log(getComments.comments);
+    dispatch(fetchCommentsData(getComments.comments));
+  };
+};
+
+export const updateStoreComment = (comment: any): any => {
+  return async (dispatch:Dispatch<any>, getState: any) => {
+    const commentData = {
+      exercice: getState().exerciceData.nowExerciceData.name,
+      nameOfCreator: getState().userData.name,
+      coment: comment,
+      id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
+      ProfilePhoto: 'sem',
+      uidOfCreator: getState().userData.uid,
+      subComments: [],
+      date: new Date(),
+    };
+    // firebase.firestore().collection('comments').doc('data').set({ commentData });
+    dispatch(setComments(commentData));
+    updateComentsDatabase(commentData);
   };
 };

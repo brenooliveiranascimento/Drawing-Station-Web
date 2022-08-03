@@ -1,7 +1,8 @@
 import { accessLocalStore } from '../../../globalFuncions/localStoreControl';
-import { exerciceBaseData } from '../../../MOCKS/__ExerciceData';
+import { exerciceBaseData } from '../../../_MOCKS/__ExerciceData';
 import { DRAWING_STATION_LOCAL_DATA_MODULES } from '../../../__GlobalTypes/globalTypes';
 import {
+  FETCH_COMMENTS,
   FETCH_EXERCICE_FAIL,
   FETCH_EXERCICE_INIT,
   FETCH_EXERCICE_SUCCESS,
@@ -19,7 +20,7 @@ const STATE_INITIAL_VALUE = {
   modules: accessLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES),
   loading: false,
   error: '',
-  showMaterials: true,
+  showMaterials: false,
   comments: [],
 };
 
@@ -32,6 +33,7 @@ const ACTION_INITIAL_STATE = {
 };
 
 function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE) {
+  console.log(action.comments);
   switch (action.type) {
     case FETCH_EXERCICE_INIT:
       return { ...state, loading: true };
@@ -48,7 +50,9 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
     case HIDDEN_MATERIALS:
       return { ...state, showMaterials: false };
     case SET_COMMENTS:
-      return { ...state, comments: action.comments };
+      return { ...state, comments: [...state.comments, action.comments] };
+    case FETCH_COMMENTS:
+      return { ...state, comments: [...state.comments, ...action.comments] };
     default:
       return state;
   }

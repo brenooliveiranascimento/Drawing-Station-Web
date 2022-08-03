@@ -21,11 +21,22 @@ export const ComentsContainer = styled.section`
     padding: 10px;
     font-size: 17px;
   };
+
+  .add_btn {
+    width: 30%;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #08111C;
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+  }
 `;
 
 export const CommentBody = styled.article`
   display: flex;
-  width: 100%;
+  max-width: 100%;
   background-color: #08111C;
   flex-direction: column;
   align-items: flex-start;
@@ -33,19 +44,25 @@ export const CommentBody = styled.article`
   border-radius:6px;
   height: auto;
   padding: 10px;
+  word-wrap: break-word;
+  word-break: break-word;
   h2{
     color: white;
     font-size: 18px;
     margin-bottom: 5px;
   }
 
+  span {
+    text-overflow: clip;
+    line-break: auto;
+    line-height: 26px;
+  }
 `;
 
 export const UserDataComent = styled.section`
   display: flex;
   align-items: center;
   width: 100%;
-  
   button {
     color: white;
     background-color: #212630;

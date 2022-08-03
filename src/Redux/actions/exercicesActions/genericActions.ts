@@ -1,4 +1,5 @@
 import {
+  FETCH_COMMENTS,
   FETCH_EXERCICE_FAIL,
   FETCH_EXERCICE_INIT,
   FETCH_EXERCICE_SUCCESS,
@@ -46,5 +47,10 @@ export const hiddenMaterial = () => ({
 
 export const setComments = (comments: any) => ({
   type: SET_COMMENTS,
+  comments,
+});
+
+export const fetchCommentsData = (comments: any) => ({
+  type: FETCH_COMMENTS,
   comments,
 });

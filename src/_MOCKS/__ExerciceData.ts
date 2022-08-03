@@ -137,22 +137,30 @@ export const exerciceBaseData = {
   ],
 };
 
-const CommentMock = {
-  Comments: [
-    {
-      exercice: 'Name of exercice',
-      nameOfCreator: 'UserName',
-      coment: 'coment body',
-      id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
-      ProfilePhoto: 'profile photo',
-      uidOfCreator: 'user id',
-      subComents: [],
-    },
-  ],
-};
+const comments = [
+  {
+    exercice: 'Name of exerciceeee',
+    nameOfCreator: 'UserName',
+    coment: 'coment body',
+    id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
+    ProfilePhoto: 'profile photo',
+    uidOfCreator: 'user id',
+    subComents: [],
+  },
+  {
+    exercice: 'Name of exerciceeee',
+    nameOfCreator: 'UserName',
+    coment: 'coment body',
+    id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
+    ProfilePhoto: 'profile photo',
+    uidOfCreator: 'user id',
+    subComents: [],
+  },
+];
 
 // const setCommentsTest = async () => {
-//   firebase.firestore().collection('comments').doc('data').set(CommentMock);
+//   firebase.firestore().collection('comments').doc('data').set({ comments })
+//     .then(() => alert('dwaio'));
 // };
 // setCommentsTest();
 

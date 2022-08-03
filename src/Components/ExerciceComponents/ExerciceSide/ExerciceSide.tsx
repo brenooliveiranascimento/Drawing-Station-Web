@@ -31,7 +31,7 @@ function ExerciceSide() {
         dificultys.map((dificulty, index) => (
           <ContentContainer key={dificulty}>
             <ModulesNameContent
-              onClick={() => setNowModule(dificulty)}
+              onClick={() => setNowModule(dificulty === nowModule ? '' : dificulty)}
             >
               <span>
                 <strong>
@@ -49,7 +49,6 @@ function ExerciceSide() {
                 <Exercicelist>
                   {
                     exercicesData[dificulty].map((exercice: any, exerciceIndex:any) => {
-                      console.log(userProgressData[dificulty][exercice.name]);
                       return (
                         <ExerciceListItem
                           color={nowExerciceState.name === exercice.name ? '#000' : '#212630'}

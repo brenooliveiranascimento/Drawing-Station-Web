@@ -2,7 +2,7 @@
 /* eslint-disable consistent-return */
 import { errorMessageAlert } from '../../globalFuncions/errorMessage';
 import { setUserInLocalStore } from '../../globalFuncions/persistUser';
-import { userDataBase } from '../../MOCKS/__ExerciceData';
+import { userDataBase } from '../../_MOCKS/__ExerciceData';
 import firebase from '../firebase_connection';
 
 export const createUserInDataBase = async (userData: any) => {

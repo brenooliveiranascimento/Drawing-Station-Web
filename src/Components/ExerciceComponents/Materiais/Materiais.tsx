@@ -6,7 +6,6 @@ import {
 
 function Materiais() {
   const nowExerciceColors = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
-  console.log(nowExerciceColors);
   return (
     <MaterialsContainer>
       <h2>
