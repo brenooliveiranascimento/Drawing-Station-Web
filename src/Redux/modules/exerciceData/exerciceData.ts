@@ -48,7 +48,7 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
     case HIDDEN_MATERIALS:
       return { ...state, showMaterials: false };
     case SET_COMMENTS:
-      return { ...state, comments: action.comments };
+      return { ...state, comments: [...state.comments, action.comments] };
     default:
       return state;
   }
