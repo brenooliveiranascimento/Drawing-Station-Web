@@ -65,7 +65,7 @@ export const updateStoreComment = (comment: any): any => {
 
 export const deletComment = (comment: any): any => {
   return async (dispatch: Dispatch<any>) => {
-    removeCommentDataBase(comment);
+    await removeCommentDataBase(comment);
     dispatch(removeComment(comment));
   };
 };

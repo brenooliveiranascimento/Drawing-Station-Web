@@ -3,7 +3,6 @@ import firebase from '../firebase_connection';
 export const getAllComents = async () => {
   const commentsData = await firebase.firestore()
     .collection('comments').doc('data').get();
-  console.log(commentsData.data());
   return commentsData.data();
 };
 
@@ -20,8 +19,9 @@ export const updateComentsDatabase = async (nowComments: any) => {
 export const removeCommentDataBase = async (nowComments: any) => {
   const all: any = await getAllComents();
   const removeComment = all.comments
-    .filter((comment: any) => comment !== nowComments);
-  const comments = [...all.comments];
+    .filter((comment: any) => comment.id !== nowComments.id);
+  const comments = [...removeComment];
+  console.log(all.comments);
   try {
     firebase.firestore().collection('comments').doc('data')
       .set({ comments });

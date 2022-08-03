@@ -27,7 +27,7 @@ function ComentsArea() {
       <h1>Comentário</h1>
       {
         commentsFilter().map((coment: any) => (
-          <CommentBody>
+          <CommentBody key={coment.id}>
             <UserDataComent>
               <h2>{coment.nameOfCreator}</h2>
               { coment.uidOfCreator === userInf.uid && (
