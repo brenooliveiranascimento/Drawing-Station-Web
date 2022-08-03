@@ -6,6 +6,7 @@ import {
   HIDDEN_MATERIALS,
   NEXT_EXERCICE,
   PREV_EXERCICE,
+  REMOVE_COMMENT,
   SET_COMMENTS, SET_NOW_EXERCICE, SHOWN_MATERIALS,
 } from '../../modules/exerciceData/exerciceDataTypes';
 
@@ -52,5 +53,10 @@ export const setComments = (comments: any) => ({
 
 export const fetchCommentsData = (comments: any) => ({
   type: FETCH_COMMENTS,
+  comments,
+});
+
+export const removeComment = (comments: any) => ({
+  type: REMOVE_COMMENT,
   comments,
 });

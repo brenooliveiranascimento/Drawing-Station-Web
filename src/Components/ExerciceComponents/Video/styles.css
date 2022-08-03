@@ -38,3 +38,15 @@
     height: 330px;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .Video {
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Video {
+    height: 230px;
+  }
+}

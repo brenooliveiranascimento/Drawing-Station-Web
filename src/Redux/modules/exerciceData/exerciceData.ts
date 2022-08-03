@@ -7,6 +7,7 @@ import {
   FETCH_EXERCICE_INIT,
   FETCH_EXERCICE_SUCCESS,
   HIDDEN_MATERIALS,
+  REMOVE_COMMENT,
   SET_COMMENTS,
   SET_NOW_EXERCICE,
   SHOWN_MATERIALS,
@@ -53,6 +54,11 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
       return { ...state, comments: [...state.comments, action.comments] };
     case FETCH_COMMENTS:
       return { ...state, comments: [...state.comments, ...action.comments] };
+    case REMOVE_COMMENT:
+      return {
+        ...state,
+        comments: state.comments.filter((nowComment) => nowComment !== action.comments),
+      };
     default:
       return state;
   }

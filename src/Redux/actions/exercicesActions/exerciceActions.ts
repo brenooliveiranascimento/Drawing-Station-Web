@@ -14,7 +14,6 @@ import {
   updateExerciceStoreFail,
   updateExerciceStoreInit,
 } from './genericActions';
-import firebase from '../../../Services/firebase_connection';
 
 export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
   dispatch(updateExerciceStoreFail(errorMessage));
@@ -58,7 +57,6 @@ export const updateStoreComment = (comment: any): any => {
       subComments: [],
       date: new Date(),
     };
-    // firebase.firestore().collection('comments').doc('data').set({ commentData });
     dispatch(setComments(commentData));
     updateComentsDatabase(commentData);
   };
