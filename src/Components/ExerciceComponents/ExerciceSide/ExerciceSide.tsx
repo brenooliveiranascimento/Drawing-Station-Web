@@ -31,7 +31,7 @@ function ExerciceSide() {
         dificultys.map((dificulty, index) => (
           <ContentContainer key={dificulty}>
             <ModulesNameContent
-              onClick={() => setNowModule(dificulty)}
+              onClick={() => setNowModule(dificulty === nowModule ? '' : dificulty)}
             >
               <span>
                 <strong>
