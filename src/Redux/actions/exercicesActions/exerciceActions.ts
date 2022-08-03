@@ -1,7 +1,7 @@
 import { Dispatch } from 'react';
 import { errorMessageConsole } from '../../../globalFuncions/errorMessage';
 import { setDataInLocalStore } from '../../../globalFuncions/localStoreControl';
-import { getAllComents, updateComentsDatabase } from '../../../Services/comentsControlFirebase/comentsControl';
+import { getAllComents, removeCommentDataBase, updateComentsDatabase } from '../../../Services/comentsControlFirebase/comentsControl';
 import { getProductioModulesData, getProductionData } from '../../../Services/versionControlFirebase/versionControlFirebase';
 import {
   DRAWING_STATION_LOCAL_DATA,
@@ -9,12 +9,12 @@ import {
 } from '../../../__GlobalTypes/globalTypes';
 import {
   fetchCommentsData,
+  removeComment,
   setComments,
   updateExerciceStore,
   updateExerciceStoreFail,
   updateExerciceStoreInit,
 } from './genericActions';
-import firebase from '../../../Services/firebase_connection';
 
 export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
   dispatch(updateExerciceStoreFail(errorMessage));
@@ -58,8 +58,14 @@ export const updateStoreComment = (comment: any): any => {
       subComments: [],
       date: new Date(),
     };
-    // firebase.firestore().collection('comments').doc('data').set({ commentData });
     dispatch(setComments(commentData));
     updateComentsDatabase(commentData);
+  };
+};
+
+export const deletComment = (comment: any): any => {
+  return async (dispatch: Dispatch<any>) => {
+    await removeCommentDataBase(comment);
+    dispatch(removeComment(comment));
   };
 };
