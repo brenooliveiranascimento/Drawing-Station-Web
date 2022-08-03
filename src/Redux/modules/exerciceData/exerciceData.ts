@@ -1,5 +1,5 @@
 import { accessLocalStore } from '../../../globalFuncions/localStoreControl';
-import { exerciceBaseData } from '../../../MOCKS/__ExerciceData';
+import { exerciceBaseData } from '../../../_MOCKS/__ExerciceData';
 import { DRAWING_STATION_LOCAL_DATA_MODULES } from '../../../__GlobalTypes/globalTypes';
 import {
   FETCH_EXERCICE_FAIL,

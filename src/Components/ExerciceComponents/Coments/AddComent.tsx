@@ -1,19 +1,32 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { updateStoreComment } from '../../../Redux/actions/exercicesActions/exerciceActions';
 import { ComentsContainer } from './Components';
 
 function AddComents() {
-  const [coment, setComent] = useState<string>('');
+  const [comment, setComment] = useState<string>('');
+  const dispatch = useDispatch();
+
+  const sendComment = () => {
+    dispatch(updateStoreComment(comment));
+  };
 
   return (
     <ComentsContainer>
       <h1>Adicionar Comentario</h1>
       <input
-        value={coment}
-        onChange={({ target }) => setComent(target.value)}
+        value={comment}
+        onChange={({ target }) => setComment(target.value)}
         maxLength={500}
         placeholder="Fique a vontade para tirar as duvidas."
         type="text"
       />
+      <button
+        onClick={sendComment}
+        type="button"
+      >
+        Enviar comentario
+      </button>
     </ComentsContainer>
   );
 }

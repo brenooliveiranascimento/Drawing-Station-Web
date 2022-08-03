@@ -42,3 +42,18 @@ export const fetchComments = (): any => {
     dispatch(setComments(getComments.Comments));
   };
 };
+
+export const updateStoreComment = (comment: any): any => {
+  return async (dispatch:Dispatch<any>, getState: any) => {
+    const commentData = {
+      exercice: getState().exerciceData.nowExerciceData.name,
+      nameOfCreator: getState().userData.name,
+      coment: comment,
+      id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
+      ProfilePhoto: undefined,
+      uidOfCreator: getState().userData.uid,
+      subComents: [],
+    };
+    dispatch(setComments(commentData));
+  };
+};
