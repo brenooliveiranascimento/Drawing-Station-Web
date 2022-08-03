@@ -22,3 +22,27 @@ export const ComentsContainer = styled.section`
     font-size: 17px;
   };
 `;
+
+export const CommentBody = styled.article`
+  display: flex;
+  width: 100%;
+  background-color: #08111C;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px;
+  border-radius:6px;
+  height: auto;
+  padding: 10px;
+  h2{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+`;
+
+export const UserDataComent = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;

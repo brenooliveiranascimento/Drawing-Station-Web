@@ -14,17 +14,17 @@ import {
   updateExerciceStoreInit,
 } from './genericActions';
 
+export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
+  dispatch(updateExerciceStoreFail(errorMessage));
+  errorMessageConsole(errorMessage);
+};
+
 export const updateExerciceState = async (dispatch: Dispatch<any>) => {
   const fetchExerciceData = await getProductionData();
   const fetchModulesData = await getProductioModulesData();
   setDataInLocalStore(DRAWING_STATION_LOCAL_DATA_MODULES, fetchModulesData);
   setDataInLocalStore(DRAWING_STATION_LOCAL_DATA, fetchExerciceData);
   dispatch(updateExerciceStore(fetchExerciceData, fetchModulesData));
-};
-
-export const failInUpdateStore = (errorMessage: string, dispatch: any) => {
-  dispatch(updateExerciceStoreFail(errorMessage));
-  errorMessageConsole(errorMessage);
 };
 
 export const updateExerciceData = (): any => {
