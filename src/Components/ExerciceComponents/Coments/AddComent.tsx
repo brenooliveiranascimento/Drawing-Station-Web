@@ -5,11 +5,14 @@ import { ComentsContainer } from './Components';
 
 function AddComents() {
   const [comment, setComment] = useState<string>('');
+  const [showAlertMessage, setShowAlertMessage] = useState<boolean>(false);
   const dispatch = useDispatch();
 
   const sendComment = () => {
+    if (!comment.length) setShowAlertMessage(true);
     setComment('');
     dispatch(updateStoreComment(comment));
+    setShowAlertMessage(false);
   };
 
   return (
@@ -22,13 +25,18 @@ function AddComents() {
         placeholder="Fique a vontade para tirar as duvidas."
         type="text"
       />
-      <button
-        className="add_btn"
-        onClick={sendComment}
-        type="button"
-      >
-        Enviar comentario
-      </button>
+      <section>
+        <button
+          className="add_btn"
+          onClick={sendComment}
+          type="button"
+        >
+          Enviar comentario
+        </button>
+        {
+          showAlertMessage && <span>Digite alguma coisa...</span>
+        }
+      </section>
     </ComentsContainer>
   );
 }

@@ -30,6 +30,7 @@ export const ComentsContainer = styled.section`
     background-color: #08111C;
     color: white;
     font-size: 18px;
+    margin-right: 10px;
   }
 `;
 
