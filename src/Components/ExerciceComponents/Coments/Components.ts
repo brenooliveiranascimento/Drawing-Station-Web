@@ -21,6 +21,16 @@ export const ComentsContainer = styled.section`
     padding: 10px;
     font-size: 17px;
   };
+
+  .add_btn {
+    width: 30%;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #08111C;
+    color: white;
+    font-size: 18px;
+  }
 `;
 
 export const CommentBody = styled.article`

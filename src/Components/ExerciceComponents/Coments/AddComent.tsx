@@ -23,6 +23,7 @@ function AddComents() {
         type="text"
       />
       <button
+        className="add_btn"
         onClick={sendComment}
         type="button"
       >
