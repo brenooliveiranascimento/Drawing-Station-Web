@@ -6,6 +6,7 @@ import {
   FETCH_EXERCICE_INIT,
   FETCH_EXERCICE_SUCCESS,
   HIDDEN_MATERIALS,
+  SET_COMMENTS,
   SET_NOW_EXERCICE,
   SHOWN_MATERIALS,
 } from './exerciceDataTypes';
@@ -19,6 +20,7 @@ const STATE_INITIAL_VALUE = {
   loading: false,
   error: '',
   showMaterials: true,
+  comments: [],
 };
 
 const ACTION_INITIAL_STATE = {
@@ -26,6 +28,7 @@ const ACTION_INITIAL_STATE = {
   payLoad: {},
   error: '',
   modules: {},
+  comments: [],
 };
 
 function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE) {
@@ -44,6 +47,8 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
       return { ...state, showMaterials: true };
     case HIDDEN_MATERIALS:
       return { ...state, showMaterials: false };
+    case SET_COMMENTS:
+      return { ...state, comments: action.comments };
     default:
       return state;
   }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import AddComents from '../../Components/ExerciceComponents/Coments/AddComent';
+import ComentsArea from '../../Components/ExerciceComponents/Coments/ComentsArea';
 import ExerciceInf from '../../Components/ExerciceComponents/ExerciceInf/ExerciceInf';
 import ExerciceSide from '../../Components/ExerciceComponents/ExerciceSide/ExerciceSide';
 import Materiais from '../../Components/ExerciceComponents/Materiais/Materiais';
@@ -8,7 +10,6 @@ import { ExerciceContainer, Main, VideoArea } from './ExerciceComponents';
 
 function ExerciceArea() {
   const nowExercice = useSelector(({ exerciceData }: any) => exerciceData);
-  console.log(nowExercice);
   return (
     <Main>
       <ExerciceContainer>
@@ -18,6 +19,8 @@ function ExerciceArea() {
           {
             nowExercice.showMaterials && nowExercice.nowExerciceData.finished && <Materiais />
           }
+          <AddComents />
+          <ComentsArea />
         </VideoArea>
         <ExerciceSide />
       </ExerciceContainer>

@@ -1,5 +1,5 @@
 .home_container {
-  /* background: url("../../Assets/layered-waves-haikei (40).svg") fixed ; */
+  background: url("../../Assets/layered-waves-haikei (40).svg") fixed ;
   background-size: cover;
   background-color: #191919;
   background-attachment: fixed;
@@ -16,8 +16,8 @@
   position: absolute;
   left: 0px;
   height: 100vh;
-  width: 100%;
-  /* background-color: rgba(0,0,0,0.7); */
+  width: 99.5%;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .Logo_In_Home {
