@@ -18,7 +18,9 @@ export const SideContent = styled.aside`
   transition: all 0.3s;
 
   @media screen and (max-width: 1300px){
-    display: none;
+    position: absolute;
+    width: 80%;
+    height: auto;
   }
 `;
 

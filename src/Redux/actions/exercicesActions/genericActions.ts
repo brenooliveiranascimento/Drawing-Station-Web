@@ -62,6 +62,7 @@ export const removeComment = (comments: any) => ({
   comments,
 });
 
-export const handleSideBar = () => ({
+export const handleSideBar = (condition: boolean) => ({
   type: HANDLE_SIDE_EXERCICE,
+  payLoad: condition,
 });

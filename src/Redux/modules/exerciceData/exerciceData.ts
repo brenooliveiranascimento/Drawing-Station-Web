@@ -56,7 +56,7 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
     case FETCH_COMMENTS:
       return { ...state, comments: [...state.comments, ...action.comments] };
     case HANDLE_SIDE_EXERCICE:
-      return { ...state, showSideBar: !state.showSideBar };
+      return { ...state, showSideBar: action.payLoad };
     case REMOVE_COMMENT:
       return {
         ...state,

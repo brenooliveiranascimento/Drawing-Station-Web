@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   width: 100%;
   display: flex;
-  align-items: flex-end;
-  height: auto;
+  align-items: flex-start;
   justify-content: space-between;
+  height: auto;
   h1 {
     font-size: 27px;
     margin-bottom: -1rem;
@@ -22,7 +22,6 @@ export const HandleBtn = styled.button`
   background-color: #212630;
   color:white;
   padding: 10px;
-  margin-bottom: -20px;
   font-size: 18px;
   margin-right: 15px;
   @media screen and (max-width: 1300px){
