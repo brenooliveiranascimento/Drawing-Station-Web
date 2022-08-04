@@ -6,13 +6,13 @@ import {
   ContentContainer,
   Divise, Exercicelist, ExerciceListItem, ModulesNameContent, SideContent, SideSearch,
 } from './ExeerciceSide';
-import { changeNowExercice } from '../../../Redux/actions/exercicesActions/genericActions';
+import { changeNowExercice, handleSideBar } from '../../../Redux/actions/exercicesActions/genericActions';
+import { HandleBtn } from '../ExerciceHeader/components';
 
 function ExerciceSide() {
   const exercicesData = useSelector(({ exerciceData }: any) => exerciceData.exercices);
   const userProgressData = useSelector(({ exerciceProgress }: any) => exerciceProgress);
   const nowExerciceState = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
-
   const dispatch = useDispatch();
   const dificultys = Object.keys(exercicesData);
   const [nowModule, setNowModule] = useState('basics');
@@ -23,9 +23,15 @@ function ExerciceSide() {
 
   return (
     <SideContent>
-      <SideSearch
+      <HandleBtn
+        onClick={() => dispatch(handleSideBar(false))}
+        style={{ alignSelf: 'flex-start' }}
+      >
+        Fechar
+      </HandleBtn>
+      {/* <SideSearch
         placeholder="Buscar Exercicio"
-      />
+      /> */}
       <Divise />
       {
         dificultys.map((dificulty, index) => (

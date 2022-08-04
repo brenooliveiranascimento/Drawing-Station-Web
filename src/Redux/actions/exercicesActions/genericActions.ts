@@ -3,6 +3,7 @@ import {
   FETCH_EXERCICE_FAIL,
   FETCH_EXERCICE_INIT,
   FETCH_EXERCICE_SUCCESS,
+  HANDLE_SIDE_EXERCICE,
   HIDDEN_MATERIALS,
   NEXT_EXERCICE,
   PREV_EXERCICE,
@@ -59,4 +60,9 @@ export const fetchCommentsData = (comments: any) => ({
 export const removeComment = (comments: any) => ({
   type: REMOVE_COMMENT,
   comments,
+});
+
+export const handleSideBar = (condition: boolean) => ({
+  type: HANDLE_SIDE_EXERCICE,
+  payLoad: condition,
 });

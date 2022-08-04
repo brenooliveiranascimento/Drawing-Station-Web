@@ -9,18 +9,24 @@ function AddComents() {
   const dispatch = useDispatch();
 
   const sendComment = () => {
-    if (!comment.length) setShowAlertMessage(true);
+    if (!comment.length) return setShowAlertMessage(true);
     setComment('');
     dispatch(updateStoreComment(comment));
     setShowAlertMessage(false);
+  };
+
+  const handleInput = (value: string) => {
+    setShowAlertMessage(false);
+    setComment(value);
   };
 
   return (
     <ComentsContainer>
       <h1>Adicionar Comentario</h1>
       <input
+        style={{ border: showAlertMessage ? '3px solid red' : 'none' }}
         value={comment}
-        onChange={({ target }) => setComment(target.value)}
+        onChange={({ target }) => handleInput(target.value)}
         maxLength={500}
         placeholder="Fique a vontade para tirar as duvidas."
         type="text"
@@ -31,7 +37,9 @@ function AddComents() {
           onClick={sendComment}
           type="button"
         >
-          Enviar comentario
+          <span>
+            Enviar comentario
+          </span>
         </button>
         {
           showAlertMessage && <span>Digite alguma coisa...</span>

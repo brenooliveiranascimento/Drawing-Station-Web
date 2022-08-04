@@ -8,7 +8,7 @@ export const ContentContainer = styled.section`
 `;
 
 export const SideContent = styled.aside`
-  width: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -16,9 +16,12 @@ export const SideContent = styled.aside`
   align-items: center;
   color: #fff;
   transition: all 0.3s;
-
+  height: 100%;
   @media screen and (max-width: 1300px){
-    display: none;
+    position: absolute;
+    width: 80%;
+    height: auto;
+    right: 10px;
   }
 `;
 

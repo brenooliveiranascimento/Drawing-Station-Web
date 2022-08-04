@@ -32,6 +32,12 @@ export const ComentsContainer = styled.section`
     font-size: 18px;
     margin-right: 10px;
   }
+
+  @media screen and (max-width: 670px){
+    .add_btn {
+      width: 50%;
+    }
+  }
 `;
 
 export const CommentBody = styled.article`
