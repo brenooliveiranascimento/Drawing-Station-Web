@@ -37,7 +37,9 @@ function AddComents() {
           onClick={sendComment}
           type="button"
         >
-          Enviar comentario
+          <span>
+            Enviar comentario
+          </span>
         </button>
         {
           showAlertMessage && <span>Digite alguma coisa...</span>
