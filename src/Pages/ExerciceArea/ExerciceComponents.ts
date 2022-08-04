@@ -41,3 +41,12 @@ export const Main = styled.section`
     margin-left: 0px;
   }
 `;
+
+export const Darknessbackground = styled.section`
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6),
+`;

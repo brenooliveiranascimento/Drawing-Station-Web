@@ -9,7 +9,9 @@ import ExerciceSide from '../../Components/ExerciceComponents/ExerciceSide/Exerc
 import Materiais from '../../Components/ExerciceComponents/Materiais/Materiais';
 import VideoPlayer from '../../Components/ExerciceComponents/Video/VideoPlayer';
 import { handleSideBar } from '../../Redux/actions/exercicesActions/genericActions';
-import { ExerciceContainer, Main, VideoArea } from './ExerciceComponents';
+import {
+  Darknessbackground, ExerciceContainer, Main, VideoArea,
+} from './ExerciceComponents';
 
 function ExerciceArea() {
   const nowExercice = useSelector(({ exerciceData }: any) => exerciceData);
@@ -38,19 +40,29 @@ function ExerciceArea() {
         </VideoArea>
         {
           nowExercice.showSideBar && (
-            <section style={{
-              position: 'absolute',
-              right: 0,
-              width: '100%',
-              zIndex: 0,
-              height: '100%',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-            }}
-            >
-              <ExerciceSide />
+
+            <section>
+              {
+                width <= 1300 ? (
+                  <section style={{
+                    position: 'absolute',
+                    right: 0,
+                    width: '100%',
+                    zIndex: 0,
+                    height: '100%',
+                    backgroundColor: 'rgba(0,0,0,0.6)',
+                  }}
+                  >
+                    <ExerciceSide />
+                  </section>
+                ) : (
+                  <ExerciceSide />
+                )
+              }
             </section>
+
           )
-        }
+            }
       </ExerciceContainer>
     </Main>
   );

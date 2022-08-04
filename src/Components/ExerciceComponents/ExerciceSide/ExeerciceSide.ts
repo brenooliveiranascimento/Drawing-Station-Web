@@ -16,7 +16,7 @@ export const SideContent = styled.aside`
   align-items: center;
   color: #fff;
   transition: all 0.3s;
-
+  height: 100%;
   @media screen and (max-width: 1300px){
     position: absolute;
     width: 80%;
