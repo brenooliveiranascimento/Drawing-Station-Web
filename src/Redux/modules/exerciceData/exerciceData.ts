@@ -6,6 +6,7 @@ import {
   FETCH_EXERCICE_FAIL,
   FETCH_EXERCICE_INIT,
   FETCH_EXERCICE_SUCCESS,
+  HANDLE_SIDE_EXERCICE,
   HIDDEN_MATERIALS,
   REMOVE_COMMENT,
   SET_COMMENTS,
@@ -23,6 +24,7 @@ const STATE_INITIAL_VALUE = {
   error: '',
   showMaterials: false,
   comments: [],
+  showSideBar: false,
 };
 
 const ACTION_INITIAL_STATE = {
@@ -34,7 +36,6 @@ const ACTION_INITIAL_STATE = {
 };
 
 function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE) {
-  console.log(action.comments);
   switch (action.type) {
     case FETCH_EXERCICE_INIT:
       return { ...state, loading: true };
@@ -54,6 +55,8 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
       return { ...state, comments: [...state.comments, action.comments] };
     case FETCH_COMMENTS:
       return { ...state, comments: [...state.comments, ...action.comments] };
+    case HANDLE_SIDE_EXERCICE:
+      return { ...state, showSideBar: !state.showSideBar };
     case REMOVE_COMMENT:
       return {
         ...state,
