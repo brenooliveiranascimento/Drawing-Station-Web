@@ -12,7 +12,7 @@ body {
     sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
   z-index: 99;
 }
 input:focus, textarea:focus, select:focus{
