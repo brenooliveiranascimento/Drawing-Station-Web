@@ -37,7 +37,19 @@ function ExerciceArea() {
           <ComentsArea />
         </VideoArea>
         {
-          nowExercice.showSideBar && <ExerciceSide />
+          nowExercice.showSideBar && (
+            <section style={{
+              position: 'absolute',
+              right: 0,
+              width: '100%',
+              zIndex: 0,
+              height: '100%',
+              backgroundColor: 'rgba(0,0,0,0.5)',
+            }}
+            >
+              <ExerciceSide />
+            </section>
+          )
         }
       </ExerciceContainer>
     </Main>

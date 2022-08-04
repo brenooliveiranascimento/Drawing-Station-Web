@@ -29,9 +29,9 @@ function ExerciceSide() {
       >
         Fechar
       </HandleBtn>
-      <SideSearch
+      {/* <SideSearch
         placeholder="Buscar Exercicio"
-      />
+      /> */}
       <Divise />
       {
         dificultys.map((dificulty, index) => (

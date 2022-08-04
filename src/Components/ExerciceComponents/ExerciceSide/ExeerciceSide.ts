@@ -21,6 +21,7 @@ export const SideContent = styled.aside`
     position: absolute;
     width: 80%;
     height: auto;
+    right: 10px;
   }
 `;
 
