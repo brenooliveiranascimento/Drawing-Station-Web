@@ -51,7 +51,6 @@ function ExerciceInf() {
                 >
                   <h1>
                     {nowExercice.name}
-                    {' '}
                     {nowExercice.description}
                     <AiFillCheckCircle className="check_icon_check" />
                   </h1>
@@ -65,7 +64,6 @@ function ExerciceInf() {
                 >
                   <h1>
                     {nowExercice.name}
-                    {' '}
                     {nowExercice.description}
                     <AiFillCloseCircle className="check_icon_no_check" />
                   </h1>
