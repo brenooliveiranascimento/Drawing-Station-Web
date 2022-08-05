@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const SideContainer = styled.aside`
   width: 70px;
   height: 100%;
-  background-color: aqua;
   position: fixed;
   display: flex;
   z-index: 99;

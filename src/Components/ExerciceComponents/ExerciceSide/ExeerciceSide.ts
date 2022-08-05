@@ -13,7 +13,9 @@ export const SideContent = styled.aside`
   flex-direction: column;
   padding: 10px;
   background-color: #212630;
+  z-index: 99;
   align-items: center;
+  z-index: 3;
   color: #fff;
   transition: all 0.3s;
   height: 100%;

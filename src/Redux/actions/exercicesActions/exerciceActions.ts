@@ -41,7 +41,6 @@ export const updateExerciceData = (): any => {
 export const fetchComments = (): any => {
   return async (dispatch: Dispatch<any>) => {
     const getComments: any = await getAllComents();
-    console.log(getComments.comments);
     dispatch(fetchCommentsData(getComments.comments));
   };
 };
