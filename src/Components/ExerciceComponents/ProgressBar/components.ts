@@ -1,23 +1,34 @@
 import styled from 'styled-components';
 
 export const MainBar = styled.section`
-  display: flex;
+  height: 30px;
+  width: auto;
+  margin-top: 20px;
   align-items: center;
-  justify-content: center;
-  height: 15px;
-  width: 400px;
+  padding: 10px;
+  margin-left: -10px;
+  display: flex;
+
+  h2 {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+  }
 `;
 
 export const BackBar = styled.article`
-  width: 100%;
-  width: 15px;
-  background-color: black;
-  position: absolute;
+  height: 15px;
+  z-index: 0;
+  width: 200px;
+  background-color: #2f3644;
+  border-radius: 10px;
 `;
 
 export const Colorbar = styled.article`
-  width: 40%;
+  width: 30px;
   position: absolute;
-  background-color: aqua;
   height: 15px;
+  z-index: 1;
+  background-color: #BE4D68;
+  border-radius: 10px;
 `;

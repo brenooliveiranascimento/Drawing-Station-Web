@@ -12,6 +12,16 @@ export const HeaderContainer = styled.header`
   }
 `;
 
+export const ProgressBar = styled.section`
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction:column ;
+  width: 200px;
+`;
+
 export const HandleBtn = styled.button`
   display: none;
   width: auto;

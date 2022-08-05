@@ -48,7 +48,7 @@ function ExerciceArea() {
                     position: 'absolute',
                     right: 0,
                     width: '100%',
-                    zIndex: 0,
+                    zIndex: 3,
                     height: '100%',
                     backgroundColor: 'rgba(0,0,0,0.6)',
                   }}
