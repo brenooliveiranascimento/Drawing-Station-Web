@@ -4,12 +4,12 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDUv30AFNdzf4osmUmecIO5-iGFTlMz5oA',
-  authDomain: 'drawingstationdesktop.firebaseapp.com',
-  projectId: 'drawingstationdesktop',
-  storageBucket: 'drawingstationdesktop.appspot.com',
-  messagingSenderId: '760441447330',
-  appId: '1:760441447330:web:45c8097a7e240d0dd848fb',
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID,
 };
 
 if (!firebase.apps.length) {
