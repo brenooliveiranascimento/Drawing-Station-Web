@@ -22,7 +22,6 @@ function PaitingProgressBar() {
   };
 
   const convertExerciceNumberToPercentage = () => (userProgress.all / sumAllExercice()) * 200;
-  console.log(convertExerciceNumberToPercentage());
 
   return (
     <MainBar>
