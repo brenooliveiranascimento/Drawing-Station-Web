@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const ExerciceContainer = styled.section`
   width: 1300px;
   background-color: #08111C;
+  margin:20px;
+  margin-bottom: 40px;
   height: auto;
   margin-top: 5rem;
   padding: 15px;

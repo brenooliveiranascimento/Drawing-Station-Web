@@ -30,19 +30,10 @@ function Modules() {
   };
 
   return (
-    <section>
-      <ContentHeader>
-        <h1>Módulos</h1>
-        <SelectArea>
-          <Link to="/Modulos">
-            <span>Modulos</span>
-          </Link>
-
-          <Link to="/Blog">
-            <span>Blog</span>
-          </Link>
-        </SelectArea>
-      </ContentHeader>
+    <section style={{
+      display: 'flex', backgroundColor: 'black', alignItems: 'center', justifyContent: 'center',
+    }}
+    >
       <ModulesContain>
         {
         modulesData.map((module: any) => (
@@ -60,7 +51,11 @@ function Modules() {
                 />
               ) : (
                 <Link to={module.id}>
-                  <BsPencilFill className="Icon" />
+                  <img
+                    className="Img_Modules"
+                    src={module.image}
+                    alt={module.id}
+                  />
                   <h1 className="Name_Of_Module">{module.name}</h1>
                   <span>
                     {module.details}

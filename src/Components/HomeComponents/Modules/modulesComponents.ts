@@ -1,18 +1,13 @@
 import styled from 'styled-components';
 
 export const ModulesContain = styled.nav`
-  width: 100%;
+  width: auto;
   height: auto;
   padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 5rem;
   border-radius: 0px;
-  justify-content: flex-start;
-  padding-left: 6%;
-
 
   @media screen and(max-width: 1300px) {
     justify-content: flex-start;
@@ -24,32 +19,31 @@ export const ModulesContain = styled.nav`
 `;
 
 export const ModuleCard = styled.a`
-  width: 290px;
-  height: 320px;
+  width: 500px;
+  height: 400px;
   align-self: flex-start;
   display: flex;
   justify-self: flex-start;
   flex-direction: column;
-  padding: 20px;
   background-color: #2b2b2b;
   backdrop-filter: blur(15px);
-  margin: 20px;
+  margin: 0px 10px 0px;
   align-items: center;
-  justify-content: center;
-  /* img {
-    width: 250px;
-    height: 190px;
-    margin-top: -100px;
+  justify-content: flex-start;
+
+  .Img_Modules {
+    width: 500px;
+    height: 270px;
     filter: brightness(80%);
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     object-fit: cover;
-  } */
+  }
+
   .Name_Of_Module {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
-    margin-top: 60px;
-    text-align: center;
+    text-align: start;
+    margin-left: 10px;
+    margin-top: 5px;
   }
 
   a {
@@ -70,55 +64,21 @@ export const ModuleCard = styled.a`
   span {
     margin-top: 10px;
     line-height: 20px;
+    text-align: start;
+    padding-left: 10px;
+    margin-top: 5px;
   }
 
   .Construct_mode {
       bottom: 2px;
       font-weight: 500;
       color: #fff;
-      font-size: 20px;
+      font-size: 15px;
     }
 
   @media screen and (max-width: 990px){
     width: 200px;
     height: 200px;
-
-    img {
-      height: 180px;
-      margin-top: 5px;
-      width: 190px;
-    }
-
-    .Name_Of_Module {
-      top: 10px;
-    }
-
-    span {
-      bottom: 30px;
-    }
-
-    .Construct_mode {
-      bottom: 65px;
-    }
-  }
-
-  @media screen and (max-width: 990px){
-    width: 40%;
-    height: 220px;
-
-    img {
-      width: 140px;
-    }
-
-  }
-
-  @media screen and (max-width: 514px){
-    width: 80%;
-    height: 300px;
-
-    img {
-      width: 160px;
-    }
   }
 `;
 
