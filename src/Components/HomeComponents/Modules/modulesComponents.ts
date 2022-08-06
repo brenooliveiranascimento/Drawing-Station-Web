@@ -31,10 +31,13 @@ export const ModuleCard = styled.a`
   align-items: center;
   justify-content: flex-start;
 
+  .progress_container {
+    padding-left: 10px;
+  }
+
   .Img_Modules {
     width: 500px;
     height: 270px;
-    filter: brightness(80%);
     object-fit: cover;
   }
 
@@ -43,7 +46,7 @@ export const ModuleCard = styled.a`
     font-weight: 800;
     text-align: start;
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
   a {

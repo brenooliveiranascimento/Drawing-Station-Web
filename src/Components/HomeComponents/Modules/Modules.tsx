@@ -9,6 +9,7 @@ import {
   ContentHeader, ModuleCard, ModulesContain, SelectArea,
 } from './modulesComponents';
 import animationLoading from '../../../Assets/Lottie/lf30_editor_0ktlr6ix.json';
+import PaitingProgressBar from '../../ExerciceComponents/ProgressBar/PaitingProgressBar';
 
 function Modules() {
   const modulesData = useSelector(({ exerciceData }: any) => exerciceData.modules);
@@ -31,7 +32,7 @@ function Modules() {
 
   return (
     <section style={{
-      display: 'flex', backgroundColor: 'black', alignItems: 'center', justifyContent: 'center',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
     }}
     >
       <ModulesContain>
@@ -61,9 +62,13 @@ function Modules() {
                     {module.details}
                   </span>
                   {
-              !module.conclude && (
+              !module.conclude ? (
                 <span className="Construct_mode">
                   Em construção
+                </span>
+              ) : (
+                <span className="progress_container">
+                  <PaitingProgressBar />
                 </span>
               )
             }

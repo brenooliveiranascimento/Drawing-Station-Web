@@ -19,10 +19,10 @@ export const MainContent = styled.section`
 `;
 
 export const MainLimit = styled.section`
-  width: 1300px;
+  width: auto;
   height: auto;
-  margin-top: 5rem;
-  padding: 15px;
+  margin-top: 2rem;
+  margin-left: -2rem;
   justify-content: flex-end;
   margin-bottom: 15px;
   @media screen and (max-width: 1300px){
