@@ -11,8 +11,9 @@ export const MainBar = styled.section`
 
   h2 {
     color: white;
+    margin-left: -60px;
+    z-index: 99;
     font-size: 20px;
-    margin-left: 10px;
   }
 `;
 
