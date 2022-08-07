@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 export const Contain = styled.section`
   display: flex;
+  background-color: aqua;
 
   @media screen and (max-width: 940px){
     margin-left: 0px;
     flex-wrap: wrap;
-    width: 85%;
+    width: 100%;
     justify-self: center;
-    padding: 20px;
+    padding: 10px;
+    align-items: center;
   }
 `;
 
@@ -107,6 +109,14 @@ export const ModuleCard = styled.a`
 
     .Img_Modules {
       width: 280px;
+    }
+  }
+
+  @media screen and (max-width: 940px){
+    width: 230px;
+    align-items: flex-start;
+    .Img_Modules {
+      width: 230px;
     }
   }
 `;

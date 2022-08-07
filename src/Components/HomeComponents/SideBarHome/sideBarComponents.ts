@@ -8,20 +8,14 @@ export const SideContainer = styled.aside`
   z-index: 99;
   background-color: #08111C;
   flex-direction: column;
-  transition: all 0.3s;
   align-items: center;
 
   img {
     display: none;
   }
-
-  a {
-    transition: all 1s;
-  }
   
   a span{
     display: none;
-    transition: all 1s;
   }
 
   .icon_side {
@@ -36,18 +30,15 @@ export const SideContainer = styled.aside`
 
   :hover {
     width: 200px;
-    transition: all 0.3s;
 
     a {
       display: flex;
       align-items: center;
-      transition: all 1s;
       flex-direction: column;
       justify-content: center;
     }
 
     a span{
-    transition: all 1s;
       display: block;
       margin-top: -25px;
       margin-bottom: 10px;
@@ -59,13 +50,11 @@ export const SideContainer = styled.aside`
   }
 
   @media screen and (max-width: 1320px){
-    transition: none
   }
   @media screen and (max-width: 1300px){
     width: 100%;
     height: 70px;
     flex-direction: row;
-    transition: none;
     justify-content: space-around;
     img {
       display: block;
@@ -76,13 +65,11 @@ export const SideContainer = styled.aside`
     a {
       display: block;
       align-items: center;
-      transition: none;
       flex-direction: column;
       justify-content: center;
     }
 
     a span{
-    transition: none;
       display: none;
       margin-top: -25px;
       margin-bottom: 10px;
