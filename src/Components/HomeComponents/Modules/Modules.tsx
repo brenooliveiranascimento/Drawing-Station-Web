@@ -31,12 +31,8 @@ function Modules() {
   };
 
   return (
-    <section style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
-    }}
-    >
-      <ModulesContain>
-        {
+    <ModulesContain>
+      {
         modulesData.map((module: any) => (
           <ModuleCard key={module.name}>
             {
@@ -79,8 +75,7 @@ function Modules() {
           </ModuleCard>
         ))
       }
-      </ModulesContain>
-    </section>
+    </ModulesContain>
   );
 }
 

@@ -8,10 +8,10 @@ export const ModulesContain = styled.nav`
   flex-direction: row;
   justify-content: center;
   border-radius: 0px;
-  margin-top: 4rem;
+  margin-top: 2rem;
 
-  @media screen and(max-width: 1300px) {
-    justify-content: flex-start;
+  @media screen and(max-width: 1400px) {
+    flex-wrap: wrap;
   }
 
   @media screen and (max-width: 514px){
@@ -80,9 +80,21 @@ export const ModuleCard = styled.a`
       font-size: 15px;
     }
 
-  @media screen and (max-width: 990px){
-    width: 200px;
-    height: 200px;
+  @media screen and (max-width: 1300px){
+    width: 350px;
+
+    .Img_Modules {
+      width: 350px;
+    }
+  }
+
+
+  @media screen and (max-width: 1113px){
+    width: 280px;
+
+    .Img_Modules {
+      width: 280px;
+    }
   }
 `;
 
