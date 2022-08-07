@@ -32,7 +32,7 @@ function Modules() {
 
   return (
     <section style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
     }}
     >
       <ModulesContain>

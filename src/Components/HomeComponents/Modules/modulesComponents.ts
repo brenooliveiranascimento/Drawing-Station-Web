@@ -8,6 +8,7 @@ export const ModulesContain = styled.nav`
   flex-direction: row;
   justify-content: center;
   border-radius: 0px;
+  margin-top: 4rem;
 
   @media screen and(max-width: 1300px) {
     justify-content: flex-start;
@@ -19,7 +20,7 @@ export const ModulesContain = styled.nav`
 `;
 
 export const ModuleCard = styled.a`
-  width: 500px;
+  width: 450px;
   height: 400px;
   align-self: flex-start;
   display: flex;
@@ -36,7 +37,7 @@ export const ModuleCard = styled.a`
   }
 
   .Img_Modules {
-    width: 500px;
+    width: 450px;
     height: 270px;
     object-fit: cover;
   }
