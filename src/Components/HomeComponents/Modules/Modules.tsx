@@ -6,9 +6,11 @@ import Lottie from 'react-lottie';
 import { Link } from 'react-router-dom';
 import { BsPencilFill } from 'react-icons/bs';
 import {
+  Contain,
   ContentHeader, ModuleCard, ModulesContain, SelectArea,
 } from './modulesComponents';
 import animationLoading from '../../../Assets/Lottie/lf30_editor_0ktlr6ix.json';
+import PaitingProgressBar from '../../ExerciceComponents/ProgressBar/PaitingProgressBar';
 
 function Modules() {
   const modulesData = useSelector(({ exerciceData }: any) => exerciceData.modules);
@@ -30,20 +32,11 @@ function Modules() {
   };
 
   return (
-    <section>
+    <ModulesContain>
       <ContentHeader>
-        <h1>Módulos</h1>
-        <SelectArea>
-          <Link to="/Modulos">
-            <span>Modulos</span>
-          </Link>
-
-          <Link to="/Blog">
-            <span>Blog</span>
-          </Link>
-        </SelectArea>
+        <h1>dmkwaopdkjwaopd</h1>
       </ContentHeader>
-      <ModulesContain>
+      <Contain>
         {
         modulesData.map((module: any) => (
           <ModuleCard key={module.name}>
@@ -60,15 +53,23 @@ function Modules() {
                 />
               ) : (
                 <Link to={module.id}>
-                  <BsPencilFill className="Icon" />
+                  <img
+                    className="Img_Modules"
+                    src={module.image}
+                    alt={module.id}
+                  />
                   <h1 className="Name_Of_Module">{module.name}</h1>
                   <span>
                     {module.details}
                   </span>
                   {
-              !module.conclude && (
+              !module.conclude ? (
                 <span className="Construct_mode">
                   Em construção
+                </span>
+              ) : (
+                <span className="progress_container">
+                  <PaitingProgressBar />
                 </span>
               )
             }
@@ -79,8 +80,9 @@ function Modules() {
           </ModuleCard>
         ))
       }
-      </ModulesContain>
-    </section>
+      </Contain>
+    </ModulesContain>
+
   );
 }
 
