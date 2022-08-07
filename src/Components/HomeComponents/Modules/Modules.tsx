@@ -6,6 +6,7 @@ import Lottie from 'react-lottie';
 import { Link } from 'react-router-dom';
 import { BsPencilFill } from 'react-icons/bs';
 import {
+  Contain,
   ContentHeader, ModuleCard, ModulesContain, SelectArea,
 } from './modulesComponents';
 import animationLoading from '../../../Assets/Lottie/lf30_editor_0ktlr6ix.json';
@@ -32,7 +33,8 @@ function Modules() {
 
   return (
     <ModulesContain>
-      {
+      <Contain>
+        {
         modulesData.map((module: any) => (
           <ModuleCard key={module.name}>
             {
@@ -75,7 +77,9 @@ function Modules() {
           </ModuleCard>
         ))
       }
+      </Contain>
     </ModulesContain>
+
   );
 }
 

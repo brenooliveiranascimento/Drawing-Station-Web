@@ -5,10 +5,7 @@ import { MainLimit } from '../Home/HomeComponents';
 
 function ModulesArea() {
   return (
-    <MainLimit>
-      {/* <HeaderHome /> */}
-      <Modules />
-    </MainLimit>
+    <Modules />
   );
 }
 

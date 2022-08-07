@@ -1,7 +1,19 @@
 import styled from 'styled-components';
 
+export const Contain = styled.section`
+  display: flex;
+
+  @media screen and (max-width: 940px){
+    margin-left: 0px;
+    flex-wrap: wrap;
+    width: 85%;
+    justify-self: center;
+    padding: 20px;
+  }
+`;
+
 export const ModulesContain = styled.nav`
-  width: auto;
+  max-width: 1300px;
   height: auto;
   padding: 30px;
   display: flex;
@@ -10,25 +22,26 @@ export const ModulesContain = styled.nav`
   border-radius: 0px;
   margin-top: 2rem;
 
-  @media screen and(max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
-  @media screen and (max-width: 514px){
-    justify-content: center;
+  @media screen and (max-width: 940px){
+    margin-left: 0px;
+    margin-top: 90px;
+    flex-wrap: wrap;
   }
 `;
 
 export const ModuleCard = styled.a`
   width: 450px;
   height: 400px;
-  align-self: flex-start;
   display: flex;
-  justify-self: flex-start;
   flex-direction: column;
   background-color: #2b2b2b;
   backdrop-filter: blur(15px);
-  margin: 0px 10px 0px;
+  margin: 10px 10px 0px;
   align-items: center;
   justify-content: flex-start;
 
