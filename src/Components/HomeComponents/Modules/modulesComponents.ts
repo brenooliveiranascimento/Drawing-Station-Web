@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Contain = styled.section`
   display: flex;
-  background-color: aqua;
 
   @media screen and (max-width: 940px){
     margin-left: 0px;
