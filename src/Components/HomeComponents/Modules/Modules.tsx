@@ -33,6 +33,9 @@ function Modules() {
 
   return (
     <ModulesContain>
+      <ContentHeader>
+        <h1>dmkwaopdkjwaopd</h1>
+      </ContentHeader>
       <Contain>
         {
         modulesData.map((module: any) => (
