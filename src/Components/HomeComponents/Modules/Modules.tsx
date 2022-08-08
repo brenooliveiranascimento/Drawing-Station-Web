@@ -33,9 +33,6 @@ function Modules() {
 
   return (
     <ModulesContain>
-      <ContentHeader>
-        <h1>dmkwaopdkjwaopd</h1>
-      </ContentHeader>
       <Contain>
         {
         modulesData.map((module: any) => (
@@ -81,6 +78,9 @@ function Modules() {
         ))
       }
       </Contain>
+      <ContentHeader>
+        <h1>Tatakae!</h1>
+      </ContentHeader>
     </ModulesContain>
 
   );
