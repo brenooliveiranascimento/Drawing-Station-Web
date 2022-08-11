@@ -65,7 +65,14 @@ class AuthForm extends React.Component {
   };
 
   registerVisitant = () => {
-    const { visitLog }: any = this.props;
+    const visitInf = {
+      name: 'Pintor',
+      email: `pintor${new Date().getMilliseconds()}@gmail.com`,
+      password: '123123',
+    };
+
+    const { registerUser, visitLog }: any = this.props;
+    registerUser(visitInf);
     visitLog();
   };
 
@@ -88,17 +95,18 @@ class AuthForm extends React.Component {
   };
 
   register = () => {
+    const { visitLog, registerUser }: any = this.props;
     const {
       email, password, name, confirmPassword,
     }: any = this.state;
 
-    const { registerUser }: any = this.props;
     if (!name.length && confirmPassword !== password) return;
     if (emailVerification(email) && passwordVerification(password)) {
       registerUser(this.state);
       return;
     }
     alert('error register');
+    visitLog();
   };
 
   signIn = () => {
