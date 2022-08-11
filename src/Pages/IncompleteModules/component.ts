@@ -19,16 +19,37 @@ export const MainContent = styled.section`
   span {
     text-align: center;
     margin-top: 1rem;
+    font-size: 20px;
+    line-height: 25px;
   }
 
   a {
     margin:20px;
     align-self: center;
+    color: #fff;
+  }
+
+  .googlePlay {
+    :hover {
+      color: #aaa;
+    }
   }
 
   .Redes_sociais {
     display: flex;
     margin: 20px;
+
+    a {
+      :hover {
+        color: #aaa;
+      }
+    }
+  }
+
+  .email {
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
   }
 
   @media screen and (max-width: 1300px){
