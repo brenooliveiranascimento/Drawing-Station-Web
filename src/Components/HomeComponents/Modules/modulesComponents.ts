@@ -157,7 +157,7 @@ export const ModuleCard = styled.a`
   @media screen and (max-width: 818px){
     width: 190px;
     align-items: flex-start;
-    height: 290px;
+    height: 320px;
     .Img_Modules {
       width: 190px;
       height: 200px;
@@ -171,7 +171,6 @@ export const ModuleCard = styled.a`
   @media screen and (max-width: 500px){
     width: 200px;
     align-items: flex-start;
-    height: 290px;
     .Img_Modules {
       width: 200px;
       height: 200px;

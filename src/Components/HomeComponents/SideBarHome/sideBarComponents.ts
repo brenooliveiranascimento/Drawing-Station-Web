@@ -21,6 +21,10 @@ export const SideContainer = styled.aside`
   .icon_side {
     color:white;
     font-size: 27px;
+
+    :hover {
+      color: #aaa;
+    }
   }
 
   .icon_side:nth-child(1) {

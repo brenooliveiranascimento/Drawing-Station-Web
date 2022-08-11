@@ -15,6 +15,7 @@ import {
   BtnShow,
   BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo,
 } from './AuthForm';
+import { signinVisitant } from '../../../Redux/actions/authActions/genericAuthActions';
 
 class AuthForm extends React.Component {
   constructor(props:any) {
@@ -63,6 +64,18 @@ class AuthForm extends React.Component {
     this.setState({ btnDisabled: true });
   };
 
+  registerVisitant = () => {
+    const visitInf = {
+      name: 'Pintor',
+      email: `pintor${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}@gmail.com`,
+      password: '123123',
+    };
+
+    const { registerUser, visitLog }: any = this.props;
+    registerUser(visitInf);
+    visitLog();
+  };
+
   checkUserInfRegister = () => {
     const {
       email, password, name, confirmPassword,
@@ -82,17 +95,18 @@ class AuthForm extends React.Component {
   };
 
   register = () => {
+    const { visitLog, registerUser }: any = this.props;
     const {
       email, password, name, confirmPassword,
     }: any = this.state;
 
-    const { registerUser }: any = this.props;
     if (!name.length && confirmPassword !== password) return;
     if (emailVerification(email) && passwordVerification(password)) {
       registerUser(this.state);
       return;
     }
     alert('error register');
+    visitLog();
   };
 
   signIn = () => {
@@ -196,7 +210,9 @@ class AuthForm extends React.Component {
         >
           { !isRegister ? 'Registrar' : 'Já possuo conta' }
         </BtnRegister>
-        <BtnRegister>
+        <BtnRegister
+          onClick={this.registerVisitant}
+        >
           Entrar Como Visitante
         </BtnRegister>
         <LinksArea>
@@ -220,6 +236,7 @@ class AuthForm extends React.Component {
 const mapDispatchToProps = (dispatch:any) => ({
   registerUser: (userData: any) => dispatch(createUserCount(userData)),
   signInUser: (userData: any) => dispatch(signIn(userData)),
+  visitLog: () => dispatch(signinVisitant()),
 });
 
 export default connect(null, mapDispatchToProps)(AuthForm);

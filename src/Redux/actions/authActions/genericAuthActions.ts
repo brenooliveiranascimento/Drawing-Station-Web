@@ -1,5 +1,6 @@
 import { FETCH_PROGRESS } from '../../modules/exerciceProgress/exerciceProgressTypes';
 import {
+  ISVISITANT,
   LOGOUT, SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS,
 } from '../../modules/userData/userDataTypes';
 
@@ -27,4 +28,8 @@ export const setUserDataFail: any = () => ({
 
 export const logoutUser: any = () => ({
   type: LOGOUT,
+});
+
+export const signinVisitant: any = () => ({
+  type: ISVISITANT,
 });

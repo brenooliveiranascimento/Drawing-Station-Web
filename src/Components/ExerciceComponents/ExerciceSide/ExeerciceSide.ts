@@ -24,6 +24,8 @@ export const SideContent = styled.aside`
     width: 80%;
     height: auto;
     right: 10px;
+    border: 1px solid #666666;
+    border-radius: 6px;
   }
 `;
 

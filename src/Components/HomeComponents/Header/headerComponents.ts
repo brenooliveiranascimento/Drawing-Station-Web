@@ -22,8 +22,12 @@ export const Container = styled.section`
   }
 
   @media screen and (max-width: 1300px){
-    margin-top: 0px;
     width: 100%;
+  }
+
+  @media screen and (max-width: 940px){
+    width: 100%;
+    margin-top: -3rem;
   }
 `;
 

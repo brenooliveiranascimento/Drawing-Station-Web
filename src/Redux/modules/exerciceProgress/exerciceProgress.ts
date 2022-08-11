@@ -1,3 +1,4 @@
+import { LOGOUT } from '../userData/userDataTypes';
 import { FETCH_PROGRESS, PROGRESS_DECREMENT, PROGRESS_INCREMENT } from './exerciceProgressTypes';
 
 const STATE_INITIAL_VALUE: any = {
@@ -55,6 +56,11 @@ function exerciceProgress(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_S
           [action.exercice]: false,
         },
         all: state.all - 1,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        ...STATE_INITIAL_VALUE,
       };
     default:
       return state;
