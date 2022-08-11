@@ -23,6 +23,7 @@ export const Container = styled.section`
 
   @media screen and (max-width: 1300px){
     margin-top: 0px;
+    width: 100%;
   }
 `;
 

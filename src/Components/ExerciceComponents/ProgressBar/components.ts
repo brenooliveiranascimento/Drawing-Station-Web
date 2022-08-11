@@ -30,6 +30,6 @@ export const Colorbar = styled.article`
   position: absolute;
   height: 15px;
   z-index: 1;
-  background-color: #BE4D68;
+  background-color: #5303bc;
   border-radius: 10px;
 `;

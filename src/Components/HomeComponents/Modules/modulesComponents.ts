@@ -67,8 +67,14 @@ export const ModuleCard = styled.a`
   height: 400px;
   display: flex;
   flex-direction: column;
-  background-color: #2b2b2b;
+  background-color: rgba(255, 255, 255, 0.1000);;
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
+  backdrop-filter: blur(15px);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   margin: 10px 10px 0px;
   align-items: center;
   justify-self: flex-start;
@@ -81,6 +87,8 @@ export const ModuleCard = styled.a`
     width: 450px;
     height: 270px;
     object-fit: cover;
+    border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   }
 
   .Name_Of_Module {
