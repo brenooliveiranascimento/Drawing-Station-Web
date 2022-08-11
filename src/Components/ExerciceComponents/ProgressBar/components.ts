@@ -12,7 +12,7 @@ export const MainBar = styled.section`
   h2 {
     color: white;
     margin-left: -60px;
-    z-index: 99;
+    z-index: 2;
     font-size: 20px;
   }
 `;
@@ -30,6 +30,6 @@ export const Colorbar = styled.article`
   position: absolute;
   height: 15px;
   z-index: 1;
-  background-color: #BE4D68;
+  background-color: #350866;
   border-radius: 10px;
 `;

@@ -145,7 +145,11 @@ const comments = [
     id: `${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}`,
     ProfilePhoto: 'profile photo',
     uidOfCreator: 'user id',
-    subComents: [],
+    subComents: [
+      {
+        creator: '',
+      },
+    ],
   },
   {
     exercice: 'Name of exerciceeee',

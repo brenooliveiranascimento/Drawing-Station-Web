@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Contain = styled.section`
   display: flex;
+  margin-top: 3rem;
+  width: auto;
   @media screen and (max-width: 940px){
     margin-left: 0px;
     flex-wrap: wrap;
@@ -11,17 +13,23 @@ export const Contain = styled.section`
   }
 
   @media screen and (max-width: 683px){
+    margin-left: -10%;
     justify-content: flex-start;
-    margin-left: 10%;
-    width: 100%;
+    width: 130%;
   }
 
   @media screen and (max-width: 515px){
-    margin-left: 0%;
+    margin-left: -20%;
+    justify-content: flex-start;
+    width: 170%;
   }
   @media screen and (max-width: 474px){
+    justify-content: flex-start;
+    margin-left: -5rem;
+  }
+
+  @media screen and (max-width: 396px){
     justify-content: center;
-    margin-left: -1rem;
   }
 `;
 
@@ -59,8 +67,14 @@ export const ModuleCard = styled.a`
   height: 400px;
   display: flex;
   flex-direction: column;
-  background-color: #2b2b2b;
+  background-color: rgba(255, 255, 255, 0.1000);;
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
+  backdrop-filter: blur(15px);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   margin: 10px 10px 0px;
   align-items: center;
   justify-self: flex-start;
@@ -73,6 +87,8 @@ export const ModuleCard = styled.a`
     width: 450px;
     height: 270px;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .Name_Of_Module {
@@ -151,20 +167,37 @@ export const ModuleCard = styled.a`
       display: none;
     }
   }
+
+  @media screen and (max-width: 500px){
+    width: 200px;
+    align-items: flex-start;
+    height: 290px;
+    .Img_Modules {
+      width: 200px;
+      height: 200px;
+    }
+
+    .progress_container {
+      display: none;
+    }
+  }
 `;
 
 export const ContentHeader = styled.section`
-  max-width: 1300px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 200px;
+  margin-top: 6rem;
+  border-radius: 6px;
+  justify-self: flex-end;
   display: flex;
-  z-index: 99;
   align-self: center;
-  justify-self: center;
   padding: 20px;
   margin-left: -15%;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1000);;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   h1 {
     color: white;
     font-size: 29px;

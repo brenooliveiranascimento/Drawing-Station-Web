@@ -10,10 +10,10 @@ function SideBarHome() {
   return (
     <SideContainer>
       <img alt="logo" src={require('../../../Assets/drawing/logo1.png')} />
-      <Link className="Link" to="/">
+      {/* <Link className="Link" to="/">
         <FiMenu className="icon_side" />
         <span>Home</span>
-      </Link>
+      </Link> */}
       <Link className="Link" to="/">
         <FiHome className="icon_side" />
         <span>Home</span>
@@ -22,7 +22,7 @@ function SideBarHome() {
         <FiUser className="icon_side" />
         <span>User</span>
       </Link>
-      <Link className="Link" to="/User">
+      <Link className="Link" to="/about">
         <FiHelpCircle className="icon_side" />
         <span>Suporte</span>
       </Link>
