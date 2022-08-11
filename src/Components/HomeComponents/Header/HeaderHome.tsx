@@ -13,7 +13,8 @@ function HeaderHome() {
     dispatch(logoutUser());
     dispatch(clearExercice());
     clearUserData();
-    firebase.auth().signOut();
+    firebase.firestore().collection('users').doc(user.uid).delete()
+      .then(() => firebase.auth().signOut());
   };
 
   return (

@@ -67,7 +67,7 @@ class AuthForm extends React.Component {
   registerVisitant = () => {
     const visitInf = {
       name: 'Pintor',
-      email: `pintor${new Date().getMilliseconds()}@gmail.com`,
+      email: `pintor${new Date().getMinutes()}${new Date().getFullYear()}${new Date().getDay()}${new Date().getMilliseconds()}@gmail.com`,
       password: '123123',
     };
 
