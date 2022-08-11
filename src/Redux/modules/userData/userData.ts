@@ -53,6 +53,8 @@ function userData(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE) {
       return {
         ...state,
         isVisitant: true,
+        loged: true,
+        name: 'artista',
       };
     default:
       return state;
