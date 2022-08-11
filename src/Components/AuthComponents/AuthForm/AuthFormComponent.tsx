@@ -15,6 +15,7 @@ import {
   BtnShow,
   BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo,
 } from './AuthForm';
+import { signinVisitant } from '../../../Redux/actions/authActions/genericAuthActions';
 
 class AuthForm extends React.Component {
   constructor(props:any) {
@@ -61,6 +62,11 @@ class AuthForm extends React.Component {
       return;
     }
     this.setState({ btnDisabled: true });
+  };
+
+  registerVisitant = () => {
+    const { visitLog }: any = this.props;
+    visitLog();
   };
 
   checkUserInfRegister = () => {
@@ -196,7 +202,9 @@ class AuthForm extends React.Component {
         >
           { !isRegister ? 'Registrar' : 'Já possuo conta' }
         </BtnRegister>
-        <BtnRegister>
+        <BtnRegister
+          onClick={this.registerVisitant}
+        >
           Entrar Como Visitante
         </BtnRegister>
         <LinksArea>
@@ -220,6 +228,7 @@ class AuthForm extends React.Component {
 const mapDispatchToProps = (dispatch:any) => ({
   registerUser: (userData: any) => dispatch(createUserCount(userData)),
   signInUser: (userData: any) => dispatch(signIn(userData)),
+  visitLog: () => dispatch(signinVisitant()),
 });
 
 export default connect(null, mapDispatchToProps)(AuthForm);

@@ -1,5 +1,5 @@
 import {
-  actionTypes, LOGOUT, SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS,
+  actionTypes, ISVISITANT, LOGOUT, SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS,
 } from './userDataTypes';
 
 const STATE_INITIAL_VALUE = {
@@ -9,6 +9,7 @@ const STATE_INITIAL_VALUE = {
   loading: false,
   loged: false,
   error: '',
+  isVisitant: false,
 };
 
 const ACTION_INITIAL_STATE: actionTypes = {
@@ -47,6 +48,11 @@ function userData(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE) {
         uid: '',
         loged: false,
         name: '',
+      };
+    case ISVISITANT:
+      return {
+        ...state,
+        isVisitant: true,
       };
     default:
       return state;
