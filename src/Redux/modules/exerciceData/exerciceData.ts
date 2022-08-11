@@ -2,6 +2,7 @@ import { accessLocalStore } from '../../../globalFuncions/localStoreControl';
 import { exerciceBaseData } from '../../../_MOCKS/__ExerciceData';
 import { DRAWING_STATION_LOCAL_DATA_MODULES } from '../../../__GlobalTypes/globalTypes';
 import {
+  CLEAR_EXERCICE,
   FETCH_COMMENTS,
   FETCH_EXERCICE_FAIL,
   FETCH_EXERCICE_INIT,
@@ -61,6 +62,11 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
       return {
         ...state,
         comments: state.comments.filter((nowComment) => nowComment !== action.comments),
+      };
+    case CLEAR_EXERCICE:
+      return {
+        ...state,
+        comments: [],
       };
     default:
       return state;

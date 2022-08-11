@@ -1,4 +1,5 @@
 import {
+  CLEAR_EXERCICE,
   FETCH_COMMENTS,
   FETCH_EXERCICE_FAIL,
   FETCH_EXERCICE_INIT,
@@ -65,4 +66,8 @@ export const removeComment = (comments: any) => ({
 export const handleSideBar = (condition: boolean) => ({
   type: HANDLE_SIDE_EXERCICE,
   payLoad: condition,
+});
+
+export const clearExercice = () => ({
+  type: CLEAR_EXERCICE,
 });

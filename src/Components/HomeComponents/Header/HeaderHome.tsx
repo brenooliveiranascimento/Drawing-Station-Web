@@ -4,12 +4,14 @@ import { clearUserData } from '../../../globalFuncions/localStoreControl';
 import { logoutUser } from '../../../Redux/actions/authActions/genericAuthActions';
 import { Container, HeaderContent, LogoutButton } from './headerComponents';
 import firebase from '../../../Services/firebase_connection';
+import { clearExercice } from '../../../Redux/actions/exercicesActions/genericActions';
 
 function HeaderHome() {
   const user = useSelector(({ userData }: any) => userData);
   const dispatch = useDispatch();
   const signOutUser = () => {
     dispatch(logoutUser());
+    dispatch(clearExercice());
     clearUserData();
     firebase.auth().signOut();
   };
