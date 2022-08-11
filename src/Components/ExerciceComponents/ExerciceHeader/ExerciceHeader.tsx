@@ -4,10 +4,12 @@ import { useDispatch } from 'react-redux';
 import { HandleBtn, HeaderContainer, ProgressBar } from './components';
 import { handleSideBar } from '../../../Redux/actions/exercicesActions/genericActions';
 import PaitingProgressBar from '../ProgressBar/PaitingProgressBar';
+import firebase from '../../../Services/firebase_connection';
 
 function ExerciceHeader() {
   const nowPath = useLocation().pathname;
   const dispatch = useDispatch();
+
   return (
     <HeaderContainer>
       <ProgressBar>

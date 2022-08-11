@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { clearUserData } from '../../../globalFuncions/localStoreControl';
 import { logoutUser } from '../../../Redux/actions/authActions/genericAuthActions';
 import { Container, HeaderContent, LogoutButton } from './headerComponents';
+import firebase from '../../../Services/firebase_connection';
 
 function HeaderHome() {
   const user = useSelector(({ userData }: any) => userData);
@@ -10,7 +11,9 @@ function HeaderHome() {
   const signOutUser = () => {
     dispatch(logoutUser());
     clearUserData();
+    firebase.auth().signOut();
   };
+
   return (
     <Container>
       <h1>

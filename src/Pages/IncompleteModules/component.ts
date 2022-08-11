@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainContent = styled.section`
   display: flex;
-  width: 70%;
+  width: 90%;
   height: 100%;
   flex-direction: column;
   align-self: center;
@@ -11,12 +11,19 @@ export const MainContent = styled.section`
   z-index: 1;
   h1 {
     color: #fff;
+    align-self: center;
     text-align: center;
     font-size: 30px;
   }
 
+  span {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
   a {
-    margin:20px
+    margin:20px;
+    align-self: center;
   }
 
   .Redes_sociais {

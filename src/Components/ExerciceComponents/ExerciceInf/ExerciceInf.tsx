@@ -89,7 +89,7 @@ function ExerciceInf() {
                </button>
              ) : (
                <button
-                 onClick={() => alert('Exercicio Incompletp')}
+                 onClick={() => alert('Exercicio Incompleto')}
                  className="btn_conclude"
                  type="button"
                >
