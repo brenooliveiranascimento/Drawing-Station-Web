@@ -15,7 +15,7 @@ import {
   BtnShow,
   BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo,
 } from './AuthForm';
-import { signinVisitant } from '../../../Redux/actions/authActions/genericAuthActions';
+// import { signinVisitant } from '../../../Redux/actions/authActions/genericAuthActions';
 
 class AuthForm extends React.Component {
   constructor(props:any) {
@@ -236,7 +236,7 @@ class AuthForm extends React.Component {
 const mapDispatchToProps = (dispatch:any) => ({
   registerUser: (userData: any) => dispatch(createUserCount(userData)),
   signInUser: (userData: any) => dispatch(signIn(userData)),
-  visitLog: () => dispatch(signinVisitant()),
+  // visitLog: () => dispatch(signinVisitant()),
 });
 
 export default connect(null, mapDispatchToProps)(AuthForm);

@@ -13,8 +13,10 @@ function HeaderHome() {
     dispatch(logoutUser());
     dispatch(clearExercice());
     clearUserData();
-    firebase.firestore().collection('users').doc(user.uid).delete()
-      .then(() => firebase.auth().signOut());
+    if (user.isVisitant) {
+      firebase.firestore().collection('users').doc(user.uid).delete()
+        .then(() => firebase.auth().signOut());
+    }
   };
 
   return (
