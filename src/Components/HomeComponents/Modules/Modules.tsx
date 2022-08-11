@@ -11,6 +11,7 @@ import {
 } from './modulesComponents';
 import animationLoading from '../../../Assets/Lottie/lf30_editor_0ktlr6ix.json';
 import PaitingProgressBar from '../../ExerciceComponents/ProgressBar/PaitingProgressBar';
+import HeaderHome from '../Header/HeaderHome';
 
 function Modules() {
   const modulesData = useSelector(({ exerciceData }: any) => exerciceData.modules);
@@ -33,6 +34,7 @@ function Modules() {
 
   return (
     <ModulesContain>
+      <HeaderHome />
       <Contain>
         {
         modulesData.map((module: any) => (
@@ -78,9 +80,9 @@ function Modules() {
         ))
       }
       </Contain>
-      <ContentHeader>
+      {/* <ContentHeader>
         <h1>Tatakae!</h1>
-      </ContentHeader>
+      </ContentHeader> */}
     </ModulesContain>
 
   );

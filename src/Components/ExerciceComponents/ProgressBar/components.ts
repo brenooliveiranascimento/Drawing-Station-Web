@@ -12,7 +12,7 @@ export const MainBar = styled.section`
   h2 {
     color: white;
     margin-left: -60px;
-    z-index: 99;
+    z-index: 2;
     font-size: 20px;
   }
 `;

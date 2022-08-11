@@ -1,12 +1,24 @@
 import React from 'react';
-import { HeaderContent } from './headerComponents';
+import { useSelector } from 'react-redux';
+import { Container, HeaderContent } from './headerComponents';
 
 function HeaderHome() {
+  const user = useSelector(({ userData }: any) => userData);
   return (
-    <HeaderContent>
-      <h1>Sente Dificuldade Em Algum Exercicio? Não Temas!!!</h1>
-      <span>Fique a vontate para tirar duvidas</span>
-    </HeaderContent>
+    <Container>
+      <h1>
+        Olá
+        {' '}
+        {user.name}
+      </h1>
+      <span>
+        Hora de pintar!!
+      </span>
+      <HeaderContent>
+        <h1>Sente Dificuldade Em Algum Exercicio? Não Temas!!!</h1>
+        <span>Fique a vontate para tirar duvidas</span>
+      </HeaderContent>
+    </Container>
   );
 }
 

@@ -1,5 +1,32 @@
 import styled from 'styled-components';
 
+export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+
+  h1 {
+    font-size: 23px;
+    text-align: center;
+  }
+
+  span {
+    text-align: start;
+    margin: 10px;
+  }
+`;
+
+export const LogoutButton = styled.button`
+  width: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const HeaderContent = styled.section`
   display: flex;
   width: 100%;

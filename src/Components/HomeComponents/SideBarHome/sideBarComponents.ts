@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SideContainer = styled.aside`
-  width: 70px;
+  width: 100px;
   height: 100%;
   position: fixed;
   display: flex;
@@ -28,8 +28,7 @@ export const SideContainer = styled.aside`
     margin-bottom: 2rem;
   }
 
-  :hover {
-    width: 200px;
+  /* :hover {
 
     a {
       display: flex;
@@ -47,7 +46,7 @@ export const SideContainer = styled.aside`
   @media screen and (max-width: 1300px){
     width: 100%;
   }
-  }
+  } */
 
   @media screen and (max-width: 1320px){
   }
