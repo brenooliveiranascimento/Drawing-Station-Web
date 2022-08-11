@@ -11,14 +11,16 @@ export const Container = styled.section`
   margin-top: 3rem;
 
   h1 {
-    font-size: 23px;
+    font-size: 35px;
     text-align: center;
   }
 
   span {
     text-align: start;
     margin: 10px;
-    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   @media screen and (max-width: 1300px){
@@ -61,6 +63,10 @@ export const HeaderContent = styled.section`
   padding: 20px;
   flex-direction: column;
 
+  .Message {
+    margin-left: 2px;
+  }
+
   h1 {
     color: white; 
     font-size: 23px;
@@ -71,12 +77,14 @@ export const HeaderContent = styled.section`
   }
 
   @media screen and (max-width: 762px){
-    height: 8rem;
+    height: auto;
     width: 120%;
     margin-left: -6%;
     h1 {
       text-align: start;
     }
+
+
 
     span {
       text-align: start;
@@ -84,7 +92,4 @@ export const HeaderContent = styled.section`
     }
   }
 
-  @media screen and (max-width: 450px){
-    height: 12rem;
-  }
 `;
