@@ -22,8 +22,9 @@ function ExerciceArea() {
     dispatch(handleSideBar(true));
   };
   useEffect((): any => {
-    setInterval(() => setWidth(window.innerWidth), 100);
+    const verifyWidth = setInterval(() => setWidth(window.innerWidth), 100);
     handleSideExerciceArea();
+    return () => clearInterval(verifyWidth);
   }, [width]);
 
   return (

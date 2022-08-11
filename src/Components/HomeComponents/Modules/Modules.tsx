@@ -1,7 +1,7 @@
 import React, {
   useState, useLayoutEffect, useCallback,
 } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Lottie from 'react-lottie';
 import { Link } from 'react-router-dom';
 import { BsPencilFill } from 'react-icons/bs';
@@ -39,29 +39,18 @@ function Modules() {
         {
         modulesData.map((module: any) => (
           <ModuleCard key={module.name}>
-            {
-              loadingData ? (
-                <Lottie
-                  style={{
-                    alignSelf: 'center',
-                    justifyContent: 'center',
-                    width: 60,
-                    height: 80,
-                  }}
-                  options={defaultOptionsLoading}
-                />
-              ) : (
-                <Link to={module.id}>
-                  <img
-                    className="Img_Modules"
-                    src={module.image}
-                    alt={module.id}
-                  />
-                  <h1 className="Name_Of_Module">{module.name}</h1>
-                  <span>
-                    {module.details}
-                  </span>
-                  {
+            <Link to={module.id}>
+
+              <img
+                className="Img_Modules"
+                src={module.image}
+                alt={module.id}
+              />
+              <h1 className="Name_Of_Module">{module.name}</h1>
+              <span>
+                {module.details}
+              </span>
+              {
               !module.conclude ? (
                 <span className="Construct_mode">
                   Em construção
@@ -72,9 +61,7 @@ function Modules() {
                 </span>
               )
             }
-                </Link>
-              )
-            }
+            </Link>
 
           </ModuleCard>
         ))

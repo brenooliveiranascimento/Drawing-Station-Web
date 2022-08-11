@@ -88,7 +88,7 @@ export const ModuleCard = styled.a`
     height: 270px;
     object-fit: cover;
     border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .Name_Of_Module {

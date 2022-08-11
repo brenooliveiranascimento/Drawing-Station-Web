@@ -1,5 +1,5 @@
 import {
-  actionTypes, SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS,
+  actionTypes, LOGOUT, SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS,
 } from './userDataTypes';
 
 const STATE_INITIAL_VALUE = {
@@ -39,6 +39,14 @@ function userData(state = STATE_INITIAL_VALUE, actions = ACTION_INITIAL_STATE) {
     case SIGNIN_FAIL:
       return {
         ...state, error: actions.error, loading: false,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        email: '',
+        uid: '',
+        loged: false,
+        name: '',
       };
     default:
       return state;

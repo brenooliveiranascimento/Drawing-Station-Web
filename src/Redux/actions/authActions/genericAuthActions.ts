@@ -1,5 +1,7 @@
 import { FETCH_PROGRESS } from '../../modules/exerciceProgress/exerciceProgressTypes';
-import { SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS } from '../../modules/userData/userDataTypes';
+import {
+  LOGOUT, SIGNIN_FAIL, SIGNIN_INIT, SIGNIN_SUCCESS,
+} from '../../modules/userData/userDataTypes';
 
 export const setExerciceProgress = ({ progress }: any): any => ({
   type: FETCH_PROGRESS,
@@ -21,4 +23,8 @@ export const setUserDataInit: any = () => ({
 
 export const setUserDataFail: any = () => ({
   type: SIGNIN_FAIL,
+});
+
+export const logoutUser: any = () => ({
+  type: LOGOUT,
 });

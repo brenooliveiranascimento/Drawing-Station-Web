@@ -40,7 +40,7 @@ export const Main = styled.section`
   @media screen and (max-width: 1300px){
     width: 140%;
     padding: 20px;
-    margin-left: 0px;
+    margin-left: 20px;
   }
 `;
 

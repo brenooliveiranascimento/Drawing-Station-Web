@@ -1,9 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearUserData } from '../../../globalFuncions/localStoreControl';
+import { logoutUser } from '../../../Redux/actions/authActions/genericAuthActions';
 import { Container, HeaderContent, LogoutButton } from './headerComponents';
 
 function HeaderHome() {
   const user = useSelector(({ userData }: any) => userData);
+  const dispatch = useDispatch();
+  const signOutUser = () => {
+    dispatch(logoutUser());
+    clearUserData();
+  };
   return (
     <Container>
       <h1>
@@ -14,7 +21,9 @@ function HeaderHome() {
       <span>
         Hora de pintar!!
       </span>
-      <LogoutButton>
+      <LogoutButton
+        onClick={signOutUser}
+      >
         Sair
       </LogoutButton>
       <HeaderContent>
