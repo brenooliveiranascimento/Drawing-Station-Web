@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Container, HeaderContent } from './headerComponents';
+import { Container, HeaderContent, LogoutButton } from './headerComponents';
 
 function HeaderHome() {
   const user = useSelector(({ userData }: any) => userData);
@@ -14,6 +14,9 @@ function HeaderHome() {
       <span>
         Hora de pintar!!
       </span>
+      <LogoutButton>
+        Sair
+      </LogoutButton>
       <HeaderContent>
         <h1>Sente Dificuldade Em Algum Exercicio? Não Temas!!!</h1>
         <span>Fique a vontate para tirar duvidas</span>
