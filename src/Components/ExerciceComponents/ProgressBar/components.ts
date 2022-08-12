@@ -11,7 +11,7 @@ export const MainBar = styled.section`
 
   h2 {
     color: white;
-    margin-left: -60px;
+    margin-left: -40px;
     z-index: 2;
     font-size: 20px;
   }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SideContainer = styled.aside`
-  width: 100px;
+  width: 70px;
   height: 100%;
   position: fixed;
   display: flex;

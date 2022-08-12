@@ -11,6 +11,7 @@ import { MainContent } from './HomeComponents';
 import './styles.css';
 import IncompleteModule from '../IncompleteModules/IncompleteModules';
 import About from '../About/About';
+import User from '../User/User';
 
 function Home() {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ function Home() {
         <Route path="/Materiais" exact component={IncompleteModule} />
         <Route path="/Esboço" exact component={IncompleteModule} />
         <Route path="/about" exact component={About} />
-        <Route path="/User" exact component={IncompleteModule} />
+        <Route path="/User" exact component={User} />
       </MainContent>
     </section>
   );
