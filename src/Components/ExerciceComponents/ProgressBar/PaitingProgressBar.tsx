@@ -5,8 +5,6 @@ import { BackBar, Colorbar, MainBar } from './components';
 function PaitingProgressBar() {
   const exercicesData = useSelector(({ exerciceData }: any) => exerciceData.exercices);
   const userProgress = useSelector(({ exerciceProgress }: any) => exerciceProgress);
-  const calculateProgress = () => {
-  };
 
   const getAllFinishedExercice = () => {
     const exercicesFinished = Object.keys(exercicesData).map((dificulty: any) => {

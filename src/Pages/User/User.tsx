@@ -5,7 +5,7 @@ import { clearUserData } from '../../globalFuncions/localStoreControl';
 import { logoutUser } from '../../Redux/actions/authActions/genericAuthActions';
 import { clearExercice } from '../../Redux/actions/exercicesActions/genericActions';
 import {
-  BtnArea, BtnUser, Divisor, ProgressArea, UserMain,
+  BtnArea, BtnUser, DeletAccountArea, DeletAccountBtn, Divisor, ProgressArea, UserMain,
 } from './components';
 import firebase from '../../Services/firebase_connection';
 
@@ -32,6 +32,7 @@ function User({ history }: any) {
     clearUserData();
     firebase.firestore().collection('users').doc(user.uid).delete()
       .then(() => firebase.auth().signOut());
+    setDelet(false);
   };
 
   return (
@@ -48,8 +49,8 @@ function User({ history }: any) {
           Sair
         </BtnUser>
 
-        <BtnUser>
-          Deletar Conta
+        <BtnUser onClick={() => setDelet(!delet)}>
+          { delet ? 'Cancelar' : 'Deletar Conta' }
         </BtnUser>
       </BtnArea>
 
@@ -59,6 +60,20 @@ function User({ history }: any) {
         <span>Seu Progresso Total</span>
         <PaitingProgressBar />
       </ProgressArea>
+
+      {
+        delet && (
+          <DeletAccountArea>
+            <span>
+              CUIDADO!! Está prestes a deletar a sua conta! Irá perder todo progresso até o
+              momento
+            </span>
+            <DeletAccountBtn onClick={deleteAccount}>
+              Deletar!!
+            </DeletAccountBtn>
+          </DeletAccountArea>
+        )
+      }
     </UserMain>
   );
 }

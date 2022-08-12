@@ -6,6 +6,7 @@ export const UserMain = styled.main`
   justify-content: center;
   flex-direction: column;
   margin-top: 5rem;
+  width: 105%;
   h1 {
     font-size: 30px;
     margin-bottom: 1rem;
@@ -61,5 +62,38 @@ export const ProgressArea = styled.article`
   span {
     margin-top: 1rem;
     margin-bottom: -1.4rem;
+  }
+`;
+
+export const DeletAccountArea = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  justify-content: center;
+  span {
+    margin-top: 2rem;
+    text-align: center;
+  }
+`;
+
+export const DeletAccountBtn = styled.button`
+  background-color: #a02b3e;
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 10px;
+  min-width: 150px;
+  transition: all 0.5s;
+  font-size: 18px;
+  margin-top: 1rem;
+
+  :hover {
+    background-color: #6b2631;
+    color: #ddd;
   }
 `;
