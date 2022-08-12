@@ -19,7 +19,7 @@ const createAccountAndData = async (userInf: any, dispatch: any) => {
 
 const signInWithEmailAndPassword = async (email: string, password: string, dispatch: any) => {
   const fetchUserData: any = await signInUser(email, password);
-  dispatch(setUserDataSuccess(fetchUserData));
+  dispatch(setUserDataSuccess(await fetchUserData));
   dispatch(setExerciceProgress(fetchUserData));
 };
 

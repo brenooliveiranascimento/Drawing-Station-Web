@@ -11,14 +11,16 @@ export const Container = styled.section`
   margin-top: 3rem;
 
   h1 {
-    font-size: 23px;
+    font-size: 35px;
     text-align: center;
   }
 
   span {
     text-align: start;
     margin: 10px;
-    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   @media screen and (max-width: 1300px){
@@ -57,34 +59,39 @@ export const HeaderContent = styled.section`
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  align-items: flex-start;
   padding: 20px;
+  justify-content: center;
   flex-direction: column;
+
+  .Message {
+    margin-left: 2px;
+  }
 
   h1 {
     color: white; 
     font-size: 23px;
+    text-align: center;
+    margin-top: 1rem;
   }
 
   span {
+    text-align: center;
     color: #ddd;
   }
 
   @media screen and (max-width: 762px){
-    height: 8rem;
+    height: auto;
     width: 120%;
     margin-left: -6%;
+
     h1 {
       text-align: start;
     }
 
     span {
-      text-align: start;
       margin-left: -0px;
+      text-align: start;
     }
   }
 
-  @media screen and (max-width: 450px){
-    height: 12rem;
-  }
 `;

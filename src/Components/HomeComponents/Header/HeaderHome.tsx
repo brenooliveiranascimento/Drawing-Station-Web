@@ -13,8 +13,10 @@ function HeaderHome() {
     dispatch(logoutUser());
     dispatch(clearExercice());
     clearUserData();
-    firebase.firestore().collection('users').doc(user.uid).delete()
-      .then(() => firebase.auth().signOut());
+    if (user.isVisitant) {
+      firebase.firestore().collection('users').doc(user.uid).delete()
+        .then(() => firebase.auth().signOut());
+    }
   };
 
   return (
@@ -25,16 +27,19 @@ function HeaderHome() {
         {user.name}
       </h1>
       <span>
-        Hora de pintar!!
+        Hora de por a mão na massa!!
       </span>
-      <LogoutButton
+      {/* <LogoutButton
         onClick={signOutUser}
       >
         Sair
-      </LogoutButton>
+      </LogoutButton> */}
       <HeaderContent>
-        <h1>Sente Dificuldade Em Algum Exercicio? Não Temas!!!</h1>
-        <span>Fique a vontate para tirar duvidas</span>
+        <h1>Sentindo Dificuldade Em Algum Exercicio? Não Temas!!!</h1>
+        <span className="Message">
+          Fique a vontate para tirar duvidas nos
+          comentarios ou me chamar no Instaagrampara tirar duvidas!
+        </span>
       </HeaderContent>
     </Container>
   );

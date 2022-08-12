@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ExerciceContainer = styled.section`
   width: 1300px;
   background-color: #08111C;
-  margin:20px;
   margin-bottom: 40px;
   height: auto;
   margin-top: 5rem;
@@ -17,7 +16,8 @@ export const ExerciceContainer = styled.section`
   @media screen and (max-width: 1300px){
     align-self: center;
     justify-self: center;
-    margin-left: 0px;
+    margin-top: 2rem;
+    margin-left: -1rem;
   }
 `;
 
