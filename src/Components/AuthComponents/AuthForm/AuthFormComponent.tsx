@@ -125,7 +125,7 @@ class AuthForm extends React.Component {
       showPassword,
     }: any = this.state;
     return (
-      <FormContainer autocomplete={false}>
+      <FormContainer autocomplete="off">
         <RespansiveLogo
           src={require('../../../Assets/drawing/logo1.png')}
           alt="logo"
