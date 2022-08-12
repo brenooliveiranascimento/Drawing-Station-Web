@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FormContainer = styled.section`
+export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,20 +14,20 @@ export const FormContainer = styled.section`
 
   }
 
-  input:-webkit-autofill {
+  /* input:-webkit-autofill {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 input:-webkit-autofill {
   -webkit-text-fill-color: #000;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0.1) inset;
-  box-shadow: 0 0 0px 1000px rgba(0,0,0,0.1) inset;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0.0) inset;
+  box-shadow: 0 0 0px 1000px rgba(0,0,0,0.0) inset;
 }
 
 input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
-}
+} */
 `;
 
 export const FormLabel = styled.label`
@@ -48,7 +48,6 @@ export const InputAuth = styled.input`
   border-bottom: 2px solid white;
   background-color: rgba(0,0,0, 0.0);
   font-size: 17px;
-  box-shadow: 0 0 0px 1000px rgba(0,0,0,0.1) inset;
   
   color: #fff;
 

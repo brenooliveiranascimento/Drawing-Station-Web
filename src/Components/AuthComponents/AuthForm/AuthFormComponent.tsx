@@ -125,7 +125,7 @@ class AuthForm extends React.Component {
       showPassword,
     }: any = this.state;
     return (
-      <FormContainer>
+      <FormContainer autoComplete="off">
         <RespansiveLogo
           src={require('../../../Assets/drawing/logo1.png')}
           alt="logo"
@@ -140,6 +140,7 @@ class AuthForm extends React.Component {
             <FormLabel htmlFor="name">
               <FiUser className="Icons" />
               <InputAuth
+                autoCapitalize="none"
                 name="name"
                 placeholder="Name"
                 autoComplete="off"
@@ -199,6 +200,7 @@ class AuthForm extends React.Component {
           )
         }
         <BtnSignIn
+          type="button"
           color={btnDisabled ? 'rgba(124, 74, 124, 0.4) ' : 'rgba(124, 74, 124, 0.9)'}
           disabled={btnDisabled}
           onClick={() => (isRegister ? this.register() : this.signIn())}
@@ -206,6 +208,7 @@ class AuthForm extends React.Component {
           { !isRegister ? 'Entrar' : 'Registrar' }
         </BtnSignIn>
         <BtnRegister
+          type="button"
           onClick={this.changeMode}
         >
           { !isRegister ? 'Registrar' : 'Já possuo conta' }
