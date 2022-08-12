@@ -56,6 +56,11 @@ export const InputAuth = styled.input`
   @media screen and (max-width: 920px) {
     width: 100%;
   }
+
+  @media screen and (max-width: 400px) {
+    width: 200px;
+    margin-right: 2rem;
+  }
 `;
 
 export const RespansiveLogo = styled.img`

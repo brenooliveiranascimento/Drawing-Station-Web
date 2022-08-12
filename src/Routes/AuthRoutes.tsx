@@ -5,9 +5,7 @@ import '../Pages/Auth/styles.css';
 
 function AuthRoutes() {
   return (
-    <section>
-      <Route path="/" component={Auth} exact />
-    </section>
+    <Route path="/" component={Auth} exact />
   );
 }
 
