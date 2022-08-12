@@ -42,7 +42,9 @@ export const FormLabel = styled.label`
   }
 `;
 
-export const InputAuth = styled.input`
+export const InputAuth = styled.input.attrs({
+  autocomplete: 'false',
+})`
   width: 300px;
   height: 35px;
   padding: 10px;
