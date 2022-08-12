@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PaitingProgressBar from '../../Components/ExerciceComponents/ProgressBar/PaitingProgressBar';
 import { clearUserData } from '../../globalFuncions/localStoreControl';
@@ -10,8 +10,11 @@ import {
 import firebase from '../../Services/firebase_connection';
 
 function User({ history }: any) {
+  const [delet, setDelet] = useState(false);
   const user = useSelector(({ userData }: any) => userData);
   const dispatch = useDispatch();
+  const { name, email, uid }: any = user;
+
   const signOutUser = () => {
     dispatch(logoutUser());
     dispatch(clearExercice());
@@ -22,7 +25,15 @@ function User({ history }: any) {
         .then(() => firebase.auth().signOut());
     }
   };
-  const { name, email }: any = user;
+
+  const deleteAccount = () => {
+    dispatch(logoutUser());
+    dispatch(clearExercice());
+    clearUserData();
+    firebase.firestore().collection('users').doc(user.uid).delete()
+      .then(() => firebase.auth().signOut());
+  };
+
   return (
     <UserMain>
       <h1>
