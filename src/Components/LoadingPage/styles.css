@@ -25,3 +25,15 @@
     margin-top: 10px;
   }
 }
+
+@media screen and (max-width: 920px) {
+  .LoadingContainer {
+    padding-top: 10rem;
+  }
+
+  .Logo {
+    width: 280px;
+    height: 190px;
+    margin-top: 10px;
+  }
+}
