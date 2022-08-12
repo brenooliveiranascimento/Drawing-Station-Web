@@ -31,6 +31,6 @@ export const Colorbar = styled.article`
   height: 15px;
   z-index: 1;
   transition: all 0.5s;
-  background-color: #350866;
+  background-color: #E86179;
   border-radius: 10px;
 `;
