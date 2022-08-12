@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const UserMain = styled.main`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 5rem;
@@ -15,9 +15,6 @@ export const UserMain = styled.main`
     font-size: 20px;
   }
 
-  @media screen and (max-width: 1300px){
-    align-items: center;
-  }
 `;
 
 export const BtnArea = styled.section`

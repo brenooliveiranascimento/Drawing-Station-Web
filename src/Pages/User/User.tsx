@@ -1,12 +1,27 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PaitingProgressBar from '../../Components/ExerciceComponents/ProgressBar/PaitingProgressBar';
+import { clearUserData } from '../../globalFuncions/localStoreControl';
+import { logoutUser } from '../../Redux/actions/authActions/genericAuthActions';
+import { clearExercice } from '../../Redux/actions/exercicesActions/genericActions';
 import {
   BtnArea, BtnUser, Divisor, ProgressArea, UserMain,
 } from './components';
+import firebase from '../../Services/firebase_connection';
 
-function User() {
+function User({ history }: any) {
   const user = useSelector(({ userData }: any) => userData);
+  const dispatch = useDispatch();
+  const signOutUser = () => {
+    dispatch(logoutUser());
+    dispatch(clearExercice());
+    clearUserData();
+    history.push('/');
+    if (user.isVisitant) {
+      firebase.firestore().collection('users').doc(user.uid).delete()
+        .then(() => firebase.auth().signOut());
+    }
+  };
   const { name, email }: any = user;
   return (
     <UserMain>
@@ -18,7 +33,7 @@ function User() {
       <span>{email}</span>
 
       <BtnArea>
-        <BtnUser>
+        <BtnUser onClick={signOutUser}>
           Sair
         </BtnUser>
 
