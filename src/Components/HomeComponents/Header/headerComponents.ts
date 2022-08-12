@@ -84,10 +84,13 @@ export const HeaderContent = styled.section`
     width: 120%;
     margin-left: -6%;
 
-
+    h1 {
+      text-align: start;
+    }
 
     span {
       margin-left: -0px;
+      text-align: start;
     }
   }
 
