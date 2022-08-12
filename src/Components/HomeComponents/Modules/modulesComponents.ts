@@ -24,13 +24,12 @@ export const Contain = styled.section`
     width: 170%;
   }
   @media screen and (max-width: 474px){
-    justify-content: flex-start;
-    margin-left: -5rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-left: -35%;
   }
 
-  @media screen and (max-width: 396px){
-    justify-content: center;
-  }
 `;
 
 export const ModulesContain = styled.nav`
