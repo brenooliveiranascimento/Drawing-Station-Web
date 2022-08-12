@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.form.attrs({
+  autocomplete: 'off',
+})`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +16,7 @@ export const FormContainer = styled.form`
 
   }
 
-  /* input:-webkit-autofill {
+  input:-webkit-autofill {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -26,8 +28,8 @@ input:-webkit-autofill {
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: white !important;
-} */
+    -webkit-text-fill-color: rgba(0,0,0,0.0) !important;
+}
 `;
 
 export const FormLabel = styled.label`
