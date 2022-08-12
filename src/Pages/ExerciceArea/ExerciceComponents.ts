@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ExerciceContainer = styled.section`
   width: 1300px;
   background-color: #08111C;
-  margin:20px;
   margin-bottom: 40px;
   height: auto;
   margin-top: 5rem;
@@ -18,7 +17,7 @@ export const ExerciceContainer = styled.section`
     align-self: center;
     justify-self: center;
     margin-top: 2rem;
-    margin-left: 0px;
+    margin-left: -1rem;
   }
 `;
 
