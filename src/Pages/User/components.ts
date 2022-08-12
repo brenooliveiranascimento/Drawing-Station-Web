@@ -8,6 +8,7 @@ export const UserMain = styled.main`
   margin-top: 5rem;
   h1 {
     font-size: 30px;
+    margin-bottom: 1rem;
   }
 
   span {
@@ -17,13 +18,6 @@ export const UserMain = styled.main`
   @media screen and (max-width: 1300px){
     align-items: center;
   }
-`;
-
-export const Divisor = styled.section`
-  width: 100%;
-  height: 1px;
-  background-color: #aaa;
-  margin-top: 1rem;
 `;
 
 export const BtnArea = styled.section`
@@ -51,5 +45,24 @@ export const BtnUser = styled.button`
   :hover {
     background-color: white;
     color: black;
+  }
+`;
+
+export const Divisor = styled.section`
+  width: 100%;
+  height: 1px;
+  background-color: #aaa;
+  margin-top: 1rem;
+`;
+
+export const ProgressArea = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  span {
+    margin-top: 1rem;
+    margin-bottom: -1.4rem;
   }
 `;

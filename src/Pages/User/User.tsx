@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import PaitingProgressBar from '../../Components/ExerciceComponents/ProgressBar/PaitingProgressBar';
 import {
-  BtnArea, BtnUser, Divisor, UserMain,
+  BtnArea, BtnUser, Divisor, ProgressArea, UserMain,
 } from './components';
 
 function User() {
@@ -22,11 +23,16 @@ function User() {
         </BtnUser>
 
         <BtnUser>
-          Deletar conta
+          Deletar Conta
         </BtnUser>
       </BtnArea>
 
       <Divisor />
+
+      <ProgressArea>
+        <span>Seu Progresso Total</span>
+        <PaitingProgressBar />
+      </ProgressArea>
     </UserMain>
   );
 }
