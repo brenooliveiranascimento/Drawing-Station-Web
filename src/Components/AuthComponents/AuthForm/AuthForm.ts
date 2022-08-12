@@ -20,7 +20,7 @@ export const FormContainer = styled.section`
 
 input:-webkit-autofill {
   -webkit-text-fill-color: #000;
-  -webkit-box-shadow: 0 0 0px 1000px #422E42 inset;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0.0) inset;
 }
 
 input:-webkit-autofill {
