@@ -59,8 +59,8 @@ export const HeaderContent = styled.section`
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 38px, rgba(0, 0, 0, 0.22) 0px 15px 30px;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  align-items: flex-start;
   padding: 20px;
+  justify-content: center;
   flex-direction: column;
 
   .Message {
@@ -70,9 +70,12 @@ export const HeaderContent = styled.section`
   h1 {
     color: white; 
     font-size: 23px;
+    text-align: center;
+    margin-top: 1rem;
   }
 
   span {
+    text-align: center;
     color: #ddd;
   }
 
@@ -80,14 +83,10 @@ export const HeaderContent = styled.section`
     height: auto;
     width: 120%;
     margin-left: -6%;
-    h1 {
-      text-align: start;
-    }
 
 
 
     span {
-      text-align: start;
       margin-left: -0px;
     }
   }

@@ -17,6 +17,7 @@ export const ExerciceContainer = styled.section`
   @media screen and (max-width: 1300px){
     align-self: center;
     justify-self: center;
+    margin-top: 2rem;
     margin-left: 0px;
   }
 `;
