@@ -44,7 +44,7 @@ export const InputAuth = styled.input`
   padding: 10px;
   margin: 10px;
   border-bottom: 2px solid white;
-  background-color: rgba(124, 74, 124, 0.0);
+  background-color: rgba(0,0,0, 0.0);
   font-size: 17px;
   
   color: #fff;
