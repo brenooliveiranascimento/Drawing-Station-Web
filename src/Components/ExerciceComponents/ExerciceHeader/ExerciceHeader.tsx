@@ -17,7 +17,7 @@ function ExerciceHeader() {
         <PaitingProgressBar />
       </ProgressBar>
       <HandleBtn onClick={() => dispatch(handleSideBar(true))}>
-        Exercicios
+        Exercícios
       </HandleBtn>
     </HeaderContainer>
   );

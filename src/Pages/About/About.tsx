@@ -14,12 +14,12 @@ function About() {
         Olá me chamo Breno Nascimento e sou o desenvolvedor e professor
         deste projeto.
         DrawingStation se trata de uma plataforma de ensino de desenho realista
-        desenvolvida no intuito de auxiliar os meus alunos, e
-        praticar o uso de algumas tecnologias como o Redux, TypeScript, React e Firebase.
+        desenvolvida no intuito de auxiliar os meus alunos e
+        praticar o uso de algumas tecnologias como o Redux, TypeScript e React.
       </span>
       <span>
         Além da plataforma web também desenvolvi o app mobile com ReactNative
-        que está disponivél na playstore.
+        que está disponivél na Playstore.
       </span>
 
       <a className="googlePlay" href="https://play.google.com/store/apps/details?id=com.drawingstation" target="_blank" rel="noreferrer">
@@ -27,7 +27,7 @@ function About() {
       </a>
 
       <span>
-        Link das minhas redes sociair e amil para contato
+        Link das minhas redes sociair e E-mil para contato
       </span>
       <span className="email">
         breno564nascimento@gmail.com
