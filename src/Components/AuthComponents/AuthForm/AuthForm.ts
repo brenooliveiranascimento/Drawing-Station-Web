@@ -15,7 +15,7 @@ export const FormContainer = styled.section.attrs({
     font-size: 18px;
 
   }
-
+/* 
   input:-webkit-autofill {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -30,6 +30,20 @@ input:-webkit-autofill {
 
 input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
+} */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px ease-in-out inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 input {
