@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FormContainer = styled.form.attrs({
+export const FormContainer = styled.section.attrs({
   autocomplete: 'off',
 })`
   display: flex;
@@ -22,13 +22,18 @@ export const FormContainer = styled.form.attrs({
 }
 
 input:-webkit-autofill {
-  -webkit-text-fill-color: #000;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0.0) inset;
-  box-shadow: 0 0 0px 1000px rgba(0,0,0,0.0) inset;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px black inset;
+  box-shadow: 0 0 0px 1000px black inset;
+  color: white;
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: rgba(0,0,0,0.0) !important;
+    -webkit-text-fill-color: white !important;
+}
+
+input {
+  color: white
 }
 `;
 
