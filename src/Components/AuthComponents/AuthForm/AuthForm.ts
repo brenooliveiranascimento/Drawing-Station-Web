@@ -23,8 +23,8 @@ export const FormContainer = styled.section.attrs({
 
 input:-webkit-autofill {
   -webkit-text-fill-color: #fff;
-  -webkit-box-shadow: 0 0 0px 1000px black inset;
-  box-shadow: 0 0 0px 1000px black inset;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0, 0.0) inset;
+  box-shadow: 0 0 0px 1000px rgba(0,0,0, 0.0) inset;
   color: white;
 }
 
