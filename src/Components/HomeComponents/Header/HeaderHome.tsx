@@ -35,10 +35,10 @@ function HeaderHome() {
         Sair
       </LogoutButton> */}
       <HeaderContent>
-        <h1>Sentindo Dificuldade Em Algum Exercicio? Não Temas!!!</h1>
+        <h1>Sentindo dificuldade em algum exercicio? Não temas!!!</h1>
         <span className="Message">
           Fique a vontate para tirar duvidas nos
-          comentarios ou me chamar no Instaagrampara tirar duvidas!
+          comentarios ou me chamar no Instagram para tirar duvidas!
         </span>
       </HeaderContent>
     </Container>
