@@ -9,7 +9,7 @@ import {
   NEXT_EXERCICE,
   PREV_EXERCICE,
   REMOVE_COMMENT,
-  SET_COMMENTS, SET_NOW_EXERCICE, SHOWN_MATERIALS,
+  SET_COMMENTS, SET_NOW_EXERCICE, SHOWN_MATERIALS, UPDATE_EXERCICE_DIFICULTY,
 } from '../../modules/exerciceData/exerciceDataTypes';
 
 export const updateExerciceStore = (exerciceData: any, modulesData: any): any => ({
@@ -30,6 +30,7 @@ export const updateExerciceStoreFail = (errorMessage: string) => ({
 export const changeNowExercice = (nowExercice: any) => ({
   type: SET_NOW_EXERCICE,
   payLoad: nowExercice,
+  dificulty: nowExercice.dificulty,
 });
 
 export const nextExercice = () => ({
@@ -70,4 +71,9 @@ export const handleSideBar = (condition: boolean) => ({
 
 export const clearExercice = () => ({
   type: CLEAR_EXERCICE,
+});
+
+export const updateExerciceDificulty = (dificulty: string) => ({
+  type: UPDATE_EXERCICE_DIFICULTY,
+  payLoad: dificulty,
 });

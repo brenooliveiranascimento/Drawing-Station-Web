@@ -6,20 +6,24 @@ import {
   ContentContainer,
   Divise, Exercicelist, ExerciceListItem, ModulesNameContent, SideContent, SideSearch,
 } from './ExeerciceSide';
-import { changeNowExercice, handleSideBar } from '../../../Redux/actions/exercicesActions/genericActions';
+import { changeNowExercice, handleSideBar, updateExerciceDificulty } from '../../../Redux/actions/exercicesActions/genericActions';
 import { HandleBtn } from '../ExerciceHeader/components';
 
 function ExerciceSide() {
   const exercicesData = useSelector(({ exerciceData }: any) => exerciceData.exercices);
   const userProgressData = useSelector(({ exerciceProgress }: any) => exerciceProgress);
   const nowExerciceState = useSelector(({ exerciceData }: any) => exerciceData.nowExerciceData);
+  const globalDificlty = useSelector(({ exerciceData }: any) => exerciceData.nowExecideDificulty);
   const dispatch = useDispatch();
   const dificultys = Object.keys(exercicesData);
   const [nowModule, setNowModule] = useState('basics');
 
   const updateExercice = (exercice: any) => {
+    dispatch(updateExerciceDificulty(exercice.dificulty));
     dispatch(changeNowExercice(exercice));
   };
+
+  const showDificulty = (dificulty: string) => dispatch(updateExerciceDificulty(dificulty));
 
   return (
     <SideContent>
@@ -37,7 +41,7 @@ function ExerciceSide() {
         dificultys.map((dificulty, index) => (
           <ContentContainer key={dificulty}>
             <ModulesNameContent
-              onClick={() => setNowModule(dificulty === nowModule ? '' : dificulty)}
+              onClick={() => (globalDificlty === dificulty ? showDificulty('') : showDificulty(dificulty))}
             >
               <span>
                 <strong>
@@ -51,7 +55,7 @@ function ExerciceSide() {
               </span>
             </ModulesNameContent>
             {
-              nowModule === dificulty && (
+              globalDificlty === dificulty && (
                 <Exercicelist>
                   {
                     exercicesData[dificulty].map((exercice: any, exerciceIndex:any) => {

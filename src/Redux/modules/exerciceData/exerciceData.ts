@@ -13,6 +13,7 @@ import {
   SET_COMMENTS,
   SET_NOW_EXERCICE,
   SHOWN_MATERIALS,
+  UPDATE_EXERCICE_DIFICULTY,
 } from './exerciceDataTypes';
 
 const STATE_INITIAL_VALUE = {
@@ -26,6 +27,7 @@ const STATE_INITIAL_VALUE = {
   showMaterials: false,
   comments: [],
   showSideBar: false,
+  nowExecideDificulty: 'basics',
 };
 
 const ACTION_INITIAL_STATE = {
@@ -34,6 +36,7 @@ const ACTION_INITIAL_STATE = {
   error: '',
   modules: {},
   comments: [],
+  dificulty: '',
 };
 
 function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE) {
@@ -47,7 +50,9 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
     case FETCH_EXERCICE_FAIL:
       return { ...state, loading: false, error: action.error };
     case SET_NOW_EXERCICE:
-      return { ...state, nowExerciceData: action.payLoad };
+      return {
+        ...state, nowExerciceData: action.payLoad, nowExecideDificulty: action.dificulty,
+      };
     case SHOWN_MATERIALS:
       return { ...state, showMaterials: true };
     case HIDDEN_MATERIALS:
@@ -67,6 +72,11 @@ function exerciceData(state = STATE_INITIAL_VALUE, action = ACTION_INITIAL_STATE
       return {
         ...state,
         comments: [],
+      };
+    case UPDATE_EXERCICE_DIFICULTY:
+      return {
+        ...state,
+        nowExecideDificulty: action.payLoad,
       };
     default:
       return state;
