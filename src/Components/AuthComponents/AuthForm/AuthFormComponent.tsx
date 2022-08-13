@@ -263,7 +263,7 @@ class AuthForm extends React.Component {
           isRegister && (
             <TermosDeUsoAre href="https://brenooliveiranascimento.github.io/" target="_blank">
               <span>
-                Ao se registrar voce concorde com nossos termos de uso
+                Ao se registrar você concorde com nossos termos de uso
               </span>
             </TermosDeUsoAre>
           )
