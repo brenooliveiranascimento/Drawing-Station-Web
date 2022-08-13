@@ -7,7 +7,10 @@ import { connect } from 'react-redux';
 import {
   FiLock, FiMail, FiUser, FiXCircle, FiCheckCircle, FiEye,
 } from 'react-icons/fi';
-import { FaEye, FaEyeSlash, FaGooglePlay } from 'react-icons/fa';
+import {
+  FaEye, FaEyeSlash, FaGooglePlay, FaLaptopHouse,
+} from 'react-icons/fa';
+import Lottie from 'react-lottie';
 import { createUserCount, signIn } from '../../../Redux/actions/authActions/authActions';
 import { emailVerification, passwordVerification } from '../../../Services/emailAndPasswordVerificaion/emailAndPasswordVerificaion';
 import {
@@ -15,7 +18,17 @@ import {
   BtnShow,
   BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo,
 } from './AuthForm';
+import animationLoading from '../../../Assets/Lottie/lf30_editor_0ktlr6ix.json';
 // import { signinVisitant } from '../../../Redux/actions/authActions/genericAuthActions';
+
+const defaultOptionsLoading: any = {
+  loop: true,
+  autoplay: true,
+  animationData: animationLoading,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
 
 class AuthForm extends React.Component {
   constructor(props:any) {
@@ -30,6 +43,7 @@ class AuthForm extends React.Component {
       btnDisabled: true,
       passwordDifferent: 'white',
       showPassword: false,
+      isSignin: false,
     };
   }
 
@@ -74,6 +88,7 @@ class AuthForm extends React.Component {
     const { registerUser, visitLog }: any = this.props;
     registerUser(visitInf);
     visitLog();
+    this.setState({ isSignin: false });
   };
 
   checkUserInfRegister = () => {
@@ -95,6 +110,7 @@ class AuthForm extends React.Component {
   };
 
   register = () => {
+    this.setState({ isSignin: true });
     const { visitLog, registerUser }: any = this.props;
     const {
       email, password, name, confirmPassword,
@@ -102,27 +118,25 @@ class AuthForm extends React.Component {
 
     if (!name.length && confirmPassword !== password) return;
     if (emailVerification(email) && passwordVerification(password)) {
+      setTimeout(() => this.setState({ isSignin: false }), 1000);
       registerUser(this.state);
-      return;
     }
-    alert('error register');
-    visitLog();
   };
 
   signIn = () => {
+    this.setState({ isSignin: true });
     const { email, password }: any = this.state;
     const { signInUser }: any = this.props;
     if (emailVerification(email) && passwordVerification(password)) {
       signInUser(this.state);
-      return;
+      setTimeout(() => this.setState({ isSignin: false }), 1000);
     }
-    alert('Erro ao logar');
   };
 
   render() {
     const {
       name, email, password, confirmPassword, isRegister, btnDisabled, passwordDifferent,
-      showPassword,
+      showPassword, isSignin,
     }: any = this.state;
     return (
       <FormContainer>
@@ -201,7 +215,23 @@ class AuthForm extends React.Component {
           disabled={btnDisabled}
           onClick={() => (isRegister ? this.register() : this.signIn())}
         >
-          { !isRegister ? 'Entrar' : 'Registrar' }
+          {
+            isSignin ? (
+              <Lottie
+                style={{
+                  alignSelf: 'center',
+                  justifyContent: 'center',
+                  width: 56,
+                  height: 50,
+                }}
+                options={defaultOptionsLoading}
+              />
+            ) : (
+              <section>
+                { !isRegister ? 'Entrar' : 'Registrar' }
+              </section>
+            )
+          }
         </BtnSignIn>
         <BtnRegister
           type="button"
