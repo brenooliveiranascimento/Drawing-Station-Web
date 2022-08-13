@@ -29,7 +29,7 @@ export const HandleBtn = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  background-color: #212630;
+  background-color: #333944;
   color:white;
   padding: 10px;
   font-size: 18px;
@@ -37,4 +37,10 @@ export const HandleBtn = styled.button`
   @media screen and (max-width: 1300px){
     display: flex;
   }
+
+  @media screen and (max-width: 610px){
+    font-size: 15px;
+    padding: 5px;
+  }
+
 `;
