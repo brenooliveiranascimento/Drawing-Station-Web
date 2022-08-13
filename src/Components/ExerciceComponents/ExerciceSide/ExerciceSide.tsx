@@ -19,8 +19,8 @@ function ExerciceSide() {
   const [nowModule, setNowModule] = useState('basics');
 
   const updateExercice = (exercice: any) => {
-    dispatch(updateExerciceDificulty(exercice.dificulty));
     dispatch(changeNowExercice(exercice));
+    dispatch(updateExerciceDificulty(exercice.dificulty));
   };
 
   const showDificulty = (dificulty: string) => dispatch(updateExerciceDificulty(dificulty));
