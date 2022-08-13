@@ -16,7 +16,9 @@ import { emailVerification, passwordVerification } from '../../../Services/email
 import {
   BtnRegister,
   BtnShow,
-  BtnSignIn, FormContainer, FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo,
+  BtnSignIn,
+  FormContainer,
+  FormLabel, InputAuth, LinkBtn, LinksArea, RespansiveLogo, TermosDeUsoAre,
 } from './AuthForm';
 import animationLoading from '../../../Assets/Lottie/lf30_editor_0ktlr6ix.json';
 // import { signinVisitant } from '../../../Redux/actions/authActions/genericAuthActions';
@@ -257,6 +259,15 @@ class AuthForm extends React.Component {
             </span>
           </LinkBtn>
         </LinksArea>
+        {
+          isRegister && (
+            <TermosDeUsoAre href="https://brenooliveiranascimento.github.io/" target="_blank">
+              <span>
+                Ao se registrar voce concorde com nossos termos de uso
+              </span>
+            </TermosDeUsoAre>
+          )
+        }
       </FormContainer>
     );
   }

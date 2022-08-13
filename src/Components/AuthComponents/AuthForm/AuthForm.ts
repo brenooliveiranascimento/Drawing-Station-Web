@@ -61,6 +61,25 @@ export const FormLabel = styled.label`
   }
 `;
 
+export const TermosDeUsoAre = styled.a`
+  width: 90%;
+  display: flex;
+  background-color: rgba(0,0,0,0.0);
+  text-decoration: none;
+  span {
+    color: white;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 700px){
+    width:50%
+  }
+
+  @media screen and (max-width: 370px){
+    width:45%
+  }
+`;
+
 export const InputAuth = styled.input.attrs({
   autocomplete: 'false',
 })`
