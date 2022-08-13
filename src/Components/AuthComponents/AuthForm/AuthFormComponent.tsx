@@ -125,7 +125,7 @@ class AuthForm extends React.Component {
       showPassword,
     }: any = this.state;
     return (
-      <FormContainer autocomplete="off">
+      <FormContainer>
         <RespansiveLogo
           src={require('../../../Assets/drawing/logo1.png')}
           alt="logo"
@@ -143,7 +143,6 @@ class AuthForm extends React.Component {
                 autoCapitalize="none"
                 name="name"
                 placeholder="Name"
-                autocomplete="false"
                 value={name}
                 onChange={({ target }) => this.updateUserState(target.name, target.value)}
               />
@@ -154,7 +153,6 @@ class AuthForm extends React.Component {
           <FiMail className="Icons" />
           <InputAuth
             placeholder="Email"
-            autocomplete="false"
             name="email"
             value={email}
             onChange={({ target }) => this.updateUserState(target.name, target.value)}
@@ -164,7 +162,6 @@ class AuthForm extends React.Component {
           <FiLock className="Icons" />
           <InputAuth
             style={{ borderBottomColor: passwordDifferent, color: passwordDifferent }}
-            autocomplete="false"
             type={showPassword ? 'text' : 'password'}
             name="password"
             placeholder="Password"
@@ -189,7 +186,6 @@ class AuthForm extends React.Component {
               <FiLock className="Icons" />
               <InputAuth
                 style={{ borderBottomColor: passwordDifferent, color: passwordDifferent }}
-                autocomplete="false"
                 type={showPassword ? 'text' : 'password'}
                 name="confirmPassword"
                 placeholder="confirmPassword"
