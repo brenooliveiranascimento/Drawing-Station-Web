@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BluidingArea = styled.section`
-  height: 550px;
+  height: 400px;
   width: 100%;
   margin-top: 40px;
   border-radius: 6px;
@@ -15,8 +15,7 @@ export const BluidingArea = styled.section`
   }
 
   img {
-    height: 500;
-    width: 400px;
+    width: 300px;
     filter: brightness(70%);
   }
 `;
