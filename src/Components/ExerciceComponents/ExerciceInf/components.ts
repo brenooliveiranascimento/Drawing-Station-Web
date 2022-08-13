@@ -34,6 +34,17 @@ export const ExerciceInfContainer = styled.article`
     margin-left: 10px;
     margin-bottom: -6px;
   }
+
+  @media screen and (max-width: 610px){
+    .check_icon_check {
+      font-size: 20px;
+      margin-left: 5px;
+    }
+    .check_icon_no_check {
+      font-size: 20px;
+      margin-left: 5px;
+    }
+    }
 `;
 
 export const BtnAreas = styled.section`
