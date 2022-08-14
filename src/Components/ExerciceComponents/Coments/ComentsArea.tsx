@@ -24,7 +24,7 @@ function ComentsArea() {
 
   return (
     <ComentsContainer>
-      <h1>Comentário</h1>
+      <h1>Comentários</h1>
       {
         commentsFilter().map((coment: any) => (
           <CommentBody key={coment.id}>
