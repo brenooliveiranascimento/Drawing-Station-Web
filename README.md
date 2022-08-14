@@ -11,9 +11,10 @@ Este projeto se trata da minha plataforma de ensino de desenhos realistas, estou
 oque venho aprendendo no curso da Trybe nos ultimos mese!
 
 <img src="https://user-images.githubusercontent.com/94801880/181121295-5ae30215-b7dd-4a39-894a-ca91898518be.png" width=800>
+<img src="https://user-images.githubusercontent.com/94801880/184520042-b8879a97-d33a-4a9b-afa7-8c7139852af6.png" width=800>
 <div>
-<img src="https://user-images.githubusercontent.com/94801880/181121037-1ad3bd52-29d8-4e16-acd0-426e5ca34dcf.png" width=400>
 <img src="https://user-images.githubusercontent.com/94801880/181121053-314cef2b-01ce-4889-a9c1-565e0c1e46f7.png" width=400>
+<img src="https://user-images.githubusercontent.com/94801880/184520051-fc4038d7-7fd3-46a3-ae35-b0cc904cf0c0.png" width=400>
 <div>
 
 
