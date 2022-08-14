@@ -15,14 +15,14 @@ Os alunos podem atualizar o seu progresso conforme concluem os exercicio, essa a
 
 Todo Leyout está respoansivo e estilizado com StyledComponents.
 
+### Recentemente publiquei o app da plataforma na [PlayStore](https://play.google.com/store/apps/details?id=com.drawingstation). Link do [repositorio](https://github.com/brenooliveiranascimento/Drawing-station-Redux) do app
+
 <img src="https://user-images.githubusercontent.com/94801880/181121295-5ae30215-b7dd-4a39-894a-ca91898518be.png" width=800>
 <img src="https://user-images.githubusercontent.com/94801880/184520042-b8879a97-d33a-4a9b-afa7-8c7139852af6.png" width=800>
 <div>
 <img src="https://user-images.githubusercontent.com/94801880/181121053-314cef2b-01ce-4889-a9c1-565e0c1e46f7.png" width=400>
 <img src="https://user-images.githubusercontent.com/94801880/184520051-fc4038d7-7fd3-46a3-ae35-b0cc904cf0c0.png" width=400>
 <div>
-
-### Recentemente publiquei o app da plataforma na [PlayStore](https://play.google.com/store/apps/details?id=com.drawingstation). Link do [repositorio](https://github.com/brenooliveiranascimento/Drawing-station-Redux) do app
 
 Tecnologias utilizadas:<br/>
 <a href="https://www.javascript.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" width=30 height=30></a>
