@@ -9,6 +9,11 @@
 
 Este projeto se trata da minha plataforma de ensino de desenhos realistas, estou aplicando
 oque venho aprendendo no curso da Trybe nos ultimos mese!
+O gerenciamento de estado global está sendo feito com Redux e todos os modulos e aulas estão sendo consumido de um banco de dado, o firestore possibilitando com que eu possa adicionar novas aulas e editar as já existentes.
+
+Os alunos podem atualizar o seu progresso conforme concluem os exercicio, essa atualização ocorre no estado global e banco de dados onde fica registrado o progresso de cada aluno.
+
+Todo Leyout está respoansivo e estilizado com StyledComponents.
 
 <img src="https://user-images.githubusercontent.com/94801880/181121295-5ae30215-b7dd-4a39-894a-ca91898518be.png" width=800>
 <img src="https://user-images.githubusercontent.com/94801880/184520042-b8879a97-d33a-4a9b-afa7-8c7139852af6.png" width=800>
@@ -16,7 +21,6 @@ oque venho aprendendo no curso da Trybe nos ultimos mese!
 <img src="https://user-images.githubusercontent.com/94801880/181121053-314cef2b-01ce-4889-a9c1-565e0c1e46f7.png" width=400>
 <img src="https://user-images.githubusercontent.com/94801880/184520051-fc4038d7-7fd3-46a3-ae35-b0cc904cf0c0.png" width=400>
 <div>
-
 
 ### Recentemente publiquei o app da plataforma na [PlayStore](https://play.google.com/store/apps/details?id=com.drawingstation). Link do [repositorio](https://github.com/brenooliveiranascimento/Drawing-station-Redux) do app
 
