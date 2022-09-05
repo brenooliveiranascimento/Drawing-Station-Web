@@ -3,8 +3,6 @@
 
 ## Sejam bem vindos a minha plataforma de ensino! :)
 
-<h3>**Ainda em desenvolvimento**</h3>
-
 ### [Link para acessar o projeto](https://drawing-station-web.vercel.app/)
 
 Este projeto se trata da minha plataforma de ensino de desenhos realistas, estou aplicando
