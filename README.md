@@ -5,8 +5,9 @@
 
 ### [Link para acessar o projeto](https://drawing-station-web.vercel.app/)
 
-Este projeto se trata da minha plataforma de ensino de desenhos realistas, estou aplicando
-oque venho aprendendo no curso da Trybe nos ultimos mese!
+Este projeto se trata da minha plataforma de ensino de desenhos realistas.
+A desenvolvi no intuito de publicar as minhas aulas e auxiliar os meus alunos direto da aplicação. Estou aplicando
+oque venho aprendendo no curso da Trybe nos ultimos meses!
 O gerenciamento de estado global está sendo feito com Redux e todos os modulos e aulas estão sendo consumido de um banco de dado, o firestore possibilitando com que eu possa adicionar novas aulas e editar as já existentes.
 
 Os alunos podem atualizar o seu progresso conforme concluem os exercicio, essa atualização ocorre no estado global e banco de dados onde fica registrado o progresso de cada aluno.
